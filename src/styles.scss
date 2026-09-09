@@ -1,0 +1,625 @@
+@use '@angular/material' as mat;
+
+$laops-primary: mat.$indigo-palette;
+$laops-accent: mat.$pink-palette;
+$laops-warn: mat.$red-palette;
+
+$laops-typography: mat.define-typography-config();
+
+$laops-light-theme: mat.define-light-theme((
+  color: (
+    primary: $laops-primary,
+    accent: $laops-accent,
+    warn: $laops-warn,
+  ),
+  typography: $laops-typography,
+  density: 0,
+));
+
+$laops-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $laops-primary,
+    accent: $laops-accent,
+    warn: $laops-warn,
+  ),
+  typography: $laops-typography,
+  density: 0,
+));
+
+@mixin laops-component-themes($theme) {
+  @include mat.button-theme($theme);
+  @include mat.checkbox-theme($theme);
+  @include mat.form-field-theme($theme);
+  @include mat.input-theme($theme);
+  @include mat.list-theme($theme);
+  @include mat.menu-theme($theme);
+  @include mat.radio-theme($theme);
+  @include mat.select-theme($theme);
+  @include mat.slide-toggle-theme($theme);
+  @include mat.tabs-theme($theme);
+}
+
+html {
+  @include mat.core-theme($laops-light-theme);
+}
+
+.laops-light-theme {
+  @include laops-component-themes($laops-light-theme);
+  @include mat.typography-hierarchy($laops-light-theme);
+}
+
+.laops-dark-theme {
+  @include laops-component-themes($laops-dark-theme);
+  @include mat.typography-hierarchy($laops-dark-theme);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.material-icons {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.4);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.6);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+// ---------- app layout ----------
+
+.laops-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.laops-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.laops-canvas-area {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.laops-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-left: 1px solid rgba(128, 128, 128, 0.25);
+  background: rgba(128, 128, 128, 0.06);
+}
+
+.laops-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+  .material-icons {
+    font-size: 16px;
+  }
+
+  .laops-panel-title {
+    flex: 1;
+  }
+}
+
+.laops-panel-body {
+  flex: 1;
+  overflow: auto;
+  padding: 8px;
+}
+
+.laops-tabs {
+  padding: 4px 8px 0;
+}
+
+// ---------- color swatch ----------
+
+.color-swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+
+  .swatch {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    flex: none;
+
+    &.none {
+      background: linear-gradient(135deg, #fafafa 45%, #e53935 45%, #e53935 55%, #fafafa 55%);
+    }
+  }
+}
+
+// ---------- toasts ----------
+
+.laops-toasts {
+  position: fixed;
+  bottom: 40px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2000;
+
+  .toast {
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: #fff;
+    background: #424242;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    font-size: 13px;
+
+    &.success {
+      background: #2e7d32;
+    }
+
+    &.error {
+      background: #c62828;
+    }
+  }
+}
+
+// ---------- canvas ----------
+
+.laops-canvas-host {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(45deg, rgba(128, 128, 128, 0.06) 0 12px, transparent 12px 24px),
+    rgba(128, 128, 128, 0.1);
+}
+
+.laops-canvas-viewport {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center center;
+}
+
+.laops-stage {
+  position: relative;
+  flex: none;
+}
+
+.laops-stage-svg {
+  display: block;
+  overflow: visible;
+}
+
+.laops-stage-border {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.laops-node {
+  outline: none;
+
+  .node-frame {
+    stroke: #2196f3;
+    stroke-width: 1.5;
+    stroke-dasharray: 6 3;
+    fill: none;
+    display: none;
+    pointer-events: none;
+  }
+
+  .node-label {
+    font-size: 11px;
+    fill: #ff5252;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &:hover .node-label {
+    opacity: 0.85;
+  }
+
+  &.selected .node-frame {
+    display: block;
+  }
+
+  &.selected {
+    cursor: move;
+  }
+
+  &.locked {
+    cursor: not-allowed;
+
+    .node-frame,
+    .node-label {
+      display: none;
+    }
+  }
+}
+
+.laops-tool-pan .laops-stage-svg,
+.laops-tool-pan .laops-stage {
+  cursor: grab;
+}
+
+.laops-panel-tool-draw .laops-stage-svg {
+  cursor: crosshair;
+}
+
+.laops-handle {
+  pointer-events: all;
+
+  .handle-dot {
+    fill: #2196f3;
+    stroke: #fff;
+    stroke-width: 1;
+  }
+
+  &.rotate .handle-dot {
+    fill: #ff9800;
+  }
+
+  &.pivot .handle-dot {
+    fill: #26a69a;
+  }
+}
+
+.laops-marquee {
+  position: absolute;
+  border: 1px dashed #2196f3;
+  background: rgba(33, 150, 243, 0.1);
+  pointer-events: none;
+}
+
+.laops-draw-preview {
+  position: absolute;
+  pointer-events: none;
+  border: 2px dashed #4caf50;
+}
+
+// ---------- layers panel ----------
+
+.layer-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  user-select: none;
+  margin-left: 0;
+
+  .layer-type {
+    font-size: 14px;
+    opacity: 0.7;
+    flex: none;
+  }
+
+  .layer-label {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .layer-toggles {
+    display: none;
+    gap: 2px;
+  }
+
+  &:hover .layer-toggles {
+    display: flex;
+  }
+
+  &.selected {
+    background: rgba(33, 150, 243, 0.25);
+  }
+
+  &.hidden .layer-label {
+    opacity: 0.45;
+  }
+
+  .icon-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+    color: inherit;
+
+    .material-icons {
+      font-size: 16px;
+    }
+
+    &:hover {
+      background: rgba(128, 128, 128, 0.2);
+    }
+
+    &.active {
+      color: #ff9800;
+    }
+  }
+}
+
+.layer-indent {
+  flex: none;
+  width: 14px;
+}
+
+// ---------- library panel ----------
+
+.lib-toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 8px 8px 4px;
+  align-items: center;
+}
+
+.lib-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 8px;
+}
+
+.lib-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 4px;
+  border-radius: 6px;
+  cursor: grab;
+  user-select: none;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: rgba(128, 128, 128, 0.15);
+  }
+
+  .lib-preview {
+    width: 72px;
+    height: 56px;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  .lib-label {
+    font-size: 11px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .lib-badge {
+    font-size: 9px;
+    padding: 0 4px;
+    border-radius: 3px;
+    background: #7b1fa2;
+    color: #fff;
+  }
+}
+
+.lib-folder {
+  margin: 6px 0;
+
+  .lib-folder-name {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 2px 4px;
+    opacity: 0.75;
+  }
+}
+
+.lib-empty {
+  padding: 16px 8px;
+  font-size: 12px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+// ---------- properties ----------
+
+.props-section {
+  margin-bottom: 12px;
+
+  h4 {
+    margin: 0 0 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    opacity: 0.75;
+  }
+}
+
+.props-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+  align-items: center;
+
+  label {
+    flex: none;
+    width: 26px;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  input[type='number'],
+  input[type='text'] {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+.props-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.props-empty {
+  font-size: 12px;
+  opacity: 0.7;
+  padding: 8px 4px;
+}
+
+// ---------- menubar ----------
+
+.laops-menubar {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  flex: none;
+  user-select: none;
+
+  .menu-title {
+    font-weight: 600;
+    font-size: 13px;
+    padding: 0 12px 0 10px;
+    letter-spacing: 0.5px;
+  }
+
+  .menu-item {
+    padding: 0 10px;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(128, 128, 128, 0.2);
+    }
+  }
+
+  .menu-sep {
+    width: 1px;
+    align-self: stretch;
+    margin: 6px 4px;
+    background: rgba(128, 128, 128, 0.3);
+  }
+}
+
+// ---------- toolbar ----------
+
+.laops-toolbar {
+  display: flex;
+  align-items: center;
+  flex: none;
+  gap: 2px;
+  padding: 2px 6px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+  flex-wrap: wrap;
+
+  .tool-btn {
+    border: none;
+    background: transparent;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: inherit;
+
+    .material-icons {
+      font-size: 20px;
+    }
+
+    &:hover {
+      background: rgba(128, 128, 128, 0.2);
+    }
+
+    &.active {
+      background: rgba(33, 150, 243, 0.3);
+    }
+  }
+
+  .tb-sep {
+    width: 1px;
+    height: 22px;
+    align-self: center;
+    margin: 0 4px;
+    background: rgba(128, 128, 128, 0.3);
+  }
+}
+
+// ---------- statusbar ----------
+
+.laops-statusbar {
+  display: flex;
+  align-items: center;
+  flex: none;
+  gap: 12px;
+  padding: 2px 10px;
+  font-size: 12px;
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+
+  .sb-item {
+    white-space: nowrap;
+  }
+
+  .sb-spacer {
+    flex: 1;
+  }
+}
+
+// ---------- misc ----------
+
+.mat-mdc-menu-panel {
+  min-width: 220px;
+}
+
+input[type='number'] {
+  font-family: inherit;
+}

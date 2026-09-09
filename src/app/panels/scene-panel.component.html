@@ -1,0 +1,79 @@
+<div class="search-bar">
+  <mat-form-field appearance="fill" class="search-field">
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput [(ngModel)]="searchQuery"
+           [placeholder]="'SCENES.SEARCH_PLACEHOLDER' | translate" />
+  </mat-form-field>
+</div>
+
+@if (!scenes.loaded()) {
+  <div class="loading-row">
+    <mat-spinner diameter="20" />
+    <span>{{ 'SCENES.LOADING' | translate }}</span>
+  </div>
+} @else if (isSearching) {
+  <div class="tree">
+    @for (item of filteredItems; track item.id) {
+      <div class="scene-item-row">
+        <div class="scene-thumb">
+          @if (item.preview) {
+            <img [src]="scenes.urlFor(item.preview)" [alt]="item.label" />
+          } @else {
+            <div class="thumb-placeholder"></div>
+          }
+        </div>
+        <div class="scene-info">
+          <span class="scene-label">{{ item.label }}</span>
+          <span class="scene-desc">{{ item.description }}</span>
+        </div>
+        <button mat-icon-button class="load-btn"
+                [matTooltip]="'SCENES.LOAD' | translate"
+                (click)="loadScene(item)">
+          <mat-icon>download</mat-icon>
+        </button>
+      </div>
+    }
+    @if (!filteredItems.length) {
+      <div class="empty-row">{{ 'SCENES.NO_RESULTS' | translate }}</div>
+    }
+  </div>
+} @else {
+  <div class="tree">
+    @if (!getFolders().length) {
+      <div class="empty-row">{{ 'SCENES.EMPTY' | translate }}</div>
+    }
+    @for (folder of getFolders(); track folder.id) {
+      <div class="folder-row" (click)="toggleFolder(folder.id)">
+        <mat-icon class="chevron">
+          {{ isExpanded(folder.id) ? 'expand_more' : 'chevron_right' }}
+        </mat-icon>
+        <mat-icon class="folder-icon">
+          {{ isExpanded(folder.id) ? 'folder_open' : 'folder' }}
+        </mat-icon>
+        <span>{{ folder.label ?? folder.id }}</span>
+      </div>
+      @if (isExpanded(folder.id)) {
+        @for (item of folder.items; track item.id) {
+          <div class="scene-item-row">
+            <div class="scene-thumb">
+              @if (item.preview) {
+                <img [src]="scenes.urlFor(item.preview)" [alt]="item.label" />
+              } @else {
+                <div class="thumb-placeholder"></div>
+              }
+            </div>
+            <div class="scene-info">
+              <span class="scene-label">{{ item.label }}</span>
+              <span class="scene-desc">{{ item.description }}</span>
+            </div>
+            <button mat-icon-button class="load-btn"
+                    [matTooltip]="'SCENES.LOAD' | translate"
+                    (click)="loadScene(item)">
+              <mat-icon>download</mat-icon>
+            </button>
+          </div>
+        }
+      }
+    }
+  </div>
+}

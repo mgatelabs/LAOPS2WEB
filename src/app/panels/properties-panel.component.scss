@@ -1,0 +1,90 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  overflow-y: auto;
+  height: 100%;
+  gap: 8px;
+  font-size: 13px;
+}
+
+// Compact, readable form fields for the narrow panel
+:host ::ng-deep .mat-mdc-form-field {
+  // Tighter density without going through the global theme
+  .mat-mdc-text-field-wrapper {
+    padding: 0 8px;
+  }
+
+  .mat-mdc-form-field-flex {
+    height: 44px;
+    align-items: center;
+  }
+
+  // Visible fill even when unfocused
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: rgba(128, 128, 128, 0.18);
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled):hover {
+    background-color: rgba(128, 128, 128, 0.26);
+  }
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  opacity: 0.4;
+  gap: 8px;
+
+  mat-icon {
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.row-2col-lock {
+  display: grid;
+  grid-template-columns: 1fr 1fr 32px;
+  gap: 8px;
+  align-items: center;
+}
+
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.field-label {
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+.field-value {
+  font-size: 12px;
+}
+
+.type-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px 0;
+}

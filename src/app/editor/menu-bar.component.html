@@ -1,0 +1,103 @@
+<div class="menu-bar">
+  <button mat-button [matMenuTriggerFor]="fileMenu">
+    {{ 'MENU.FILE' | translate }}
+  </button>
+  <button mat-button [matMenuTriggerFor]="editMenu">
+    {{ 'MENU.EDIT' | translate }}
+  </button>
+  <button mat-button [matMenuTriggerFor]="viewMenu">
+    {{ 'MENU.VIEW' | translate }}
+  </button>
+  <button mat-button [matMenuTriggerFor]="helpMenu">
+    {{ 'MENU.HELP' | translate }}
+  </button>
+
+  <span class="spacer"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="settingsMenu">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <span class="app-title">{{ 'APP.TITLE' | translate }}</span>
+</div>
+
+<mat-menu #fileMenu="matMenu">
+  <button mat-menu-item>{{ 'MENU.FILE_NEW' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.FILE_OPEN' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>{{ 'MENU.FILE_SAVE' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.FILE_SAVE_AS' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>{{ 'MENU.FILE_IMPORT_LEGACY' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item [matMenuTriggerFor]="exportMenu">
+    <span class="menu-item-label">{{ 'MENU.FILE_EXPORT' | translate }}</span>
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</mat-menu>
+
+<mat-menu #exportMenu="matMenu">
+  <button mat-menu-item>{{ 'MENU.FILE_EXPORT_PNG' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.FILE_EXPORT_SVG' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>{{ 'MENU.FILE_CLIPBOARD_PNG' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.FILE_CLIPBOARD_JSON' | translate }}</button>
+</mat-menu>
+
+<mat-menu #editMenu="matMenu">
+  <button mat-menu-item disabled>{{ 'MENU.EDIT_UNDO' | translate }}</button>
+  <button mat-menu-item disabled>{{ 'MENU.EDIT_REDO' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>{{ 'MENU.EDIT_CUT' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.EDIT_COPY' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.EDIT_PASTE' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>{{ 'MENU.EDIT_DELETE' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>{{ 'MENU.EDIT_GROUP' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.EDIT_UNGROUP' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>{{ 'MENU.EDIT_SELECT_ALL' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.EDIT_DESELECT' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>{{ 'MENU.EDIT_TO_FRONT' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.EDIT_FRONT' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.EDIT_BACK' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.EDIT_TO_BACK' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>{{ 'MENU.EDIT_FLIP_H' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.EDIT_FLIP_V' | translate }}</button>
+</mat-menu>
+
+<mat-menu #viewMenu="matMenu">
+  <button mat-menu-item>{{ 'MENU.VIEW_ZOOM_IN' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.VIEW_ZOOM_OUT' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.VIEW_ZOOM_RESET' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.VIEW_ZOOM_FIT' | translate }}</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item>{{ 'MENU.VIEW_PANEL_PROPERTIES' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.VIEW_PANEL_LAYERS' | translate }}</button>
+  <button mat-menu-item>{{ 'MENU.VIEW_PANEL_LIBRARY' | translate }}</button>
+</mat-menu>
+
+<mat-menu #helpMenu="matMenu">
+  <button mat-menu-item>{{ 'MENU.HELP_ABOUT' | translate }}</button>
+</mat-menu>
+
+<mat-menu #settingsMenu="matMenu">
+  <div class="settings-body">
+    <div class="settings-row">
+      <div class="settings-label">{{ 'SETTINGS.THEME' | translate }}</div>
+      <mat-button-toggle-group [ngModel]="theme()" (ngModelChange)="onThemeChange($event)">
+        <mat-button-toggle value="auto">{{ 'SETTINGS.THEME_AUTO' | translate }}</mat-button-toggle>
+        <mat-button-toggle value="light">{{ 'SETTINGS.THEME_LIGHT' | translate }}</mat-button-toggle>
+        <mat-button-toggle value="dark">{{ 'SETTINGS.THEME_DARK' | translate }}</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div class="settings-row">
+      <div class="settings-label">{{ 'SETTINGS.LANGUAGE' | translate }}</div>
+      <mat-select class="lang-select" [value]="language()" (selectionChange)="onLanguageChange($event.value)">
+        <mat-option value="en">English</mat-option>
+      </mat-select>
+    </div>
+  </div>
+</mat-menu>

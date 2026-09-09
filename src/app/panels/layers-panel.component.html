@@ -1,0 +1,60 @@
+<div class="panel-header">
+  <span class="panel-title">{{ 'PANEL.LAYERS' | translate }}</span>
+  <button mat-icon-button [matTooltip]="'LAYERS.SELECT_ALL' | translate">
+    <mat-icon>select_all</mat-icon>
+  </button>
+</div>
+
+@if (hasMultiSelection) {
+  <div class="bulk-bar">
+    <button mat-icon-button [matTooltip]="'LAYERS.GROUP' | translate">
+      <mat-icon>folder_special</mat-icon>
+    </button>
+    <button mat-icon-button [matTooltip]="'LAYERS.TO_FRONT' | translate">
+      <mat-icon>flip_to_front</mat-icon>
+    </button>
+    <button mat-icon-button [matTooltip]="'LAYERS.TO_BACK' | translate">
+      <mat-icon>flip_to_back</mat-icon>
+    </button>
+    <button mat-icon-button [matTooltip]="'LAYERS.LOCK_SELECTED' | translate">
+      <mat-icon>lock</mat-icon>
+    </button>
+    <button mat-icon-button [matTooltip]="'LAYERS.HIDE_SELECTED' | translate">
+      <mat-icon>visibility_off</mat-icon>
+    </button>
+    <button mat-icon-button color="warn" [matTooltip]="'LAYERS.DELETE_SELECTED' | translate">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+}
+
+<div class="row-list">
+  @for (row of rows; track row.id) {
+    <div class="layer-row" [class.selected]="row.selected" [class.locked]="row.locked">
+      <mat-checkbox [checked]="row.selected" />
+
+      <button mat-icon-button class="visibility-btn">
+        <mat-icon>{{ row.visible ? 'visibility' : 'visibility_off' }}</mat-icon>
+      </button>
+
+      <button mat-icon-button class="lock-btn">
+        <mat-icon>{{ row.locked ? 'lock' : 'lock_open' }}</mat-icon>
+      </button>
+
+      <div class="thumbnail"></div>
+
+      <mat-icon class="type-icon">{{ row.typeIcon }}</mat-icon>
+
+      <span class="row-label">{{ row.label }}</span>
+
+      <div class="reorder-btns">
+        <button mat-icon-button class="reorder-btn">
+          <mat-icon>keyboard_arrow_up</mat-icon>
+        </button>
+        <button mat-icon-button class="reorder-btn">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+      </div>
+    </div>
+  }
+</div>

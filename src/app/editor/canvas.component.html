@@ -1,0 +1,130 @@
+<div class="viewport"
+     (pointermove)="onPointerMove($event)"
+     (pointerup)="onPointerUp($event)">
+  <div class="canvas-wrapper">
+    <svg
+      class="scene-svg"
+      [attr.width]="canvasWidth()"
+      [attr.height]="canvasHeight()"
+      [attr.viewBox]="'0 0 ' + canvasWidth() + ' ' + canvasHeight()"
+      (pointerdown)="onCanvasPointerDown($event)"
+    >
+      <rect class="background" width="100%" height="100%"
+            [attr.fill]="cssColor(store.canvas().backgroundColor)" />
+
+      @for (node of store.nodes(); track node.id) {
+        @if (node.visible !== false) {
+          <g [attr.transform]="nodeTransform(node)"
+             (pointerdown)="onNodePointerDown($event, node)"
+             [style.cursor]="toolState.activeTool() === 'move' ? 'move' : 'default'"
+             [class.selected]="store.selectedIds().has(node.id)">
+
+            @if (node.type === 'svg-object') {
+              <rect x="0" y="0" width="64" height="64"
+                    fill="#ddd" stroke="#aaa" stroke-width="1" />
+              <text x="32" y="38" text-anchor="middle"
+                    font-size="9" fill="#888" font-family="Roboto,sans-serif">
+                {{ asSvgObject(node).assetId }}
+              </text>
+            }
+
+            @if (node.type === 'multicolor-object') {
+              <rect x="0" y="0" width="64" height="64"
+                    fill="#e8d8f0" stroke="#b090c0" stroke-width="1" />
+              <text x="32" y="38" text-anchor="middle"
+                    font-size="9" fill="#806090" font-family="Roboto,sans-serif">
+                {{ asMulticolor(node).assetId }}
+              </text>
+            }
+
+            @if (node.type === 'primitive' && asPrimitive(node).shape === 'rect') {
+              <rect x="0" y="0"
+                    [attr.width]="asPrimitive(node).w"
+                    [attr.height]="asPrimitive(node).h"
+                    [attr.fill]="cssColor(asPrimitive(node).fill)"
+                    [attr.stroke]="cssColor(asPrimitive(node).stroke)"
+                    [attr.stroke-width]="asPrimitive(node).strokeWidth ?? 0" />
+            }
+
+            @if (node.type === 'primitive' && asPrimitive(node).shape === 'ellipse') {
+              <ellipse
+                    [attr.cx]="asPrimitive(node).w / 2"
+                    [attr.cy]="asPrimitive(node).h / 2"
+                    [attr.rx]="asPrimitive(node).w / 2"
+                    [attr.ry]="asPrimitive(node).h / 2"
+                    [attr.fill]="cssColor(asPrimitive(node).fill)"
+                    [attr.stroke]="cssColor(asPrimitive(node).stroke)"
+                    [attr.stroke-width]="asPrimitive(node).strokeWidth ?? 0" />
+            }
+
+            @if (node.type === 'text') {
+              @for (line of asText(node).content.split('\n'); track $index) {
+                <text [attr.x]="0"
+                      [attr.y]="$index * asText(node).size * 1.2"
+                      [attr.font-family]="asText(node).font"
+                      [attr.font-size]="asText(node).size"
+                      [attr.font-weight]="asText(node).style.includes('bold') ? 'bold' : 'normal'"
+                      [attr.font-style]="asText(node).style.includes('italic') ? 'italic' : 'normal'"
+                      [attr.fill]="cssColor(asText(node).color)">
+                  {{ line }}
+                </text>
+              }
+            }
+
+            @if (node.type === 'group') {
+              <rect x="0" y="0" width="80" height="80"
+                    fill="none" stroke="#80a0ff" stroke-width="1" stroke-dasharray="4 2" />
+              <text x="4" y="14" font-size="10" fill="#80a0ff" font-family="Roboto,sans-serif">
+                {{ asGroup(node).label }}
+              </text>
+            }
+
+            @if (store.selectedIds().has(node.id)) {
+              <rect class="selection-box"
+                    [attr.x]="-4"
+                    [attr.y]="-4"
+                    [attr.width]="nodeBoundsW(node) + 8"
+                    [attr.height]="nodeBoundsH(node) + 8"
+                    fill="none"
+                    stroke="#4285f4"
+                    stroke-width="1.5"
+                    stroke-dasharray="5 3"
+                    pointer-events="none" />
+            }
+
+          </g>
+        }
+      }
+    </svg>
+  </div>
+</div>
+
+<div class="status-bar">
+  <input
+    class="zoom-input"
+    type="number"
+    [(ngModel)]="zoomLevel"
+    min="10"
+    max="800"
+  />
+  <span class="zoom-pct">%</span>
+
+  <mat-select class="zoom-select" [(ngModel)]="zoomLevel">
+    @for (p of zoomPresets; track p) {
+      <mat-option [value]="p">{{ p }}%</mat-option>
+    }
+    <mat-option [value]="0">{{ 'STATUS.ZOOM_FIT' | translate }}</mat-option>
+  </mat-select>
+
+  <button mat-icon-button [matTooltip]="'STATUS.FIT_TO_WINDOW' | translate">
+    <mat-icon>fit_screen</mat-icon>
+  </button>
+
+  <button mat-icon-button [matTooltip]="'STATUS.ZOOM_RESET' | translate">
+    <mat-icon>zoom_out_map</mat-icon>
+  </button>
+
+  <span class="canvas-size">
+    {{ 'STATUS.CANVAS_SIZE' | translate: { w: canvasWidth(), h: canvasHeight() } }}
+  </span>
+</div>

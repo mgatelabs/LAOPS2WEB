@@ -1,0 +1,96 @@
+<div class="search-bar">
+  <mat-form-field appearance="fill" class="search-field">
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput [(ngModel)]="searchQuery"
+           [placeholder]="'ASSETS.SEARCH_PLACEHOLDER' | translate" />
+  </mat-form-field>
+</div>
+
+<div class="upload-row">
+  <button mat-stroked-button class="upload-btn">
+    <mat-icon>upload</mat-icon>
+    {{ 'ASSETS.UPLOAD_SVG' | translate }}
+  </button>
+  <button mat-stroked-button class="upload-btn">
+    <mat-icon>upload_file</mat-icon>
+    {{ 'ASSETS.UPLOAD_SCENE' | translate }}
+  </button>
+</div>
+
+@if (!catalog.loaded()) {
+  <div class="loading-row">
+    <mat-spinner diameter="20" />
+    <span>{{ 'ASSETS.LOADING' | translate }}</span>
+  </div>
+} @else if (isSearching) {
+  <div class="tree">
+    @for (item of filteredItems; track item.id) {
+      <div class="item-row">
+        <div class="item-thumb">
+          @if (catalog.previewUrl(item)) {
+            <img [src]="catalog.previewUrl(item)" [alt]="item.label" />
+          } @else {
+            <mat-icon>image</mat-icon>
+          }
+        </div>
+        <span class="item-label">{{ item.label }}</span>
+        @if (item.multiColor) {
+          <mat-icon class="mc-badge" [matTooltip]="'ASSETS.MULTICOLOR_BADGE' | translate">palette</mat-icon>
+        }
+      </div>
+    }
+    @if (!filteredItems.length) {
+      <div class="empty-row">{{ 'ASSETS.NO_RESULTS' | translate }}</div>
+    }
+  </div>
+} @else {
+  <div class="tree">
+    @for (section of catalog.catalogue().sections; track section.id) {
+      <div class="section-row" (click)="toggleFolder(section.id)">
+        <mat-icon class="chevron">
+          {{ isExpanded(section.id) ? 'expand_more' : 'chevron_right' }}
+        </mat-icon>
+        <span>{{ section.label }}</span>
+      </div>
+      @if (isExpanded(section.id)) {
+        @for (folder of section.folders; track folder.id) {
+          <ng-container
+            [ngTemplateOutlet]="folderTemplate"
+            [ngTemplateOutletContext]="{ $implicit: folder, depth: 1 }">
+          </ng-container>
+        }
+      }
+    }
+  </div>
+}
+
+<ng-template #folderTemplate let-folder let-depth="depth">
+  <div class="folder-row" [style.padding-left.px]="8 + depth * 12" (click)="toggleFolder(folder.id)">
+    <mat-icon class="chevron">{{ isExpanded(folder.id) ? 'expand_more' : 'chevron_right' }}</mat-icon>
+    <mat-icon class="folder-icon">{{ isExpanded(folder.id) ? 'folder_open' : 'folder' }}</mat-icon>
+    <span>{{ folder.label }}</span>
+  </div>
+  @if (isExpanded(folder.id)) {
+    @for (child of folder.folders; track child.id) {
+      <ng-container
+        [ngTemplateOutlet]="folderTemplate"
+        [ngTemplateOutletContext]="{ $implicit: child, depth: depth + 1 }">
+      </ng-container>
+    }
+    @for (item of folder.items; track item.id) {
+      <div class="item-row" [style.padding-left.px]="8 + (depth + 1) * 12">
+        <div class="item-thumb">
+          @if (catalog.previewUrl(item)) {
+            <img [src]="catalog.previewUrl(item)" [alt]="item.label" />
+          } @else {
+            <mat-icon>image</mat-icon>
+          }
+        </div>
+        <span class="item-label">{{ item.label }}</span>
+        @if (item.multiColor) {
+          <mat-icon class="mc-badge" [matTooltip]="'ASSETS.MULTICOLOR_BADGE' | translate">palette</mat-icon>
+        }
+      </div>
+    }
+  }
+</ng-template>

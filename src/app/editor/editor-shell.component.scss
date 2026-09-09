@@ -1,0 +1,10 @@
+:host {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 40px 1fr 280px;
+  grid-template-rows: 48px 1fr;
+  grid-template-areas:
+    "menubar  menubar    menubar"
+    "toolbar  canvas     rightpanel";
+  overflow: hidden;
+}

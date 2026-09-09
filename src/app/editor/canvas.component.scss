@@ -1,0 +1,65 @@
+:host {
+  grid-area: canvas;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.viewport {
+  flex: 1;
+  overflow: auto;
+  /* workspace background — explicitly not themed, always neutral grey */
+  background: #505050;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 200px;
+  touch-action: none;
+}
+
+.canvas-wrapper {
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.scene-svg {
+  display: block;
+  border: 1px solid #aaa;
+  cursor: default;
+  user-select: none;
+}
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  height: 32px;
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+.zoom-input {
+  width: 48px;
+  text-align: right;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  color: inherit;
+}
+
+.zoom-select {
+  width: 72px;
+  font-size: 12px;
+}
+
+.zoom-pct {
+  opacity: 0.6;
+  margin-right: 4px;
+}
+
+.canvas-size {
+  margin-left: auto;
+  opacity: 0.6;
+}

@@ -1,0 +1,47 @@
+Line Art Object Placement System (Version 1.3)
+
+By Michael Fuller (SlashAndBurn)
+
+Based on Half-Park Custom Character Creator
+
+Version Beta 1
+-Initial Release
+
+Version Beta 2
+
+Version Beta 3
+
+Version Beta 4
+-Parts
+	If you shift-click the add object button you can now add "parts". Basically hands,feet,shirt,pants and arm. Gives you a little more control over character creation.
+-Middle-Clicking
+	If you middle-click the program will cycle through the move,scale and rotate tool.
+-Object Loader
+	Double-clicking and item on the list will load it into the scene.
+
+Version Beta 5
+
+Version Beta 6
+
+Version Beta 7
+-Part Release
+
+Version Beta 8
+-Internal Objects
+	Rectangles and Ellipses can be added to the scene. And the user can change the color and size. This removes the need to have box-red.svg objects in the parts folder. The box parts will be removed later.
+
+Version Beta 10
+-High Customizability
+	Shift+Click "Add Object" to now add parts. Then you can change the part's color with the Edit Internal Button.
+
+Version Beta 11
+
+Version Beta 12
+-Speed
+	The speed issues have been finally fixed.  There was a bug where the program would check a web site for files on every load.  So speed has greatly improved and the software can be used without an internet connection.
+	
+Version Beta 13
+-Part
+	The Internal Part system has been updated a little.  And a few more parts were added.
+-Background
+	A new tool was added that allows the user to change the background color.

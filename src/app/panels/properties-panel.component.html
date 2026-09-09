@@ -1,0 +1,101 @@
+@if (hasSelection) {
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>{{ 'PROPS.LABEL' | translate }}</mat-label>
+    <input matInput [value]="selectedNode?.label ?? ''" />
+  </mat-form-field>
+
+  <div class="row-2col">
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'PROPS.X' | translate }}</mat-label>
+      <input matInput type="number" value="0" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'PROPS.Y' | translate }}</mat-label>
+      <input matInput type="number" value="0" />
+    </mat-form-field>
+  </div>
+
+  <div class="row-2col-lock">
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'PROPS.WIDTH' | translate }}</mat-label>
+      <input matInput type="number" value="100" />
+      <span matSuffix>%</span>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'PROPS.HEIGHT' | translate }}</mat-label>
+      <input matInput type="number" value="100" />
+      <span matSuffix>%</span>
+    </mat-form-field>
+    <button mat-icon-button [matTooltip]="'PROPS.LOCK_ASPECT' | translate">
+      <mat-icon>lock</mat-icon>
+    </button>
+  </div>
+
+  <div class="row-2col">
+    <mat-form-field appearance="fill">
+      <mat-label>{{ 'PROPS.ROTATION' | translate }}</mat-label>
+      <input matInput type="number" value="0" />
+      <span matSuffix>°</span>
+    </mat-form-field>
+  </div>
+
+  <div class="row-2col">
+    <mat-form-field appearance="fill">
+      <mat-label>pX</mat-label>
+      <input matInput type="number" value="0" />
+      <span matSuffix>%</span>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>pY</mat-label>
+      <input matInput type="number" value="0" />
+      <span matSuffix>%</span>
+    </mat-form-field>
+  </div>
+
+  <div class="action-row">
+    <button mat-stroked-button [matTooltip]="'PROPS.FLIP_H' | translate">
+      <mat-icon>flip</mat-icon> {{ 'PROPS.FLIP_H' | translate }}
+    </button>
+    <button mat-stroked-button [matTooltip]="'PROPS.FLIP_V' | translate">
+      <mat-icon>flip</mat-icon> {{ 'PROPS.FLIP_V' | translate }}
+    </button>
+  </div>
+
+  <div class="action-row">
+    <button mat-icon-button [matTooltip]="'PROPS.TO_FRONT' | translate">
+      <mat-icon>flip_to_front</mat-icon>
+    </button>
+    <button mat-icon-button [matTooltip]="'PROPS.TO_BACK' | translate">
+      <mat-icon>flip_to_back</mat-icon>
+    </button>
+    <button mat-icon-button [matTooltip]="'PROPS.MOVE_UP' | translate">
+      <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
+    <button mat-icon-button [matTooltip]="'PROPS.MOVE_DOWN' | translate">
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button mat-icon-button [matTooltip]="'PROPS.CLONE' | translate">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+    <button mat-icon-button color="warn" [matTooltip]="'PROPS.DELETE' | translate">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+  <button mat-stroked-button class="full-width">
+    <mat-icon>restart_alt</mat-icon> {{ 'PROPS.RESET_TRANSFORM' | translate }}
+  </button>
+
+  <mat-divider />
+
+  <div class="type-section">
+    <span class="field-label">{{ 'PROPS.ASSET_NAME' | translate }}</span>
+    <span class="field-value">Gordon Freeman</span>
+  </div>
+} @else {
+  <div class="empty-state">
+    <mat-icon>touch_app</mat-icon>
+    <span>{{ 'PANEL.NOTHING_SELECTED' | translate }}</span>
+  </div>
+}

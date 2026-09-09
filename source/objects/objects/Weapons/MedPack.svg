@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 10.0, SVG Export Plug-In . SVG Version: 3.0.0 Build 76)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="128" height="128.646" viewBox="0 0 128 128.646" overflow="visible" enable-background="new 0 0 128 128.646"
+	 xml:space="preserve">
+	<style type="text/css">
+	<![CDATA[
+@font-face{font-family:'ArialMT';src:url("data:;base64,\
+T1RUTwADACAAAQAQQ0ZGINl6Xb0AAAA8AAADckdQT1Oumr6TAAAEBAAAAIRjbWFwASEA8wAAA7AA\
+AABUAQAEAgABAQEIQXJpYWxNVAABAQE2+BsB+BgEHPqv/S0cEAAcCAwFHqAASIKBJf+Lix6gAEiC\
+gSX/i4sMB/dJD/daEPdcEZL5/xIAAQEBZUFyaWFsKFIpIFRyYWRlbWFyayBvZiBUaGUgTW9ub3R5\
+cGUgQ29ycG9yYXRpb24gcGxjIHJlZ2lzdGVyZWQgaW4gdGhlIFVTIFBhdCAmIFRNIE9mZi4gYW5k\
+IGVsc2V3aGVyZS4AAAAAAQAiACUAJwAqADMANAA1AAAACQIAAQAbABwAWgDcAPYBAwGPAnUCjcr3\
+lBYcBQD6lBz7AAf+dKsV+lQcBMD+VAYODiCIFvjHHAW6BfdlBvjsHPpGBftxBvs/+FAF/PkG+zX8\
+UAX3bfjuFfiFBvst+Cpc9w9p8XTaGXgtcS5pLggOkfcyFhwFuviNB/cG4oR9xx/feNNoxljYSsU3\
+siYIsSWe+wj7Fxr7A34ocTUecTVqRGJTYlJfX1trWmpRc0d6CHpGPYMyG/vj90EV980G7NeUncIf\
+wp22pKysubmvyaXZCKTYmOn3Axr3LXL3ClneHljdTsJDpwifVzeV+wcb+8gGDvty9zwWHAW6+nH7\
+Qf2v/Fr5RPtB/UT9LgcO91MWHAW691Yc+kYHDpH3NRYcBbr5Hgf3F+5+cc8fz3DBXbRICLRIn0I6\
+GiNpM0hEHkhEI137IXi+crJzpnPEV8BKvj33k/wjGPuIBvtW98VS413OZroZZrprq26ebp5tmG2S\
+CJB1Z41ZG/t1/R8G+ccE+DUG5NCUnr0fvZ2xqKW0CKWzmLe6GtByxFm4HrhYPKH7ARv8ZAYOIOf4\
+axX3S5uUQp9Pq1wZqly8Zc5uCG7O1nzeG9XMlqHEH8ShtamnsgimsZm1uBq5frNwrh5wrV+oTqJk\
+mjSj+xus+xurLalVqEWwV7hpwghowXrIzhrVoNC1zB61y8i83KwIrNzknO4b9wHremjeH95oyle4\
+R7hHoz6ONftOfRiB6GnRUroIulE2o/sFG/sJNXZgVh9VYHBXThpWnmCxaR6wae1o9zJo9zFn9wBs\
+xnDgZMpZtE8ItE6fRjwaPXVCXkYeXkZLVThlCGQ3LXgiG/sZ+wOesjIfMbJFxVjZWNhw44jtCA77\
+cvinFhwFDfx390EcBIr7Qfx5HPrzBw74zRQcBcEVAAAAAAABAAAAAwAAAAwABABIAAAADgAIAAIA\
+BgAgAEEARABGAEkAVP//AAAAIABBAEQARgBJAFL////h/8H/v/++/7z/tAABAAAAAAAAAAAAAAAA\
+AAAAAQAAAAoAHgAsAAFERkxUAAgABAAAAAD//wABAAAAAWtlcm4ACAAAAAEAAAABAAQAAgAAAAEA\
+CAABAD4ABAAAAAUAFAAeACgALgA0AAIAAv+PAAj/2wACAAH/jwAI/2gAAQAC/48AAQAI/9sAAgAB\
+/9sAAv9oAAEABQABAAIABAAGAAg=")}
+	]]>
+	</style>
+	<g id="Layer_1">
+		<g>
+			<path fill="#E8E8E8" d="M32,128.646L0,99.637V24.559L32,0h64l32,24.559v75.078l-32,29.009H32z"/>
+			<path d="M88,48H40V0h48V48z"/>
+			<g>
+				<path fill="#FF0000" d="M72,112H56V76h16V112z"/>
+				<path fill="#FF0000" d="M46,102V86h36v16H46z"/>
+			</g>
+			<path fill="#FF0000" d="M20,40h4l-8-12L8,40h4v52h8V40z"/>
+			<path fill="#FF0000" d="M116,40h4l-8-12l-8,12h4v52h8V40z"/>
+			<path fill="#4C4B4A" d="M60,23c0,2.762,2.239,5,5,5h14c2.761,0,5-2.238,5-5V9c0-2.762-2.239-5-5-5H65c-2.761,0-5,2.238-5,5V23z"
+				/>
+			<path fill="#4C4B4A" d="M84,39c0,2.762-2.239,5-5,5H49c-2.761,0-5-2.238-5-5v-2c0-2.762,2.239-5,5-5h30c2.761,0,5,2.238,5,5V39z"
+				/>
+			<path fill="#33CC33" stroke="#000000" d="M53.875,12H42.25V4h11.625V12z"/>
+			<path fill="#FF6666" stroke="#000000" d="M53.875,24H42.25v-8h11.625V24z"/>
+			<path fill="#BEBFBE" stroke="#000000" d="M59,8h-4V4h4V8z"/>
+			<path fill="#BEBFBE" stroke="#000000" d="M59,16h-4v-4h4V16z"/>
+			<path fill="#BEBFBE" stroke="#000000" d="M59,24h-4v-4h4V24z"/>
+			<text transform="matrix(1 0 0 1 28.2979 68.5)"><tspan x="0" y="0" fill="#E23030" font-family="'ArialMT'" font-size="15">FIRST AID</tspan></text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,3961 @@
+{
+  "version": 1,
+  "generated": "2026-09-09T04:54:54Z",
+  "sections": [
+    {
+      "id": "objects",
+      "label": "Objects",
+      "folders": [
+        {
+          "id": "B6e",
+          "label": "Backgrounds",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "B6f",
+              "label": "Back Mesa",
+              "description": "",
+              "author": "",
+              "folders": [
+                {
+                  "id": "H70",
+                  "label": "Halls",
+                  "description": "",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X21",
+                      "label": "1",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "objects/Backgrounds/Back Mesa/Halls/1.svg",
+                      "preview": "objects/Backgrounds/Back Mesa/Halls/1.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X22",
+                      "label": "2",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "objects/Backgrounds/Back Mesa/Halls/2.svg",
+                      "preview": "objects/Backgrounds/Back Mesa/Halls/2.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X23",
+                      "label": "3",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "objects/Backgrounds/Back Mesa/Halls/3.svg",
+                      "preview": "objects/Backgrounds/Back Mesa/Halls/3.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "4X24",
+                      "label": "4",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "objects/Backgrounds/Back Mesa/Halls/4.svg",
+                      "preview": "objects/Backgrounds/Back Mesa/Halls/4.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "5X25",
+                      "label": "5",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "objects/Backgrounds/Back Mesa/Halls/5.svg",
+                      "preview": "objects/Backgrounds/Back Mesa/Halls/5.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                }
+              ],
+              "items": [
+                {
+                  "id": "BA18",
+                  "label": "BATHROOM",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Backgrounds/Back Mesa/BATHROOM.svg",
+                  "preview": "objects/Backgrounds/Back Mesa/BATHROOM.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "LO19",
+                  "label": "LOCKERS",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Backgrounds/Back Mesa/LOCKERS.svg",
+                  "preview": "objects/Backgrounds/Back Mesa/LOCKERS.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "TR20",
+                  "label": "TRAM",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Backgrounds/Back Mesa/TRAM.svg",
+                  "preview": "objects/Backgrounds/Back Mesa/TRAM.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "H71",
+              "label": "Half-Life 2",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "CI26",
+                  "label": "CITY_17",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Backgrounds/Half-Life 2/CITY_17.svg",
+                  "preview": "objects/Backgrounds/Half-Life 2/CITY_17.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "Layer_2",
+                      "label": "Layer_2"
+                    },
+                    {
+                      "id": "Layer_4",
+                      "label": "Layer_4"
+                    },
+                    {
+                      "id": "Layer_1",
+                      "label": "Layer_1"
+                    },
+                    {
+                      "id": "Layer_3",
+                      "label": "Layer_3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "M72",
+              "label": "Misc",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "BE27",
+                  "label": "Beach",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Backgrounds/Misc/Beach.svg",
+                  "preview": "objects/Backgrounds/Misc/Beach.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "Layer_2_1_",
+                      "label": "Layer_2_1_"
+                    },
+                    {
+                      "id": "Layer_1_copy",
+                      "label": "Layer_1_copy"
+                    }
+                  ]
+                },
+                {
+                  "id": "CA28",
+                  "label": "Canal_Scene",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Backgrounds/Misc/Canal_Scene.svg",
+                  "preview": "objects/Backgrounds/Misc/Canal_Scene.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "Layer_4",
+                      "label": "Layer_4"
+                    },
+                    {
+                      "id": "Layer_1",
+                      "label": "Layer_1"
+                    },
+                    {
+                      "id": "Layer_2",
+                      "label": "Layer_2"
+                    }
+                  ]
+                },
+                {
+                  "id": "CA29",
+                  "label": "CARD",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Backgrounds/Misc/CARD.svg",
+                  "preview": "objects/Backgrounds/Misc/CARD.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "ON30",
+                  "label": "onBoat",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Backgrounds/Misc/onBoat.svg",
+                  "preview": "objects/Backgrounds/Misc/onBoat.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "Layer_2",
+                      "label": "Layer_2"
+                    },
+                    {
+                      "id": "Layer_3",
+                      "label": "Layer_3"
+                    },
+                    {
+                      "id": "Layer_5",
+                      "label": "Layer_5"
+                    },
+                    {
+                      "id": "Layer_1",
+                      "label": "Layer_1"
+                    },
+                    {
+                      "id": "Layer_4",
+                      "label": "Layer_4"
+                    },
+                    {
+                      "id": "Layer_6",
+                      "label": "Layer_6"
+                    }
+                  ]
+                },
+                {
+                  "id": "WO31",
+                  "label": "WON",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Backgrounds/Misc/WON.svg",
+                  "preview": "objects/Backgrounds/Misc/WON.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": []
+        },
+        {
+          "id": "B73",
+          "label": "Beards",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "GU32",
+              "label": "Guerilla",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Beards/Guerilla.svg",
+              "preview": "objects/Beards/Guerilla.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "VI33",
+              "label": "VIP",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Beards/VIP.svg",
+              "preview": "objects/Beards/VIP.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "B74",
+          "label": "Bodys",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "AL34",
+              "label": "alyx",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/alyx.svg",
+              "preview": "objects/Bodys/alyx.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "AR35",
+              "label": "ARTIC",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/ARTIC.svg",
+              "preview": "objects/Bodys/ARTIC.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "AU36",
+              "label": "AUBURN",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/AUBURN.svg",
+              "preview": "objects/Bodys/AUBURN.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BA37",
+              "label": "BARNEY",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/BARNEY.svg",
+              "preview": "objects/Bodys/BARNEY.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BM38",
+              "label": "BMT",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/BMT.svg",
+              "preview": "objects/Bodys/BMT.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BR39",
+              "label": "breen",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/breen.svg",
+              "preview": "objects/Bodys/breen.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CO40",
+              "label": "Combine_Elite",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/Combine_Elite.svg",
+              "preview": "objects/Bodys/Combine_Elite.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ET41",
+              "label": "ETAC",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/ETAC.svg",
+              "preview": "objects/Bodys/ETAC.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GA42",
+              "label": "Garg_O_Holics",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/Garg_O_Holics.svg",
+              "preview": "objects/Bodys/Garg_O_Holics.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GO43",
+              "label": "GORDON",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/GORDON.svg",
+              "preview": "objects/Bodys/GORDON.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GS44",
+              "label": "GSG9",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/GSG9.svg",
+              "preview": "objects/Bodys/GSG9.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GU45",
+              "label": "Guerilla",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/Guerilla.svg",
+              "preview": "objects/Bodys/Guerilla.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL46",
+              "label": "HL2",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/HL2.svg",
+              "preview": "objects/Bodys/HL2.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL47",
+              "label": "HL_COLA",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/HL_COLA.svg",
+              "preview": "objects/Bodys/HL_COLA.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "IL48",
+              "label": "ILOVEHL2",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/ILOVEHL2.svg",
+              "preview": "objects/Bodys/ILOVEHL2.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "KL49",
+              "label": "kleiner",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/kleiner.svg",
+              "preview": "objects/Bodys/kleiner.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                },
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                }
+              ]
+            },
+            {
+              "id": "LE50",
+              "label": "LEET",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/LEET.svg",
+              "preview": "objects/Bodys/LEET.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "LI51",
+              "label": "LIGHT_BLUE",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/LIGHT_BLUE.svg",
+              "preview": "objects/Bodys/LIGHT_BLUE.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MA52",
+              "label": "MANDALORIAN",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/MANDALORIAN.svg",
+              "preview": "objects/Bodys/MANDALORIAN.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ME53",
+              "label": "MEDIC",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/MEDIC.svg",
+              "preview": "objects/Bodys/MEDIC.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ME54",
+              "label": "MetroCop",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/MetroCop.svg",
+              "preview": "objects/Bodys/MetroCop.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_3",
+                  "label": "Layer_3"
+                },
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                },
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                }
+              ]
+            },
+            {
+              "id": "MO55",
+              "label": "mossman",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/mossman.svg",
+              "preview": "objects/Bodys/mossman.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "OB56",
+              "label": "OBJ9",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/OBJ9.svg",
+              "preview": "objects/Bodys/OBJ9.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "PU57",
+              "label": "PUNISHER",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/PUNISHER.svg",
+              "preview": "objects/Bodys/PUNISHER.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "RE58",
+              "label": "RECON",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/RECON.svg",
+              "preview": "objects/Bodys/RECON.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SA59",
+              "label": "SAS",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/SAS.svg",
+              "preview": "objects/Bodys/SAS.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ST60",
+              "label": "STEAM",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/STEAM.svg",
+              "preview": "objects/Bodys/STEAM.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "VI61",
+              "label": "VIP",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Bodys/VIP.svg",
+              "preview": "objects/Bodys/VIP.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "E75",
+          "label": "Effects",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "F76",
+              "label": "Fire",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "1X62",
+                  "label": "1",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Effects/Fire/1.svg",
+                  "preview": "objects/Effects/Fire/1.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "2X63",
+                  "label": "2",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Effects/Fire/2.svg",
+                  "preview": "objects/Effects/Fire/2.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "3X64",
+                  "label": "3",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Effects/Fire/3.svg",
+                  "preview": "objects/Effects/Fire/3.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "S77",
+              "label": "Streaks",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "BL65",
+                  "label": "BLACK",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Effects/Streaks/BLACK.svg",
+                  "preview": "objects/Effects/Streaks/BLACK.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "LI66",
+                  "label": "LIGHT_BLUE",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Effects/Streaks/LIGHT_BLUE.svg",
+                  "preview": "objects/Effects/Streaks/LIGHT_BLUE.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "WH67",
+                  "label": "WHITE",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Effects/Streaks/WHITE.svg",
+                  "preview": "objects/Effects/Streaks/WHITE.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": []
+        },
+        {
+          "id": "E78",
+          "label": "Eyes",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "B79",
+              "label": "Blank",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "FO72",
+                  "label": "Focus",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Eyes/Blank/Focus.svg",
+                  "preview": "objects/Eyes/Blank/Focus.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "NO73",
+                  "label": "Normal",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Eyes/Blank/Normal.svg",
+                  "preview": "objects/Eyes/Blank/Normal.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "TI74",
+                  "label": "TIRED",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Eyes/Blank/TIRED.svg",
+                  "preview": "objects/Eyes/Blank/TIRED.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "S7a",
+              "label": "Single",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "UX75",
+                  "label": "U",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Eyes/Single/U.svg",
+                  "preview": "objects/Eyes/Single/U.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "XX76",
+                  "label": "X",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Eyes/Single/X.svg",
+                  "preview": "objects/Eyes/Single/X.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "DO68",
+              "label": "DOT",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Eyes/DOT.svg",
+              "preview": "objects/Eyes/DOT.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "FO69",
+              "label": "Focus",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Eyes/Focus.svg",
+              "preview": "objects/Eyes/Focus.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "NO70",
+              "label": "Normal",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Eyes/Normal.svg",
+              "preview": "objects/Eyes/Normal.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "TI71",
+              "label": "TIRED",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Eyes/TIRED.svg",
+              "preview": "objects/Eyes/TIRED.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H7b",
+          "label": "Hair",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "AL77",
+              "label": "Alyx",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/Alyx.svg",
+              "preview": "objects/Hair/Alyx.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                },
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                }
+              ]
+            },
+            {
+              "id": "AN78",
+              "label": "anime",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/anime.svg",
+              "preview": "objects/Hair/anime.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BA79",
+              "label": "BALDING",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/BALDING.svg",
+              "preview": "objects/Hair/BALDING.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BA80",
+              "label": "Barney",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/Barney.svg",
+              "preview": "objects/Hair/Barney.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                },
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                }
+              ]
+            },
+            {
+              "id": "ET81",
+              "label": "ETAC",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/ETAC.svg",
+              "preview": "objects/Hair/ETAC.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GO82",
+              "label": "GORDON",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/GORDON.svg",
+              "preview": "objects/Hair/GORDON.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GU83",
+              "label": "Guerilla",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/Guerilla.svg",
+              "preview": "objects/Hair/Guerilla.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "LE84",
+              "label": "LEET",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/LEET.svg",
+              "preview": "objects/Hair/LEET.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO85",
+              "label": "Mossman",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/Mossman.svg",
+              "preview": "objects/Hair/Mossman.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "PU86",
+              "label": "PUNISHER",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/PUNISHER.svg",
+              "preview": "objects/Hair/PUNISHER.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "VI87",
+              "label": "VIP",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hair/VIP.svg",
+              "preview": "objects/Hair/VIP.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H7c",
+          "label": "Half-Life 2",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "HL88",
+              "label": "HL2-Ammo-AR2",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Half-Life 2/HL2-Ammo-AR2.svg",
+              "preview": "objects/Half-Life 2/HL2-Ammo-AR2.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL89",
+              "label": "HL2-Ammo-Gernade",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Half-Life 2/HL2-Ammo-Gernade.svg",
+              "preview": "objects/Half-Life 2/HL2-Ammo-Gernade.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL90",
+              "label": "HL2-Ammo-Rocket",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Half-Life 2/HL2-Ammo-Rocket.svg",
+              "preview": "objects/Half-Life 2/HL2-Ammo-Rocket.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL91",
+              "label": "HL2-Ammo-SMG",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Half-Life 2/HL2-Ammo-SMG.svg",
+              "preview": "objects/Half-Life 2/HL2-Ammo-SMG.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL92",
+              "label": "HL2-Battery",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Half-Life 2/HL2-Battery.svg",
+              "preview": "objects/Half-Life 2/HL2-Battery.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL93",
+              "label": "HL2-Health_Small",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Half-Life 2/HL2-Health_Small.svg",
+              "preview": "objects/Half-Life 2/HL2-Health_Small.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_3",
+                  "label": "Layer_3"
+                },
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                }
+              ]
+            },
+            {
+              "id": "HL94",
+              "label": "HL2-Scanner",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Half-Life 2/HL2-Scanner.svg",
+              "preview": "objects/Half-Life 2/HL2-Scanner.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL95",
+              "label": "HL2-Strider",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Half-Life 2/HL2-Strider.svg",
+              "preview": "objects/Half-Life 2/HL2-Strider.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H7d",
+          "label": "Hands",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "BL96",
+              "label": "Black GREY",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hands/Black GREY.svg",
+              "preview": "objects/Hands/Black GREY.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BL97",
+              "label": "Black",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hands/Black.svg",
+              "preview": "objects/Hands/Black.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BL98",
+              "label": "BLACK_BLUE",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hands/BLACK_BLUE.svg",
+              "preview": "objects/Hands/BLACK_BLUE.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BL99",
+              "label": "BLACK_RED",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hands/BLACK_RED.svg",
+              "preview": "objects/Hands/BLACK_RED.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BL100",
+              "label": "BLACK_YELLOW",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hands/BLACK_YELLOW.svg",
+              "preview": "objects/Hands/BLACK_YELLOW.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BR101",
+              "label": "BROWN",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hands/BROWN.svg",
+              "preview": "objects/Hands/BROWN.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GR102",
+              "label": "GREY",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hands/GREY.svg",
+              "preview": "objects/Hands/GREY.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H7e",
+          "label": "Hats",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "R7f",
+              "label": "Recon",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "BL115",
+                  "label": "BLUE",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Hats/Recon/BLUE.svg",
+                  "preview": "objects/Hats/Recon/BLUE.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "GR116",
+                  "label": "GREEN",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Hats/Recon/GREEN.svg",
+                  "preview": "objects/Hats/Recon/GREEN.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "GR117",
+                  "label": "GREY",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Hats/Recon/GREY.svg",
+                  "preview": "objects/Hats/Recon/GREY.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "RE118",
+                  "label": "RECON",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Hats/Recon/RECON.svg",
+                  "preview": "objects/Hats/Recon/RECON.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "RE119",
+                  "label": "RED",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Hats/Recon/RED.svg",
+                  "preview": "objects/Hats/Recon/RED.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "YE120",
+                  "label": "YELLOW",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Hats/Recon/YELLOW.svg",
+                  "preview": "objects/Hats/Recon/YELLOW.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "BA103",
+              "label": "BARNEY",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/BARNEY.svg",
+              "preview": "objects/Hats/BARNEY.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BA104",
+              "label": "BARNEY_BACK",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/BARNEY_BACK.svg",
+              "preview": "objects/Hats/BARNEY_BACK.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CO105",
+              "label": "Combine_Elite",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/Combine_Elite.svg",
+              "preview": "objects/Hats/Combine_Elite.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "FO106",
+              "label": "FOOTBALL",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/FOOTBALL.svg",
+              "preview": "objects/Hats/FOOTBALL.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GS107",
+              "label": "GSG9-BACK",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/GSG9-BACK.svg",
+              "preview": "objects/Hats/GSG9-BACK.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GS108",
+              "label": "GSG9",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/GSG9.svg",
+              "preview": "objects/Hats/GSG9.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GS109",
+              "label": "GSGS-MASK",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/GSGS-MASK.svg",
+              "preview": "objects/Hats/GSGS-MASK.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MA110",
+              "label": "MANDALORIAN",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/MANDALORIAN.svg",
+              "preview": "objects/Hats/MANDALORIAN.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MA111",
+              "label": "MASK-1",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/MASK-1.svg",
+              "preview": "objects/Hats/MASK-1.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MA112",
+              "label": "MASK-MOUTH",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/MASK-MOUTH.svg",
+              "preview": "objects/Hats/MASK-MOUTH.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "OB113",
+              "label": "OBJ9",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/OBJ9.svg",
+              "preview": "objects/Hats/OBJ9.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SA114",
+              "label": "SAS",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Hats/SAS.svg",
+              "preview": "objects/Hats/SAS.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H80",
+          "label": "Heads",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "1X121",
+              "label": "1",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Heads/1.svg",
+              "preview": "objects/Heads/1.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "2X122",
+              "label": "2",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Heads/2.svg",
+              "preview": "objects/Heads/2.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "3X123",
+              "label": "3",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Heads/3.svg",
+              "preview": "objects/Heads/3.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H81",
+          "label": "Helpers",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "BO124",
+              "label": "Body_Alyx",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Helpers/Body_Alyx.svg",
+              "preview": "objects/Helpers/Body_Alyx.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BO125",
+              "label": "Body_Standard",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Helpers/Body_Standard.svg",
+              "preview": "objects/Helpers/Body_Standard.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "M82",
+          "label": "Misc",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "C83",
+              "label": "Computers",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "CO145",
+                  "label": "COMPUTER-CASE",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Computers/COMPUTER-CASE.svg",
+                  "preview": "objects/Misc/Computers/COMPUTER-CASE.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "CO146",
+                  "label": "COMPUTER-MONITOR",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Computers/COMPUTER-MONITOR.svg",
+                  "preview": "objects/Misc/Computers/COMPUTER-MONITOR.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "F84",
+              "label": "Flowers",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "MI147",
+                  "label": "MISC-Flower-BLUE",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Flowers/MISC-Flower-BLUE.svg",
+                  "preview": "objects/Misc/Flowers/MISC-Flower-BLUE.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI148",
+                  "label": "MISC-Flower-PINK",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Flowers/MISC-Flower-PINK.svg",
+                  "preview": "objects/Misc/Flowers/MISC-Flower-PINK.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI149",
+                  "label": "MISC-Flower-PURPLE",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Flowers/MISC-Flower-PURPLE.svg",
+                  "preview": "objects/Misc/Flowers/MISC-Flower-PURPLE.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI150",
+                  "label": "MISC-Flower-RED",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Flowers/MISC-Flower-RED.svg",
+                  "preview": "objects/Misc/Flowers/MISC-Flower-RED.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI151",
+                  "label": "MISC-Flower-WHITE",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Flowers/MISC-Flower-WHITE.svg",
+                  "preview": "objects/Misc/Flowers/MISC-Flower-WHITE.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI152",
+                  "label": "MISC-Flower-YELLOW",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Flowers/MISC-Flower-YELLOW.svg",
+                  "preview": "objects/Misc/Flowers/MISC-Flower-YELLOW.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI153",
+                  "label": "MISC-Flower",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Flowers/MISC-Flower.svg",
+                  "preview": "objects/Misc/Flowers/MISC-Flower.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "R85",
+              "label": "Rocks",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "1X154",
+                  "label": "1",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Rocks/1.svg",
+                  "preview": "objects/Misc/Rocks/1.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "2X155",
+                  "label": "2",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Rocks/2.svg",
+                  "preview": "objects/Misc/Rocks/2.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "3X156",
+                  "label": "3",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Rocks/3.svg",
+                  "preview": "objects/Misc/Rocks/3.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "4X157",
+                  "label": "4",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "objects/Misc/Rocks/4.svg",
+                  "preview": "objects/Misc/Rocks/4.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "BU126",
+              "label": "BULLET",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/BULLET.svg",
+              "preview": "objects/Misc/BULLET.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CA127",
+              "label": "Camp_Fire",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/Camp_Fire.svg",
+              "preview": "objects/Misc/Camp_Fire.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CH128",
+              "label": "CHICKEN",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/CHICKEN.svg",
+              "preview": "objects/Misc/CHICKEN.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CI129",
+              "label": "CIG",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/CIG.svg",
+              "preview": "objects/Misc/CIG.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "EL130",
+              "label": "Elite Beer",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/Elite Beer.svg",
+              "preview": "objects/Misc/Elite Beer.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "EL131",
+              "label": "Elite_Symbol",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/Elite_Symbol.svg",
+              "preview": "objects/Misc/Elite_Symbol.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GL132",
+              "label": "GLASSES",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/GLASSES.svg",
+              "preview": "objects/Misc/GLASSES.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GU133",
+              "label": "Guitar",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/Guitar.svg",
+              "preview": "objects/Misc/Guitar.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL134",
+              "label": "HL2",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/HL2.svg",
+              "preview": "objects/Misc/HL2.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "LO135",
+              "label": "LOPS",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/LOPS.svg",
+              "preview": "objects/Misc/LOPS.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MA136",
+              "label": "MARSEMELLOW",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/MARSEMELLOW.svg",
+              "preview": "objects/Misc/MARSEMELLOW.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ME137",
+              "label": "MEDIC_LOGO",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/MEDIC_LOGO.svg",
+              "preview": "objects/Misc/MEDIC_LOGO.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "NO138",
+              "label": "NO_SMOKING",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/NO_SMOKING.svg",
+              "preview": "objects/Misc/NO_SMOKING.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "PU139",
+              "label": "PUMPKIN",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/PUMPKIN.svg",
+              "preview": "objects/Misc/PUMPKIN.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "RE140",
+              "label": "RED_POINT",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/RED_POINT.svg",
+              "preview": "objects/Misc/RED_POINT.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SH141",
+              "label": "SHINY HEAD",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/SHINY HEAD.svg",
+              "preview": "objects/Misc/SHINY HEAD.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SM142",
+              "label": "SMOKE-1",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/SMOKE-1.svg",
+              "preview": "objects/Misc/SMOKE-1.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ST143",
+              "label": "Stethascope",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/Stethascope.svg",
+              "preview": "objects/Misc/Stethascope.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "TE144",
+              "label": "Tear",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Misc/Tear.svg",
+              "preview": "objects/Misc/Tear.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "M86",
+          "label": "Mouth",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "MO158",
+              "label": "MOUTH-1",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Mouth/MOUTH-1.svg",
+              "preview": "objects/Mouth/MOUTH-1.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO159",
+              "label": "MOUTH-2",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Mouth/MOUTH-2.svg",
+              "preview": "objects/Mouth/MOUTH-2.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO160",
+              "label": "MOUTH-3",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Mouth/MOUTH-3.svg",
+              "preview": "objects/Mouth/MOUTH-3.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO161",
+              "label": "MOUTH-4",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Mouth/MOUTH-4.svg",
+              "preview": "objects/Mouth/MOUTH-4.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO162",
+              "label": "MOUTH-5",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Mouth/MOUTH-5.svg",
+              "preview": "objects/Mouth/MOUTH-5.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO163",
+              "label": "MOUTH-6",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Mouth/MOUTH-6.svg",
+              "preview": "objects/Mouth/MOUTH-6.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO164",
+              "label": "MOUTH-7",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Mouth/MOUTH-7.svg",
+              "preview": "objects/Mouth/MOUTH-7.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "P87",
+          "label": "Packs",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "P88",
+              "label": "Pimp",
+              "description": "",
+              "author": "",
+              "folders": [
+                {
+                  "id": "B89",
+                  "label": "Bling",
+                  "description": "",
+                  "author": "",
+                  "folders": [
+                    {
+                      "id": "N8a",
+                      "label": "Necklass",
+                      "description": "",
+                      "author": "",
+                      "folders": [],
+                      "items": [
+                        {
+                          "id": "1X165",
+                          "label": "1",
+                          "description": "",
+                          "author": "",
+                          "tags": [],
+                          "path": "objects/Packs/Pimp/Bling/Necklass/1.svg",
+                          "preview": "objects/Packs/Pimp/Bling/Necklass/1.webp",
+                          "multiColor": false,
+                          "parts": []
+                        },
+                        {
+                          "id": "2X166",
+                          "label": "2",
+                          "description": "",
+                          "author": "",
+                          "tags": [],
+                          "path": "objects/Packs/Pimp/Bling/Necklass/2.svg",
+                          "preview": "objects/Packs/Pimp/Bling/Necklass/2.webp",
+                          "multiColor": false,
+                          "parts": []
+                        }
+                      ]
+                    }
+                  ],
+                  "items": []
+                },
+                {
+                  "id": "C8b",
+                  "label": "Cane",
+                  "description": "",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X167",
+                      "label": "1",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "objects/Packs/Pimp/Cane/1.svg",
+                      "preview": "objects/Packs/Pimp/Cane/1.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X168",
+                      "label": "2",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "objects/Packs/Pimp/Cane/2.svg",
+                      "preview": "objects/Packs/Pimp/Cane/2.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X169",
+                      "label": "3",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "objects/Packs/Pimp/Cane/3.svg",
+                      "preview": "objects/Packs/Pimp/Cane/3.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "H8c",
+                  "label": "Hat",
+                  "description": "",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X170",
+                      "label": "1",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "objects/Packs/Pimp/Hat/1.svg",
+                      "preview": "objects/Packs/Pimp/Hat/1.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                }
+              ],
+              "items": []
+            }
+          ],
+          "items": []
+        },
+        {
+          "id": "W8d",
+          "label": "Weapons",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "35171",
+              "label": "357",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/357.svg",
+              "preview": "objects/Weapons/357.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "AU172",
+              "label": "AUG",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/AUG.svg",
+              "preview": "objects/Weapons/AUG.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "AW173",
+              "label": "AWP",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/AWP.svg",
+              "preview": "objects/Weapons/AWP.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Barrel",
+                  "label": "Barrel"
+                },
+                {
+                  "id": "TriPod",
+                  "label": "TriPod"
+                },
+                {
+                  "id": "Trigger",
+                  "label": "Trigger"
+                },
+                {
+                  "id": "Clip",
+                  "label": "Clip"
+                },
+                {
+                  "id": "Layer_10",
+                  "label": "Layer_10"
+                },
+                {
+                  "id": "Layer_8",
+                  "label": "Layer_8"
+                },
+                {
+                  "id": "Layer_7",
+                  "label": "Layer_7"
+                },
+                {
+                  "id": "Scope",
+                  "label": "Scope"
+                }
+              ]
+            },
+            {
+              "id": "C4174",
+              "label": "C4",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/C4.svg",
+              "preview": "objects/Weapons/C4.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "DE175",
+              "label": "Desert Eagle",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/Desert Eagle.svg",
+              "preview": "objects/Weapons/Desert Eagle.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GA176",
+              "label": "GAUSS",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/GAUSS.svg",
+              "preview": "objects/Weapons/GAUSS.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GO177",
+              "label": "Golden_Uzi",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/Golden_Uzi.svg",
+              "preview": "objects/Weapons/Golden_Uzi.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "KN178",
+              "label": "KNIFE",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/KNIFE.svg",
+              "preview": "objects/Weapons/KNIFE.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ME179",
+              "label": "MedPack",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/MedPack.svg",
+              "preview": "objects/Weapons/MedPack.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MP180",
+              "label": "MP5",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/MP5.svg",
+              "preview": "objects/Weapons/MP5.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "NO181",
+              "label": "NOMAD",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/NOMAD.svg",
+              "preview": "objects/Weapons/NOMAD.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "PI182",
+              "label": "PipeWrench",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/PipeWrench.svg",
+              "preview": "objects/Weapons/PipeWrench.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "RG183",
+              "label": "RGP",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/RGP.svg",
+              "preview": "objects/Weapons/RGP.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "RP184",
+              "label": "RPG_ROCKET",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/RPG_ROCKET.svg",
+              "preview": "objects/Weapons/RPG_ROCKET.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                },
+                {
+                  "id": "Layer_3",
+                  "label": "Layer_3"
+                }
+              ]
+            },
+            {
+              "id": "SA185",
+              "label": "Sachel",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/Sachel.svg",
+              "preview": "objects/Weapons/Sachel.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_3",
+                  "label": "Layer_3"
+                },
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                },
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                }
+              ]
+            },
+            {
+              "id": "SH186",
+              "label": "SHOTGUN",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/SHOTGUN.svg",
+              "preview": "objects/Weapons/SHOTGUN.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SW187",
+              "label": "SWORD",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/SWORD.svg",
+              "preview": "objects/Weapons/SWORD.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "WA188",
+              "label": "WARHAMMER",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "objects/Weapons/WARHAMMER.svg",
+              "preview": "objects/Weapons/WARHAMMER.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parts",
+      "label": "Parts",
+      "folders": [
+        {
+          "id": "B8f",
+          "label": "Body Parts",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "B90",
+              "label": "Beard",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "BR201",
+                  "label": "breen",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Beard/breen.svg",
+                  "preview": "parts/Body Parts/Beard/breen.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "GR202",
+                  "label": "grizzle",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Beard/grizzle.svg",
+                  "preview": "parts/Body Parts/Beard/grizzle.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "G91",
+              "label": "Glasses",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "KL203",
+                  "label": "kleiner",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Glasses/kleiner.svg",
+                  "preview": "parts/Body Parts/Glasses/kleiner.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "H92",
+              "label": "Hair",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "1X204",
+                  "label": "1",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Hair/1.svg",
+                  "preview": "parts/Body Parts/Hair/1.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "2X205",
+                  "label": "2",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Hair/2.svg",
+                  "preview": "parts/Body Parts/Hair/2.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "3X206",
+                  "label": "3",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Hair/3.svg",
+                  "preview": "parts/Body Parts/Hair/3.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "4X207",
+                  "label": "4",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Hair/4.svg",
+                  "preview": "parts/Body Parts/Hair/4.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "BR208",
+                  "label": "breen",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Hair/breen.svg",
+                  "preview": "parts/Body Parts/Hair/breen.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "KL209",
+                  "label": "kleiner",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Hair/kleiner.svg",
+                  "preview": "parts/Body Parts/Hair/kleiner.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "M93",
+              "label": "Misc",
+              "description": "",
+              "author": "",
+              "folders": [
+                {
+                  "id": "S94",
+                  "label": "shards",
+                  "description": "",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X211",
+                      "label": "1",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Body Parts/Misc/shards/1.svg",
+                      "preview": "parts/Body Parts/Misc/shards/1.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X212",
+                      "label": "2",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Body Parts/Misc/shards/2.svg",
+                      "preview": "parts/Body Parts/Misc/shards/2.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                }
+              ],
+              "items": [
+                {
+                  "id": "MA210",
+                  "label": "mask",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Misc/mask.svg",
+                  "preview": "parts/Body Parts/Misc/mask.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "M95",
+              "label": "Mouth",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "1X213",
+                  "label": "1",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/1.svg",
+                  "preview": "parts/Body Parts/Mouth/1.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "10214",
+                  "label": "10",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/10.svg",
+                  "preview": "parts/Body Parts/Mouth/10.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "11215",
+                  "label": "11",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/11.svg",
+                  "preview": "parts/Body Parts/Mouth/11.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "12216",
+                  "label": "12",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/12.svg",
+                  "preview": "parts/Body Parts/Mouth/12.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "2X217",
+                  "label": "2",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/2.svg",
+                  "preview": "parts/Body Parts/Mouth/2.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "3X218",
+                  "label": "3",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/3.svg",
+                  "preview": "parts/Body Parts/Mouth/3.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "4X219",
+                  "label": "4",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/4.svg",
+                  "preview": "parts/Body Parts/Mouth/4.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "5X220",
+                  "label": "5",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/5.svg",
+                  "preview": "parts/Body Parts/Mouth/5.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "6X221",
+                  "label": "6",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/6.svg",
+                  "preview": "parts/Body Parts/Mouth/6.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "7X222",
+                  "label": "7",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/7.svg",
+                  "preview": "parts/Body Parts/Mouth/7.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "8X223",
+                  "label": "8",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/8.svg",
+                  "preview": "parts/Body Parts/Mouth/8.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "9X224",
+                  "label": "9",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/9.svg",
+                  "preview": "parts/Body Parts/Mouth/9.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "SM225",
+                  "label": "Smirk",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Body Parts/Mouth/Smirk.svg",
+                  "preview": "parts/Body Parts/Mouth/Smirk.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "AR189",
+              "label": "arm",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/arm.svg",
+              "preview": "parts/Body Parts/arm.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BE190",
+              "label": "belt",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/belt.svg",
+              "preview": "parts/Body Parts/belt.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CO191",
+              "label": "colar",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/colar.svg",
+              "preview": "parts/Body Parts/colar.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HA192",
+              "label": "hand",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/hand.svg",
+              "preview": "parts/Body Parts/hand.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HE193",
+              "label": "head",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/head.svg",
+              "preview": "parts/Body Parts/head.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "JA194",
+              "label": "jacket",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/jacket.svg",
+              "preview": "parts/Body Parts/jacket.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "PA195",
+              "label": "pant",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/pant.svg",
+              "preview": "parts/Body Parts/pant.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SH196",
+              "label": "shirt",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/shirt.svg",
+              "preview": "parts/Body Parts/shirt.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SH197",
+              "label": "shoe",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/shoe.svg",
+              "preview": "parts/Body Parts/shoe.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SU198",
+              "label": "suit",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/suit.svg",
+              "preview": "parts/Body Parts/suit.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "VE199",
+              "label": "vest - B",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/vest - B.svg",
+              "preview": "parts/Body Parts/vest - B.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "VE200",
+              "label": "vest",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Body Parts/vest.svg",
+              "preview": "parts/Body Parts/vest.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "E96",
+          "label": "Eyes",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "D97",
+              "label": "Double",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "FO227",
+                  "label": "focus",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Eyes/Double/focus.svg",
+                  "preview": "parts/Eyes/Double/focus.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "NO228",
+                  "label": "normal",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Eyes/Double/normal.svg",
+                  "preview": "parts/Eyes/Double/normal.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "TI229",
+                  "label": "tired",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Eyes/Double/tired.svg",
+                  "preview": "parts/Eyes/Double/tired.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "E98",
+              "label": "Eyebrow",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "AL230",
+                  "label": "alyx",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Eyes/Eyebrow/alyx.svg",
+                  "preview": "parts/Eyes/Eyebrow/alyx.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "BA231",
+                  "label": "barney",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Eyes/Eyebrow/barney.svg",
+                  "preview": "parts/Eyes/Eyebrow/barney.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "BR232",
+                  "label": "breen",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Eyes/Eyebrow/breen.svg",
+                  "preview": "parts/Eyes/Eyebrow/breen.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MO233",
+                  "label": "mossman",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Eyes/Eyebrow/mossman.svg",
+                  "preview": "parts/Eyes/Eyebrow/mossman.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "S99",
+              "label": "Single",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "FO234",
+                  "label": "focus",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Eyes/Single/focus.svg",
+                  "preview": "parts/Eyes/Single/focus.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "NO235",
+                  "label": "normal",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Eyes/Single/normal.svg",
+                  "preview": "parts/Eyes/Single/normal.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "TI236",
+                  "label": "tired",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Eyes/Single/tired.svg",
+                  "preview": "parts/Eyes/Single/tired.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "DO226",
+              "label": "dot",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Eyes/dot.svg",
+              "preview": "parts/Eyes/dot.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "M9a",
+          "label": "Misc",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "R9b",
+              "label": "Rocks",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "1X237",
+                  "label": "1",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Misc/Rocks/1.svg",
+                  "preview": "parts/Misc/Rocks/1.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "2X238",
+                  "label": "2",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Misc/Rocks/2.svg",
+                  "preview": "parts/Misc/Rocks/2.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "3X239",
+                  "label": "3",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Misc/Rocks/3.svg",
+                  "preview": "parts/Misc/Rocks/3.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "4X240",
+                  "label": "4",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "parts/Misc/Rocks/4.svg",
+                  "preview": "parts/Misc/Rocks/4.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": []
+        },
+        {
+          "id": "S9c",
+          "label": "Symbols",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "39d",
+              "label": "3D2Toy",
+              "description": "",
+              "author": "",
+              "folders": [
+                {
+                  "id": "B9e",
+                  "label": "Bullsquid",
+                  "description": "",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X251",
+                      "label": "1",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Bullsquid/1.svg",
+                      "preview": "parts/Symbols/3D2Toy/Bullsquid/1.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X252",
+                      "label": "2",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Bullsquid/2.svg",
+                      "preview": "parts/Symbols/3D2Toy/Bullsquid/2.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X253",
+                      "label": "3",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Bullsquid/3.svg",
+                      "preview": "parts/Symbols/3D2Toy/Bullsquid/3.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "4X254",
+                      "label": "4",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Bullsquid/4.svg",
+                      "preview": "parts/Symbols/3D2Toy/Bullsquid/4.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "C9f",
+                  "label": "Chumtoad",
+                  "description": "",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X255",
+                      "label": "1",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Chumtoad/1.svg",
+                      "preview": "parts/Symbols/3D2Toy/Chumtoad/1.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X256",
+                      "label": "2",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Chumtoad/2.svg",
+                      "preview": "parts/Symbols/3D2Toy/Chumtoad/2.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X257",
+                      "label": "3",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Chumtoad/3.svg",
+                      "preview": "parts/Symbols/3D2Toy/Chumtoad/3.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "4X258",
+                      "label": "4",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Chumtoad/4.svg",
+                      "preview": "parts/Symbols/3D2Toy/Chumtoad/4.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "Ha0",
+                  "label": "Headcrab",
+                  "description": "",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X259",
+                      "label": "1",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Headcrab/1.svg",
+                      "preview": "parts/Symbols/3D2Toy/Headcrab/1.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X260",
+                      "label": "2",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Headcrab/2.svg",
+                      "preview": "parts/Symbols/3D2Toy/Headcrab/2.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X261",
+                      "label": "3",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Headcrab/3.svg",
+                      "preview": "parts/Symbols/3D2Toy/Headcrab/3.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "4X262",
+                      "label": "4",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Headcrab/4.svg",
+                      "preview": "parts/Symbols/3D2Toy/Headcrab/4.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "5X263",
+                      "label": "5",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Headcrab/5.svg",
+                      "preview": "parts/Symbols/3D2Toy/Headcrab/5.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "6X264",
+                      "label": "6",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Headcrab/6.svg",
+                      "preview": "parts/Symbols/3D2Toy/Headcrab/6.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "7X265",
+                      "label": "7",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Headcrab/7.svg",
+                      "preview": "parts/Symbols/3D2Toy/Headcrab/7.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "Ha1",
+                  "label": "Houndeye",
+                  "description": "",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X266",
+                      "label": "1",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Houndeye/1.svg",
+                      "preview": "parts/Symbols/3D2Toy/Houndeye/1.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X267",
+                      "label": "2",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Houndeye/2.svg",
+                      "preview": "parts/Symbols/3D2Toy/Houndeye/2.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X268",
+                      "label": "3",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Houndeye/3.svg",
+                      "preview": "parts/Symbols/3D2Toy/Houndeye/3.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "4X269",
+                      "label": "4",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Houndeye/4.svg",
+                      "preview": "parts/Symbols/3D2Toy/Houndeye/4.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "Sa2",
+                  "label": "Snark",
+                  "description": "",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X270",
+                      "label": "1",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Snark/1.svg",
+                      "preview": "parts/Symbols/3D2Toy/Snark/1.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X271",
+                      "label": "2",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Snark/2.svg",
+                      "preview": "parts/Symbols/3D2Toy/Snark/2.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "Sa3",
+                  "label": "Snarknest",
+                  "description": "",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "SN272",
+                      "label": "Snarknest",
+                      "description": "",
+                      "author": "",
+                      "tags": [],
+                      "path": "parts/Symbols/3D2Toy/Snarknest/Snarknest.svg",
+                      "preview": "parts/Symbols/3D2Toy/Snarknest/Snarknest.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                }
+              ],
+              "items": []
+            }
+          ],
+          "items": [
+            {
+              "id": "PO241",
+              "label": "POINT",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Symbols/POINT.svg",
+              "preview": "parts/Symbols/POINT.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY242",
+              "label": "symbol_fish",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Symbols/symbol_fish.svg",
+              "preview": "parts/Symbols/symbol_fish.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY243",
+              "label": "symbol_heart",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Symbols/symbol_heart.svg",
+              "preview": "parts/Symbols/symbol_heart.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY244",
+              "label": "symbol_HL2",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Symbols/symbol_HL2.svg",
+              "preview": "parts/Symbols/symbol_HL2.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY245",
+              "label": "symbol_lightning",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Symbols/symbol_lightning.svg",
+              "preview": "parts/Symbols/symbol_lightning.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY246",
+              "label": "symbol_LOPS",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Symbols/symbol_LOPS.svg",
+              "preview": "parts/Symbols/symbol_LOPS.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY247",
+              "label": "symbol_moon",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Symbols/symbol_moon.svg",
+              "preview": "parts/Symbols/symbol_moon.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY248",
+              "label": "symbol_speach",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Symbols/symbol_speach.svg",
+              "preview": "parts/Symbols/symbol_speach.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY249",
+              "label": "symbol_star",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Symbols/symbol_star.svg",
+              "preview": "parts/Symbols/symbol_star.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "TE250",
+              "label": "tear",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "parts/Symbols/tear.svg",
+              "preview": "parts/Symbols/tear.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multicolor",
+      "label": "Multi-Color",
+      "folders": [
+        {
+          "id": "B66",
+          "label": "Bodys",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "AR3",
+              "label": "army",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Bodys/army.svg",
+              "preview": "multicolor/Bodys/army.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Pants",
+                  "label": "Pants"
+                },
+                {
+                  "id": "Shoes",
+                  "label": "Shoes"
+                },
+                {
+                  "id": "Arms",
+                  "label": "Arms"
+                },
+                {
+                  "id": "Base_Shirt",
+                  "label": "Base_Shirt"
+                },
+                {
+                  "id": "Shirt_Opening_C",
+                  "label": "Shirt_Opening_C"
+                },
+                {
+                  "id": "Strap",
+                  "label": "Strap"
+                },
+                {
+                  "id": "Shirt_Opening_B",
+                  "label": "Shirt_Opening_B"
+                },
+                {
+                  "id": "Shirt_Opening_A",
+                  "label": "Shirt_Opening_A"
+                },
+                {
+                  "id": "Belt",
+                  "label": "Belt"
+                },
+                {
+                  "id": "Belt_Overlay",
+                  "label": "Belt_Overlay"
+                },
+                {
+                  "id": "Squigles",
+                  "label": "Squigles"
+                }
+              ]
+            },
+            {
+              "id": "NO4",
+              "label": "normal",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Bodys/normal.svg",
+              "preview": "multicolor/Bodys/normal.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Pants",
+                  "label": "Pants"
+                },
+                {
+                  "id": "Shoes",
+                  "label": "Shoes"
+                },
+                {
+                  "id": "Arms",
+                  "label": "Arms"
+                },
+                {
+                  "id": "Shirt",
+                  "label": "Shirt"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C67",
+          "label": "Canes",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "1X5",
+              "label": "1",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Canes/1.svg",
+              "preview": "multicolor/Canes/1.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                },
+                {
+                  "id": "Ball",
+                  "label": "Ball"
+                },
+                {
+                  "id": "Metal",
+                  "label": "Metal"
+                },
+                {
+                  "id": "Shine",
+                  "label": "Shine"
+                }
+              ]
+            },
+            {
+              "id": "2X6",
+              "label": "2",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Canes/2.svg",
+              "preview": "multicolor/Canes/2.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Stick",
+                  "label": "Stick"
+                },
+                {
+                  "id": "Ball",
+                  "label": "Ball"
+                },
+                {
+                  "id": "Metal",
+                  "label": "Metal"
+                },
+                {
+                  "id": "Shine",
+                  "label": "Shine"
+                }
+              ]
+            },
+            {
+              "id": "3X7",
+              "label": "3",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Canes/3.svg",
+              "preview": "multicolor/Canes/3.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Stick",
+                  "label": "Stick"
+                },
+                {
+                  "id": "Ball",
+                  "label": "Ball"
+                },
+                {
+                  "id": "Metal",
+                  "label": "Metal"
+                },
+                {
+                  "id": "Shine",
+                  "label": "Shine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "H68",
+          "label": "Hair",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "1X8",
+              "label": "1",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Hair/1.svg",
+              "preview": "multicolor/Hair/1.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Base",
+                  "label": "Base"
+                },
+                {
+                  "id": "Overlay",
+                  "label": "Overlay"
+                }
+              ]
+            },
+            {
+              "id": "2X9",
+              "label": "2",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Hair/2.svg",
+              "preview": "multicolor/Hair/2.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "3X10",
+              "label": "3",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Hair/3.svg",
+              "preview": "multicolor/Hair/3.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Base",
+                  "label": "Base"
+                },
+                {
+                  "id": "Sparky",
+                  "label": "Sparky"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "H69",
+          "label": "Hat",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "MA11",
+              "label": "mandalorian",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Hat/mandalorian.svg",
+              "preview": "multicolor/Hat/mandalorian.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Antenna",
+                  "label": "Antenna"
+                },
+                {
+                  "id": "Head_Point",
+                  "label": "Head_Point"
+                },
+                {
+                  "id": "Base",
+                  "label": "Base"
+                },
+                {
+                  "id": "Eye_Outline",
+                  "label": "Eye_Outline"
+                },
+                {
+                  "id": "Eye",
+                  "label": "Eye"
+                },
+                {
+                  "id": "Specks",
+                  "label": "Specks"
+                },
+                {
+                  "id": "Dark_Spot",
+                  "label": "Dark_Spot"
+                }
+              ]
+            },
+            {
+              "id": "PI12",
+              "label": "pimp",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Hat/pimp.svg",
+              "preview": "multicolor/Hat/pimp.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Rim",
+                  "label": "Rim"
+                },
+                {
+                  "id": "Center",
+                  "label": "Center"
+                },
+                {
+                  "id": "Wrap",
+                  "label": "Wrap"
+                },
+                {
+                  "id": "Specks",
+                  "label": "Specks"
+                }
+              ]
+            },
+            {
+              "id": "RE13",
+              "label": "recon",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Hat/recon.svg",
+              "preview": "multicolor/Hat/recon.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Hair",
+                  "label": "Hair"
+                },
+                {
+                  "id": "Hat_Back",
+                  "label": "Hat_Back"
+                },
+                {
+                  "id": "Hat_Front",
+                  "label": "Hat_Front"
+                },
+                {
+                  "id": "Emblem",
+                  "label": "Emblem"
+                },
+                {
+                  "id": "Squigle",
+                  "label": "Squigle"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "M6a",
+          "label": "Misc",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "S6b",
+              "label": "SourceForts",
+              "description": "",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "BO15",
+                  "label": "Box-Long",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "multicolor/Misc/SourceForts/Box-Long.svg",
+                  "preview": "multicolor/Misc/SourceForts/Box-Long.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "BoxColor",
+                      "label": "BoxColor"
+                    },
+                    {
+                      "id": "BoxPoints",
+                      "label": "BoxPoints"
+                    }
+                  ]
+                },
+                {
+                  "id": "BO16",
+                  "label": "Box-Small",
+                  "description": "",
+                  "author": "",
+                  "tags": [],
+                  "path": "multicolor/Misc/SourceForts/Box-Small.svg",
+                  "preview": "multicolor/Misc/SourceForts/Box-Small.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "BoxArea",
+                      "label": "BoxArea"
+                    },
+                    {
+                      "id": "SquarePoints",
+                      "label": "SquarePoints"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "FL14",
+              "label": "Flower",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Misc/Flower.svg",
+              "preview": "multicolor/Misc/Flower.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Stem",
+                  "label": "Stem"
+                },
+                {
+                  "id": "Petal_A",
+                  "label": "Petal_A"
+                },
+                {
+                  "id": "Petal_B",
+                  "label": "Petal_B"
+                },
+                {
+                  "id": "Petal_C",
+                  "label": "Petal_C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "W6c",
+          "label": "Weapons",
+          "description": "",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "KN17",
+              "label": "knife",
+              "description": "",
+              "author": "",
+              "tags": [],
+              "path": "multicolor/Weapons/knife.svg",
+              "preview": "multicolor/Weapons/knife.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Handle",
+                  "label": "Handle"
+                },
+                {
+                  "id": "Handle_Grip",
+                  "label": "Handle_Grip"
+                },
+                {
+                  "id": "Blade",
+                  "label": "Blade"
+                },
+                {
+                  "id": "Shine",
+                  "label": "Shine"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

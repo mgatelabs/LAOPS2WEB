@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 10.0, SVG Export Plug-In . SVG Version: 3.0.0 Build 76)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="248" height="51.032" viewBox="0 0 248 51.032" overflow="visible" enable-background="new 0 0 248 51.032"
+	 xml:space="preserve">
+	<g id="Barrel">
+		<path fill="#616161" d="M132,23.032h116v-4H132V23.032z"/>
+		<path fill="#616161" d="M246,19.032h-8v-6.25h8V19.032z"/>
+	</g>
+	<g id="TriPod">
+		<path d="M100,20.032h-4v-17h4V20.032z"/>
+		<path d="M124,20.032h-4v-17h4V20.032z"/>
+		<path d="M100,20.032h20v-4h-20V20.032z"/>
+		<path d="M110,3.782v12.25h-4v-12l-1-4h6L110,3.782z"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="0.25" d="M106,4.032l3.958-0.042"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="0.25" d="M106.083,0.073L106.5,2.74"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="0.25" d="M110.167,0.032L109.5,2.573"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="0.25" d="M108.042,0.032L108,1.907"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="0.25" d="M108.25,3.49l-0.208-0.625l0.406,0.167l0.177-0.5l0.292,0.625"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="0.25" d="M109.292,3.532l0.083-0.583l0.448,0.083"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="0.25" d="M109.667,3.323l-0.333-0.083"/>
+	</g>
+	<g id="Trigger">
+		<path d="M78.5,32.469c0,0,0.563,5.188,3.188,5.688s0.875-0.875,0.875-0.875s-1.563-3.125-1.125-5.25S78.5,32.469,78.5,32.469z"/>
+	</g>
+	<g id="Clip">
+		<path fill="#222222" d="M111.417,42.948H93v-9.083h18.417V42.948z"/>
+		<path fill="none" stroke="#000000" d="M104,34.448h-4v6.75h4V34.448z"/>
+	</g>
+	<g id="Layer_10">
+		<path fill="#052300" d="M171.875,35.032H180v-8h-8.125V35.032z"/>
+		<path d="M153.625,35.532l3.292,1l-0.917-1h25.125v-1.375H156l0.917-1l-3.292,1V35.532z"/>
+	</g>
+	<g id="Layer_8">
+		<path fill="#052300" d="M73.399,40.334L71,51.032h-7l-8-4h-8l-8-5H27l-4,9H0l1-27h12v-4h34l3,4h22.5l3.5-2h3h1l0.5-4.25
+			l4.25-0.293l2-1L96,14.782v4.25l36.063,0.063l-0.063,4l40-0.063v9h-42l-18,4H91l-3,5h-0.25h-2H74L73.399,40.334z M86.833,39.199
+			l2.417-3.417l-2-3.75l-8.083,0.167L75.5,39.365L86.833,39.199z M53,29.532l-3,8l5.5,4l7.5-3l5-9.5L53,29.532z"/>
+	</g>
+	<g id="Layer_7">
+		<path fill="#2D2D2D" d="M1,24.032l-1,27h9.25v-27H1z"/>
+	</g>
+	<g id="Scope">
+		<path d="M124,12.032H88v-6h36V12.032z"/>
+		<path d="M155,9.032c0,5.657-4,7-4,7h-15l-12-4v-6l12-4h15C151,2.032,155,1.032,155,9.032z"/>
+		<path d="M70,13.032h14l4-1v-6l-4-1H70V13.032z"/>
+	</g>
+</svg>

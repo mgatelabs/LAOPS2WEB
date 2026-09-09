@@ -1,0 +1,15 @@
+@for (tool of tools; track tool.id; let i = $index) {
+  @if (i === 6) {
+    <hr />
+  }
+  <div class="tool-btn-wrap" [class.active]="toolState.activeTool() === tool.id">
+    <button
+      mat-icon-button
+      [matTooltip]="tool.key | translate"
+      matTooltipPosition="right"
+      (click)="selectTool(tool.id)"
+    >
+      <mat-icon>{{ tool.icon }}</mat-icon>
+    </button>
+  </div>
+}

@@ -1,0 +1,94 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  padding: 0 4px 0 8px;
+  height: 36px;
+  border-bottom: 1px solid;
+  flex-shrink: 0;
+}
+
+.panel-title {
+  flex: 1;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.bulk-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  border-bottom: 1px solid;
+  flex-shrink: 0;
+}
+
+.row-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.layer-row {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 4px;
+  gap: 2px;
+  cursor: pointer;
+
+  &:hover { background: rgba(128,128,128,0.1); }
+  &.selected { background: rgba(66,133,244,0.15); }
+  &.locked { opacity: 0.5; }
+}
+
+.thumbnail {
+  width: 16px;
+  height: 16px;
+  border: 1px solid;
+  border-radius: 2px;
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+.type-icon {
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.row-label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.reorder-btns {
+  display: none;
+  .layer-row:hover & { display: flex; }
+}
+
+.reorder-btn, .visibility-btn, .lock-btn {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+
+mat-checkbox {
+  flex-shrink: 0;
+  visibility: hidden;
+  .layer-row:hover & { visibility: visible; }
+  .layer-row.selected & { visibility: visible; }
+}

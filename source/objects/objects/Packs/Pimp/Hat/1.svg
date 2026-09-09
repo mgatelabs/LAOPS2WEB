@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 10.0, SVG Export Plug-In . SVG Version: 3.0.0 Build 76)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="238" height="75.5" viewBox="0 0 238 75.5" overflow="visible" enable-background="new 0 0 238 75.5" xml:space="preserve">
+	<g id="Layer_1">
+		<path fill="#8722A8" d="M238,60c0,8.561-53.278,15.5-119,15.5S0,68.561,0,60s53.278-15.5,119-15.5S238,51.439,238,60z"/>
+		<path fill="#8722A8" d="M200.5,12c0-6.627-5.373-12-12-12h-132c-6.627,0-12,5.373-12,12l-4,32.5c0,6.627-4.627,12,2,12h160
+			c6.627,0,2-5.373,2-12L200.5,12z"/>
+		<path fill="#EACA92" d="M42,34.5l83.5,0.5h78l3.5,18.5l-2,3.5l-80-1l-84.5,1l-3-2.5L42,34.5z"/>
+		<path fill="#3F311B" d="M54,41.5l7.5-3l3.5,3l-5.5,2L54,41.5z"/>
+		<path fill="#3F311B" d="M105,43l6-3.5l4,3.5l-4.5,7.5l-1-6.5L105,43z"/>
+		<path fill="#3F311B" d="M87.5,48L98,50l1-5l-7-0.5l2,2.5L87.5,48z"/>
+		<path fill="#3F311B" d="M69.5,47l0.5-4.5l6.5-0.5l1.5,0.5L73.5,46L69.5,47z"/>
+		<path fill="#3F311B" d="M83.5,42l4-3l5.5,0.5l-2.5,2L87,44L83.5,42z"/>
+		<path fill="#3F311B" d="M79,52v-3l2.896-0.341L87.5,48L85,52.5L79,52z"/>
+		<path fill="#3F311B" d="M53,50l7-3v3.5h-3L55,54L53,50z"/>
+		<path fill="#3F311B" d="M47,47l5.5-3L49,41l-1.5,1L42,43L47,47z"/>
+		<path fill="#3F311B" d="M45.5,53L40,49l1.5-2.5l3.167,1.9l1.833,1.1L45.5,53z"/>
+		<path fill="#3F311B" d="M66,52.5l3.5,1l4.5-3h-4l-3.5-3L66,52.5z"/>
+		<path fill="#3F311B" d="M101.5,53.5c0,0-2-4,0.5-4s5.5,1,5.5,1L101.5,53.5z"/>
+		<path fill="#3F311B" d="M119.5,49l3-3.5l4,1.5l-1.5,6l-2.5-4H119.5z"/>
+		<path fill="#3F311B" d="M113.5,53.5v-3l6-1.5l-0.5,3.5L113.5,53.5z"/>
+		<path fill="#3F311B" d="M119,44.5l0.5-4h4.5l-1.5,2.5L119,44.5z"/>
+		<path fill="#3F311B" d="M131.5,45.5l1-5h5v5H131.5z"/>
+		<path fill="#3F311B" d="M129.5,50l5-0.5V51l-4.5,0.5L129.5,50z"/>
+		<path fill="#3F311B" d="M143,43l8.5-0.5l3,6L149,45l-4,3.5L143,43z"/>
+		<path fill="#3F311B" d="M146,51.5l1-4l9,3l-4.5,1H146z"/>
+		<path fill="#3F311B" d="M138.5,51.5L140,47l3.5,6L138.5,51.5z"/>
+		<path fill="#3F311B" d="M159.5,44.5l3.5-5h8l-1,6.5l-5-3.5V53l-6-6.5L159.5,44.5z"/>
+		<path fill="#3F311B" d="M174,51l7.5,1l1.5-5l-4.5-3.5l5-1.5l-10,4.5L174,51z"/>
+		<path fill="#3F311B" d="M192.5,49.5L196,53l2.5-3.5l-2-7l-2,3L192.5,49.5z"/>
+		<path fill="#3F311B" d="M186.5,45l5.5-1.5l-0.5-4.5h-8L186.5,45z"/>
+		<path fill="#3F311B" d="M184.5,54l1-5.5l7,1l-3,4L184.5,54z"/>
+	</g>
+</svg>
