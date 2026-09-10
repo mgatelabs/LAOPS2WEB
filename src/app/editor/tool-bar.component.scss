@@ -4,24 +4,44 @@
   flex-direction: column;
   align-items: center;
   padding: 4px 0;
-  border-right: 1px solid rgba(128, 128, 128, 0.25);
-  background: rgba(128, 128, 128, 0.1);
+  border-right: 1px solid var(--laops-border);
+  background: var(--laops-surface);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .tool-btn-wrap {
   border-radius: 4px;
   overflow: hidden;
+
+  mat-icon,
+  .mat-icon {
+    color: var(--laops-text);
+  }
+
+  button:hover mat-icon,
+  button:hover .mat-icon {
+    color: var(--laops-text);
+    opacity: 1;
+  }
+
+  button:hover {
+    background: var(--laops-hover);
+  }
 }
 
 .tool-btn-wrap.active {
-  background: rgba(33, 150, 243, 0.3);
+  background: rgba(33, 150, 243, 0.4);
+
+  mat-icon,
+  .mat-icon {
+    color: #90caf9;
+  }
 }
 
 hr {
   width: 60%;
   margin: 4px 0;
   border: none;
-  border-top: 1px solid rgba(128, 128, 128, 0.3);
-  opacity: 0.3;
+  border-top: 1px solid var(--laops-border);
 }

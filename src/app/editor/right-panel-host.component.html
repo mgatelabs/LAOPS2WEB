@@ -1,41 +1,28 @@
-<div class="panel-section" [class.collapsed]="!propertiesOpen()">
-  <div class="panel-section-header" (click)="toggleProperties()">
-    <mat-icon class="collapse-icon">
-      {{ propertiesOpen() ? 'expand_more' : 'chevron_right' }}
-    </mat-icon>
-    <span>{{ 'PANEL.PROPERTIES' | translate }}</span>
-  </div>
-  @if (propertiesOpen()) {
-    <div class="panel-section-body properties-body">
-      <app-properties-panel />
-    </div>
-  }
-</div>
-
-<div class="panel-section" [class.collapsed]="!layersOpen()">
-  <div class="panel-section-header" (click)="toggleLayers()">
-    <mat-icon class="collapse-icon">
-      {{ layersOpen() ? 'expand_more' : 'chevron_right' }}
-    </mat-icon>
-    <span>{{ 'PANEL.LAYERS' | translate }}</span>
-  </div>
-  @if (layersOpen()) {
-    <div class="panel-section-body layers-body">
-      <app-layers-panel />
-    </div>
-  }
-</div>
-
-<div class="panel-section library-section" [class.collapsed]="!libraryOpen()">
-  <div class="panel-section-header" (click)="toggleLibrary()">
-    <mat-icon class="collapse-icon">
-      {{ libraryOpen() ? 'expand_more' : 'chevron_right' }}
-    </mat-icon>
-    <span>{{ 'PANEL.ASSETS' | translate }} / {{ 'PANEL.SCENES' | translate }}</span>
-  </div>
-  @if (libraryOpen()) {
-    <div class="panel-section-body library-body">
-      <app-library-panel />
+<div class="accordion">
+  @for (panel of panels; track panel.id) {
+    <div class="accordion-section" [class.open]="isOpen(panel.id)">
+      <button class="accordion-header" (click)="toggle(panel.id)" type="button">
+        <mat-icon class="chevron">{{ isOpen(panel.id) ? 'expand_more' : 'chevron_right' }}</mat-icon>
+        <span class="accordion-label">{{ panel.labelKey | translate }}</span>
+        <span class="accordion-actions" (click)="$event.stopPropagation()">
+          @if (panel.id === 'layers') {
+            <button mat-icon-button class="header-action-btn"
+                    [matTooltip]="'LAYERS.SELECT_ALL' | translate"
+                    (click)="onSelectAll()">
+              <mat-icon>select_all</mat-icon>
+            </button>
+          }
+        </span>
+      </button>
+      <div class="accordion-body" [class.open]="isOpen(panel.id)">
+        @switch (panel.id) {
+          @case ('properties') { <app-properties-panel /> }
+          @case ('transform')  { <app-transform-panel /> }
+          @case ('layers')     { <app-layers-panel /> }
+          @case ('assets')     { <app-asset-panel /> }
+          @case ('scenes')     { <app-scene-panel /> }
+        }
+      </div>
     </div>
   }
 </div>

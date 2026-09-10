@@ -1,3 +1,5 @@
+<app-loading-overlay [visible]="fileIo.busy() || pendingLoad" message="LOADING.PLEASE_WAIT" />
+
 <div class="search-bar">
   <mat-form-field appearance="fill" class="search-field">
     <mat-icon matPrefix>search</mat-icon>
@@ -15,7 +17,9 @@
   <div class="tree">
     @for (item of filteredItems; track item.id) {
       <div class="scene-item-row">
-        <div class="scene-thumb">
+        <div class="scene-thumb clickable"
+             [matTooltip]="'SCENES.IMPORT_AS_GROUP' | translate"
+             (click)="importAsGroup(item)">
           @if (item.preview) {
             <img [src]="scenes.urlFor(item.preview)" [alt]="item.label" />
           } @else {
@@ -24,8 +28,17 @@
         </div>
         <div class="scene-info">
           <span class="scene-label">{{ item.label }}</span>
-          <span class="scene-desc">{{ item.description }}</span>
+          @if (item.description) {
+            <span class="scene-desc-icon" [matTooltip]="item.description" tabindex="0">
+              <mat-icon>info</mat-icon>
+            </span>
+          }
         </div>
+        <button mat-icon-button class="load-btn"
+                [matTooltip]="'SCENES.IMPORT_AS_GROUP' | translate"
+                (click)="$event.stopPropagation(); importAsGroup(item)">
+          <mat-icon>call_merge</mat-icon>
+        </button>
         <button mat-icon-button class="load-btn"
                 [matTooltip]="'SCENES.LOAD' | translate"
                 (click)="loadScene(item)">
@@ -55,7 +68,9 @@
       @if (isExpanded(folder.id)) {
         @for (item of folder.items; track item.id) {
           <div class="scene-item-row">
-            <div class="scene-thumb">
+            <div class="scene-thumb clickable"
+                 [matTooltip]="'SCENES.IMPORT_AS_GROUP' | translate"
+                 (click)="importAsGroup(item)">
               @if (item.preview) {
                 <img [src]="scenes.urlFor(item.preview)" [alt]="item.label" />
               } @else {
@@ -64,8 +79,17 @@
             </div>
             <div class="scene-info">
               <span class="scene-label">{{ item.label }}</span>
-              <span class="scene-desc">{{ item.description }}</span>
+              @if (item.description) {
+                <span class="scene-desc-icon" [matTooltip]="item.description" tabindex="0">
+                  <mat-icon>info</mat-icon>
+                </span>
+              }
             </div>
+            <button mat-icon-button class="load-btn"
+                    [matTooltip]="'SCENES.IMPORT_AS_GROUP' | translate"
+                    (click)="$event.stopPropagation(); importAsGroup(item)">
+              <mat-icon>call_merge</mat-icon>
+            </button>
             <button mat-icon-button class="load-btn"
                     [matTooltip]="'SCENES.LOAD' | translate"
                     (click)="loadScene(item)">

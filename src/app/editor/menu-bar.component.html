@@ -17,17 +17,50 @@
   <button mat-icon-button [matMenuTriggerFor]="settingsMenu">
     <mat-icon>settings</mat-icon>
   </button>
+  <button mat-icon-button
+          [matTooltip]="(settings.rightPanelOpen()
+                          ? 'MENU.HIDE_RIGHT_PANEL'
+                          : 'MENU.SHOW_RIGHT_PANEL') | translate"
+          (click)="settings.toggleRightPanel()">
+    <mat-icon>vertical_split</mat-icon>
+  </button>
   <span class="app-title">{{ 'APP.TITLE' | translate }}</span>
+  <span class="scene-name">
+    <button class="scene-name-btn" (click)="openRenameDialog()"
+            [matTooltip]="'MENU.RENAME_SCENE' | translate">
+      {{ displayName || untitledLabel }}
+    </button>
+    @if (store.dirty()) { <span class="dirty-dot" aria-hidden="true">●</span> }
+  </span>
 </div>
 
 <mat-menu #fileMenu="matMenu">
-  <button mat-menu-item>{{ 'MENU.FILE_NEW' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.FILE_OPEN' | translate }}</button>
+  <button mat-menu-item (click)="newScene()">
+    <mat-icon>note_add</mat-icon>
+    {{ 'MENU.FILE_NEW' | translate }}
+  </button>
+  <button mat-menu-item (click)="openScene()">
+    <mat-icon>folder_open</mat-icon>
+    {{ 'MENU.FILE_OPEN' | translate }}
+  </button>
   <mat-divider></mat-divider>
-  <button mat-menu-item>{{ 'MENU.FILE_SAVE' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.FILE_SAVE_AS' | translate }}</button>
+  <button mat-menu-item (click)="saveScene()">
+    <span class="menu-item-label"><mat-icon>save</mat-icon>{{ 'MENU.FILE_SAVE' | translate }}</span>
+    <span class="menu-shortcut">{{ 'MENU.EDIT_SAVE_SHORTCUT' | translate }}</span>
+  </button>
+  <button mat-menu-item (click)="saveSceneAs()">
+    <mat-icon>save_as</mat-icon>
+    {{ 'MENU.FILE_SAVE_AS' | translate }}
+  </button>
   <mat-divider></mat-divider>
-  <button mat-menu-item>{{ 'MENU.FILE_IMPORT_LEGACY' | translate }}</button>
+  <button mat-menu-item (click)="placeScene()">
+    <mat-icon>add_photo_alternate</mat-icon>
+    {{ 'MENU.FILE_PLACE' | translate }}
+  </button>
+  <button mat-menu-item (click)="importLegacy()">
+    <mat-icon>history</mat-icon>
+    {{ 'MENU.FILE_IMPORT_LEGACY' | translate }}
+  </button>
   <mat-divider></mat-divider>
   <button mat-menu-item [matMenuTriggerFor]="exportMenu">
     <span class="menu-item-label">{{ 'MENU.FILE_EXPORT' | translate }}</span>
@@ -36,55 +69,122 @@
 </mat-menu>
 
 <mat-menu #exportMenu="matMenu">
-  <button mat-menu-item>{{ 'MENU.FILE_EXPORT_PNG' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.FILE_EXPORT_SVG' | translate }}</button>
+  <button mat-menu-item (click)="openExportPng()">
+    <mat-icon>image</mat-icon>
+    {{ 'MENU.FILE_EXPORT_PNG' | translate }}
+  </button>
+  <button mat-menu-item (click)="exportSvg()">
+    <mat-icon>code</mat-icon>
+    {{ 'MENU.FILE_EXPORT_SVG' | translate }}
+  </button>
   <mat-divider></mat-divider>
-  <button mat-menu-item>{{ 'MENU.FILE_CLIPBOARD_PNG' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.FILE_CLIPBOARD_JSON' | translate }}</button>
+  <button mat-menu-item (click)="clipboardPng()">
+    <mat-icon>content_paste</mat-icon>
+    {{ 'MENU.FILE_CLIPBOARD_PNG' | translate }}
+  </button>
+  <button mat-menu-item (click)="clipboardJson()">
+    <mat-icon>data_object</mat-icon>
+    {{ 'MENU.FILE_CLIPBOARD_JSON' | translate }}
+  </button>
 </mat-menu>
 
 <mat-menu #editMenu="matMenu">
-  <button mat-menu-item disabled>{{ 'MENU.EDIT_UNDO' | translate }}</button>
-  <button mat-menu-item disabled>{{ 'MENU.EDIT_REDO' | translate }}</button>
+  <button mat-menu-item [disabled]="!store.canUndo()" (click)="undo()">
+    <span class="menu-item-label">{{ 'MENU.EDIT_UNDO' | translate }}</span>
+    @if (store.undoLabel()) {
+      <span class="menu-action-label">{{ store.undoLabel() }}</span>
+    }
+    <span class="menu-shortcut">{{ 'MENU.EDIT_UNDO_SHORTCUT' | translate }}</span>
+  </button>
+  <button mat-menu-item [disabled]="!store.canRedo()" (click)="redo()">
+    <span class="menu-item-label">{{ 'MENU.EDIT_REDO' | translate }}</span>
+    @if (store.redoLabel()) {
+      <span class="menu-action-label">{{ store.redoLabel() }}</span>
+    }
+    <span class="menu-shortcut">{{ 'MENU.EDIT_REDO_SHORTCUT' | translate }}</span>
+  </button>
   <mat-divider></mat-divider>
-  <button mat-menu-item>{{ 'MENU.EDIT_CUT' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.EDIT_COPY' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.EDIT_PASTE' | translate }}</button>
+  <button mat-menu-item [disabled]="store.selection().size === 0" (click)="cutSelected()">
+    <span class="menu-item-label">{{ 'MENU.EDIT_CUT' | translate }}</span>
+    <span class="menu-shortcut">{{ 'MENU.EDIT_CUT_SHORTCUT' | translate }}</span>
+  </button>
+  <button mat-menu-item [disabled]="store.selection().size === 0" (click)="copySelected()">
+    <span class="menu-item-label">{{ 'MENU.EDIT_COPY' | translate }}</span>
+    <span class="menu-shortcut">{{ 'MENU.EDIT_COPY_SHORTCUT' | translate }}</span>
+  </button>
+  <button mat-menu-item [disabled]="clipboard().length === 0" (click)="pasteClipboard()">
+    <span class="menu-item-label">{{ 'MENU.EDIT_PASTE' | translate }}</span>
+    <span class="menu-shortcut">{{ 'MENU.EDIT_PASTE_SHORTCUT' | translate }}</span>
+  </button>
   <mat-divider></mat-divider>
-  <button mat-menu-item>{{ 'MENU.EDIT_DELETE' | translate }}</button>
+  <button mat-menu-item [disabled]="store.selection().size === 0" (click)="deleteSelected()">
+    <span class="menu-item-label">{{ 'MENU.EDIT_DELETE' | translate }}</span>
+  </button>
   <mat-divider></mat-divider>
-  <button mat-menu-item>{{ 'MENU.EDIT_GROUP' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.EDIT_UNGROUP' | translate }}</button>
+  <button mat-menu-item [disabled]="store.selection().size < 2" (click)="groupSelected()">
+    <span class="menu-item-label">{{ 'MENU.EDIT_GROUP' | translate }}</span>
+  </button>
+  <button mat-menu-item [disabled]="!hasGroupSelected()" (click)="ungroupSelected()">
+    <span class="menu-item-label">{{ 'MENU.EDIT_UNGROUP' | translate }}</span>
+  </button>
   <mat-divider></mat-divider>
-  <button mat-menu-item>{{ 'MENU.EDIT_SELECT_ALL' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.EDIT_DESELECT' | translate }}</button>
+  <button mat-menu-item (click)="selectAll()">
+    <span class="menu-item-label">{{ 'MENU.EDIT_SELECT_ALL' | translate }}</span>
+    <span class="menu-shortcut">{{ 'MENU.EDIT_SELECT_ALL_SHORTCUT' | translate }}</span>
+  </button>
+  <button mat-menu-item [disabled]="store.selection().size === 0" (click)="deselect()">
+    <span class="menu-item-label">{{ 'MENU.EDIT_DESELECT' | translate }}</span>
+  </button>
   <mat-divider></mat-divider>
-  <button mat-menu-item>{{ 'MENU.EDIT_TO_FRONT' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.EDIT_FRONT' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.EDIT_BACK' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.EDIT_TO_BACK' | translate }}</button>
+  <button mat-menu-item [disabled]="store.selection().size === 0" (click)="store.toFront(store.selection())">
+    <span class="menu-item-label">{{ 'MENU.EDIT_TO_FRONT' | translate }}</span>
+  </button>
+  <button mat-menu-item [disabled]="store.selection().size === 0" (click)="store.moveUp(store.selection())">
+    <span class="menu-item-label">{{ 'MENU.EDIT_FRONT' | translate }}</span>
+  </button>
+  <button mat-menu-item [disabled]="store.selection().size === 0" (click)="store.moveDown(store.selection())">
+    <span class="menu-item-label">{{ 'MENU.EDIT_BACK' | translate }}</span>
+  </button>
+  <button mat-menu-item [disabled]="store.selection().size === 0" (click)="store.toBack(store.selection())">
+    <span class="menu-item-label">{{ 'MENU.EDIT_TO_BACK' | translate }}</span>
+  </button>
   <mat-divider></mat-divider>
-  <button mat-menu-item>{{ 'MENU.EDIT_FLIP_H' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.EDIT_FLIP_V' | translate }}</button>
+  <button mat-menu-item [disabled]="store.selection().size === 0" (click)="store.flipH(store.selection())">
+    <span class="menu-item-label">{{ 'MENU.EDIT_FLIP_H' | translate }}</span>
+  </button>
+  <button mat-menu-item [disabled]="store.selection().size === 0" (click)="store.flipV(store.selection())">
+    <span class="menu-item-label">{{ 'MENU.EDIT_FLIP_V' | translate }}</span>
+  </button>
 </mat-menu>
 
 <mat-menu #viewMenu="matMenu">
-  <button mat-menu-item>{{ 'MENU.VIEW_ZOOM_IN' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.VIEW_ZOOM_OUT' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.VIEW_ZOOM_RESET' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.VIEW_ZOOM_FIT' | translate }}</button>
+  <button mat-menu-item (click)="zoomIn()">
+    <span class="menu-item-label"><mat-icon>zoom_in</mat-icon>{{ 'MENU.VIEW_ZOOM_IN' | translate }}</span>
+  </button>
+  <button mat-menu-item (click)="zoomOut()">
+    <span class="menu-item-label"><mat-icon>zoom_out</mat-icon>{{ 'MENU.VIEW_ZOOM_OUT' | translate }}</span>
+  </button>
+  <button mat-menu-item (click)="zoomReset()">
+    <span class="menu-item-label"><mat-icon>zoom_out_map</mat-icon>{{ 'MENU.VIEW_ZOOM_RESET' | translate }}</span>
+  </button>
+  <button mat-menu-item (click)="zoomFit()">
+    <span class="menu-item-label"><mat-icon>fit_screen</mat-icon>{{ 'MENU.VIEW_ZOOM_FIT' | translate }}</span>
+  </button>
   <mat-divider></mat-divider>
-  <button mat-menu-item>{{ 'MENU.VIEW_PANEL_PROPERTIES' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.VIEW_PANEL_LAYERS' | translate }}</button>
-  <button mat-menu-item>{{ 'MENU.VIEW_PANEL_LIBRARY' | translate }}</button>
+  <button mat-menu-item (click)="openCanvasSettings()">
+    {{ 'MENU.VIEW_CANVAS_SETTINGS' | translate }}
+  </button>
 </mat-menu>
 
 <mat-menu #helpMenu="matMenu">
-  <button mat-menu-item>{{ 'MENU.HELP_ABOUT' | translate }}</button>
+  <button mat-menu-item (click)="openAbout()">
+    <mat-icon>info</mat-icon>
+    {{ 'MENU.HELP_ABOUT' | translate }}
+  </button>
 </mat-menu>
 
-<mat-menu #settingsMenu="matMenu">
-  <div class="settings-body">
+<mat-menu #settingsMenu="matMenu" class="settings-menu">
+  <div class="settings-body" (click)="$event.stopPropagation()">
     <div class="settings-row">
       <div class="settings-label">{{ 'SETTINGS.THEME' | translate }}</div>
       <mat-button-toggle-group [ngModel]="theme()" (ngModelChange)="onThemeChange($event)">
@@ -96,7 +196,9 @@
     <div class="settings-row">
       <div class="settings-label">{{ 'SETTINGS.LANGUAGE' | translate }}</div>
       <mat-select class="lang-select" [value]="language()" (selectionChange)="onLanguageChange($event.value)">
-        <mat-option value="en">English</mat-option>
+        @for (locale of locales(); track locale.code) {
+          <mat-option [value]="locale.code">{{ locale.label }}</mat-option>
+        }
       </mat-select>
     </div>
   </div>

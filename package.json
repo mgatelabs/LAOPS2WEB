@@ -1,11 +1,12 @@
 {
-  "name": "laops-reloaded",
-  "version": "0.0.0",
+  "name": "LAOPS2WEB",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "deploy": "ng build --base-href /LAOPS2WEB/ && node utils/fix404.js && node utils/deploy.js",
     "test": "ng test"
   },
   "private": true,
@@ -31,6 +32,7 @@
     "@angular/cli": "^17.0.6",
     "@angular/compiler-cli": "^17.0.0",
     "@types/jasmine": "~5.1.0",
+    "gh-pages": "^6.3.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

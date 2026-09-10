@@ -10,18 +10,20 @@ interface ToolDef {
   id: string;
   icon: string;
   key: string;
+  shortcut: string;
 }
 
 const TOOLS: ToolDef[] = [
-  { id: 'select', icon: 'arrow_selector_tool', key: 'TOOL.SELECT' },
-  { id: 'move', icon: 'open_with', key: 'TOOL.MOVE' },
-  { id: 'scale', icon: 'aspect_ratio', key: 'TOOL.SCALE' },
-  { id: 'rotate', icon: 'rotate_right', key: 'TOOL.ROTATE' },
-  { id: 'pivot', icon: 'control_camera', key: 'TOOL.PIVOT' },
-  { id: 'pan', icon: 'pan_tool', key: 'TOOL.PAN' },
-  { id: 'rect', icon: 'rectangle', key: 'TOOL.RECT' },
-  { id: 'ellipse', icon: 'circle', key: 'TOOL.ELLIPSE' },
-  { id: 'text', icon: 'title', key: 'TOOL.TEXT' },
+  { id: 'select',  icon: 'near_me', key: 'TOOL.SELECT',  shortcut: 'V' },
+  { id: 'move',    icon: 'open_with',            key: 'TOOL.MOVE',    shortcut: 'A' },
+  { id: 'scale',   icon: 'aspect_ratio',         key: 'TOOL.SCALE',   shortcut: 'S' },
+  { id: 'rotate',  icon: 'rotate_right',         key: 'TOOL.ROTATE',  shortcut: 'R' },
+  { id: 'pivot',   icon: 'control_camera',       key: 'TOOL.PIVOT',   shortcut: 'P' },
+  { id: 'pan',     icon: 'pan_tool',             key: 'TOOL.PAN',     shortcut: 'H' },
+  { id: 'rect',    icon: 'rectangle',            key: 'TOOL.RECT',    shortcut: 'M' },
+  { id: 'ellipse', icon: 'circle',               key: 'TOOL.ELLIPSE', shortcut: 'L' },
+  { id: 'polygon', icon: 'pentagon',             key: 'TOOL.POLYGON', shortcut: 'G' },
+  { id: 'text',    icon: 'title',                key: 'TOOL.TEXT',    shortcut: 'T' },
 ];
 
 @Component({

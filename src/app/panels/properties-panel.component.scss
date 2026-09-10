@@ -1,11 +1,15 @@
 :host {
   display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: 10px 12px 16px;
   overflow-y: auto;
   height: 100%;
   gap: 8px;
   font-size: 13px;
+}
+
+:host ::ng-deep mat-divider {
+  margin: 8px 0 !important;
 }
 
 // Compact, readable form fields for the narrow panel
@@ -20,13 +24,19 @@
     align-items: center;
   }
 
-  // Visible fill even when unfocused
+  // Don't constrain textarea wrapper to the fixed 44px height
+  &:has(textarea) .mat-mdc-form-field-flex {
+    height: auto;
+    align-items: flex-start;
+  }
+
+  // Visible fill even when unfocused — uses theme-aware custom properties
   .mdc-text-field--filled:not(.mdc-text-field--disabled) {
-    background-color: rgba(128, 128, 128, 0.18);
+    background-color: var(--laops-input-bg, rgba(128, 128, 128, 0.18));
   }
 
   .mdc-text-field--filled:not(.mdc-text-field--disabled):hover {
-    background-color: rgba(128, 128, 128, 0.26);
+    background-color: var(--laops-input-bg-hover, rgba(128, 128, 128, 0.26));
   }
 }
 
@@ -36,8 +46,10 @@
   align-items: center;
   justify-content: center;
   flex: 1;
-  opacity: 0.4;
-  gap: 8px;
+  opacity: 0.5;
+  gap: 12px;
+  padding: 32px 16px;
+  text-align: center;
 
   mat-icon {
     font-size: 40px;
@@ -66,7 +78,8 @@
 .action-row {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
+  margin: 4px 0;
 }
 
 .spacer {
@@ -82,9 +95,147 @@
   font-size: 12px;
 }
 
+.mono {
+  font-family: monospace;
+  font-size: 0.85em;
+  word-break: break-all;
+}
+
 .type-section {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 4px 0;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.multi-select-header {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.8;
+  padding: 4px 0 8px;
+}
+
+.color-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.color-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-input {
+  flex: 1;
+  height: 28px;
+  padding: 2px;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+
+  &.dimmed {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.none-btn {
+  width: 24px;
+  height: 28px;
+  flex-shrink: 0;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+
+  &:hover { opacity: 1; background: var(--laops-hover); }
+  &.active { opacity: 1; background: var(--laops-selected); color: #e53935; }
+}
+
+.active-btn {
+  color: #4285f4;
+}
+
+.parts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.parts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.part-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 6px;
+}
+
+.part-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.part-reset {
+  width: 28px;
+  height: 28px;
+}
+
+.part-label {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.color-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  .color-input {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+:host ::ng-deep .stroke-width-field {
+  width: 64px;
+
+  .mat-mdc-form-field-flex {
+    height: 32px;
+  }
+
+  input {
+    font-size: 11px;
+  }
+}
+
+:host ::ng-deep .text-content-field {
+  scroll-margin-top: 8px;
+
+  textarea.text-content-area {
+    min-height: 80px;
+    max-height: 200px;
+    overflow-y: auto;
+    resize: vertical;
+    line-height: 1.4;
+  }
 }

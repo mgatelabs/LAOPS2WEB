@@ -4,46 +4,94 @@
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  border-left: 1px solid;
+  transition: width 0.15s ease;
+  border-left: 1px solid var(--laops-border);
+  background: var(--laops-surface);
+  color: var(--laops-text);
 }
 
-.panel-section {
+.accordion {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.accordion-section {
   display: flex;
   flex-direction: column;
   min-height: 0;
+
+  &.open {
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
 }
 
-// Properties gets a fixed chunk; layers gets a fixed chunk; library fills the rest
-.properties-body { height: 260px; overflow: hidden; flex-shrink: 0; }
-.layers-body     { height: 200px; overflow: hidden; flex-shrink: 0; }
-.library-body    { flex: 1; overflow: hidden; }
-
-.library-section {
-  flex: 1;
-  min-height: 0;
-}
-
-.panel-section-header {
+.accordion-header {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
   height: 28px;
   padding: 0 8px;
   cursor: pointer;
   flex-shrink: 0;
-  border-bottom: 1px solid;
-  font-size: 11px;
+  border: none;
+  border-bottom: 1px solid var(--laops-border);
+  width: 100%;
+  background: var(--laops-surface);
+  color: var(--laops-text);
   font-weight: 600;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   user-select: none;
-  gap: 4px;
   opacity: 0.8;
 
   &:hover { opacity: 1; }
+  &:focus { outline: none; }
 }
 
-.collapse-icon {
+.chevron {
+  flex-shrink: 0;
   font-size: 16px;
   height: 16px;
   width: 16px;
+  opacity: 0.7;
+}
+
+.accordion-label {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.accordion-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-action-btn {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.header-action-btn mat-icon {
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+}
+
+.accordion-body {
+  display: none;
+  overflow-y: auto;
+  flex: 1 1 auto;
+  min-height: 0;
+
+  .open & {
+    display: block;
+  }
 }

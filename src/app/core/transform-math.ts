@@ -21,6 +21,8 @@ export interface Mat3 {
   f: number;
 }
 
+export const IDENTITY_MAT3: Mat3 = { a: 1, b: 0, c: 0, d: 1, e: 0, f: 0 };
+
 function R(n: number): number {
   return Math.round(n * 1e6) / 1e6;
 }

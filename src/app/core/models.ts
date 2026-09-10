@@ -3,22 +3,23 @@
 export type Color = [number, number, number]; // [r, g, b], each 0–255
 
 export interface CanvasSettings {
-  width: number;            // minimum 100, default 1024
-  height: number;           // default 768
+  width: number;            // minimum 100, default 640
+  height: number;           // default 480
   backgroundColor: Color;
   borderColor: Color;
+  transparentBackground?: boolean;  // default false
 }
 
 // Transform
 
 export interface Transform {
-  x: number;   // canvas position
+  x: number;   // world position — the pivot dot; rotation/scale origin
   y: number;
   sx: number;  // scaleX — default 1.0, negative = mirrored
   sy: number;  // scaleY
-  r: number;   // rotation in radians
-  px: number;  // pivot offset X
-  py: number;  // pivot offset Y
+  r: number;   // rotation in radians, around (x, y)
+  px: number;  // content offset X from pivot, in rotated local space
+  py: number;  // content offset Y from pivot, in rotated local space
 }
 
 export const IDENTITY_TRANSFORM: Transform = {
@@ -27,6 +28,7 @@ export const IDENTITY_TRANSFORM: Transform = {
 
 export function toSvgTransform(t: Transform): string {
   const deg = t.r * 180 / Math.PI;
+  // (x,y) is the pivot/rotation origin. Content is offset by (px,py) in local space.
   return `translate(${t.x} ${t.y}) rotate(${deg}) scale(${t.sx} ${t.sy}) translate(${t.px} ${t.py})`;
 }
 
@@ -73,15 +75,21 @@ export interface MultiColorObjectNode extends BaseNode {
 
 export interface PrimitiveNode extends BaseNode {
   type: 'primitive';
-  shape: 'rect' | 'ellipse';
+  shape: 'rect' | 'ellipse' | 'polygon';
   w: number;
   h: number;
   fill?: Color | null;
   stroke?: Color | null;
   strokeWidth?: number;
+  // polygon-only fields (ignored for rect/ellipse):
+  sides?: number;      // 3–32, default 3
+  variation?: number;  // 0.0–1.0, default 0 (flat polygon)
 }
 
 export type FontStyle = 'normal' | 'bold' | 'italic' | 'bold italic';
+
+/** Alias retained for legacy-sav-parser compatibility. */
+export type TextStyle = FontStyle;
 
 export interface TextNode extends BaseNode {
   type: 'text';
@@ -89,7 +97,9 @@ export interface TextNode extends BaseNode {
   font: string;       // full CSS font-family stack, e.g. "Arial, sans-serif"
   size: number;       // font-size in points
   style: FontStyle;
-  color: Color;
+  color: Color | null;         // null = transparent fill (no fill paint)
+  stroke?: Color | null;       // undefined = none; null = explicit none; Color = colour
+  strokeWidth?: number;        // default 0
 }
 
 export interface GroupNode extends BaseNode {
@@ -119,8 +129,8 @@ export function defaultScene(): Scene {
     version: 2,
     savedAt: new Date().toISOString(),
     canvas: {
-      width: 1024,
-      height: 768,
+      width: 800,
+      height: 600,
       backgroundColor: [255, 255, 255],
       borderColor: [180, 180, 180],
     },
@@ -213,4 +223,22 @@ export interface SceneCatalogue {
   version: number;
   generated: string;
   folders: SceneFolder[];
+}
+
+// Default node factories
+
+export function defaultTextNode(x: number, y: number): TextNode {
+  return {
+    id: crypto.randomUUID(),
+    type: 'text',
+    label: 'Text',
+    transform: { ...IDENTITY_TRANSFORM, x, y },
+    visible: true,
+    locked: false,
+    content: 'Text',
+    font: 'Roboto, sans-serif',
+    size: 24,
+    style: 'normal',
+    color: [33, 33, 33],
+  };
 }

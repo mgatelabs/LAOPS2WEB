@@ -1,10 +1,13 @@
 :host {
   display: grid;
   height: 100vh;
-  grid-template-columns: 40px 1fr 280px;
+  grid-template-columns: 40px 1fr var(--right-panel-width, 344px);
   grid-template-rows: 48px 1fr;
   grid-template-areas:
     "menubar  menubar    menubar"
     "toolbar  canvas     rightpanel";
   overflow: hidden;
+  position: relative;
+  z-index: 0;
+  transition: grid-template-columns 0.15s ease;
 }

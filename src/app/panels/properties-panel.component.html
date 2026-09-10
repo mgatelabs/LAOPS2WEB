@@ -1,98 +1,428 @@
 @if (hasSelection) {
-  <mat-form-field appearance="fill" class="full-width">
-    <mat-label>{{ 'PROPS.LABEL' | translate }}</mat-label>
-    <input matInput [value]="selectedNode?.label ?? ''" />
-  </mat-form-field>
+  @if (isSingleSelection) {
+    <ng-container *ngIf="selectedNode as node">
 
-  <div class="row-2col">
-    <mat-form-field appearance="fill">
-      <mat-label>{{ 'PROPS.X' | translate }}</mat-label>
-      <input matInput type="number" value="0" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>{{ 'PROPS.Y' | translate }}</mat-label>
-      <input matInput type="number" value="0" />
-    </mat-form-field>
-  </div>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>{{ 'PROPS.LABEL' | translate }}</mat-label>
+        <input matInput [value]="node.label" (change)="onLabelChange($any($event.target).value)" />
+      </mat-form-field>
 
-  <div class="row-2col-lock">
-    <mat-form-field appearance="fill">
-      <mat-label>{{ 'PROPS.WIDTH' | translate }}</mat-label>
-      <input matInput type="number" value="100" />
-      <span matSuffix>%</span>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>{{ 'PROPS.HEIGHT' | translate }}</mat-label>
-      <input matInput type="number" value="100" />
-      <span matSuffix>%</span>
-    </mat-form-field>
-    <button mat-icon-button [matTooltip]="'PROPS.LOCK_ASPECT' | translate">
-      <mat-icon>lock</mat-icon>
-    </button>
-  </div>
+      <!-- ── Common fields ─────────────────────────────────────────── -->
+      <div class="row-2col">
+        <mat-form-field appearance="fill">
+          <mat-label>{{ 'PROPS.X' | translate }}</mat-label>
+          <input matInput type="number"
+                 [value]="node.transform.x"
+                 (change)="onXChange($any($event.target).value)" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>{{ 'PROPS.Y' | translate }}</mat-label>
+          <input matInput type="number"
+                 [value]="node.transform.y"
+                 (change)="onYChange($any($event.target).value)" />
+        </mat-form-field>
+      </div>
 
-  <div class="row-2col">
-    <mat-form-field appearance="fill">
-      <mat-label>{{ 'PROPS.ROTATION' | translate }}</mat-label>
-      <input matInput type="number" value="0" />
-      <span matSuffix>°</span>
-    </mat-form-field>
-  </div>
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'PROPS.ROTATION' | translate }}</mat-label>
+        <input matInput type="number"
+               [value]="rotationDeg(node)"
+               (change)="onRotationChange($any($event.target).value)" />
+        <span matSuffix>{{ 'PROPS.UNIT_DEG' | translate }}</span>
+      </mat-form-field>
 
-  <div class="row-2col">
-    <mat-form-field appearance="fill">
-      <mat-label>pX</mat-label>
-      <input matInput type="number" value="0" />
-      <span matSuffix>%</span>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>pY</mat-label>
-      <input matInput type="number" value="0" />
-      <span matSuffix>%</span>
-    </mat-form-field>
-  </div>
+      <div class="row-2col">
+        <mat-form-field appearance="fill">
+          <mat-label>{{ 'PROPS.PIVOT' | translate }} X</mat-label>
+          <input matInput type="number"
+                 [value]="node.transform.px"
+                 (change)="onPivotXChange($any($event.target).value)" />
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>{{ 'PROPS.PIVOT' | translate }} Y</mat-label>
+          <input matInput type="number"
+                 [value]="node.transform.py"
+                 (change)="onPivotYChange($any($event.target).value)" />
+        </mat-form-field>
+      </div>
 
-  <div class="action-row">
-    <button mat-stroked-button [matTooltip]="'PROPS.FLIP_H' | translate">
-      <mat-icon>flip</mat-icon> {{ 'PROPS.FLIP_H' | translate }}
-    </button>
-    <button mat-stroked-button [matTooltip]="'PROPS.FLIP_V' | translate">
-      <mat-icon>flip</mat-icon> {{ 'PROPS.FLIP_V' | translate }}
-    </button>
-  </div>
+      <!-- ── Actions ───────────────────────────────────────────────── -->
+      <div class="action-row">
+        <button mat-icon-button
+                [matTooltip]="'PROPS.FLIP_H' | translate"
+                (click)="store.flipH(store.selection())">
+          <mat-icon>flip</mat-icon>
+        </button>
+        <button mat-icon-button
+                [matTooltip]="'PROPS.FLIP_V' | translate"
+                (click)="store.flipV(store.selection())">
+          <mat-icon>flip</mat-icon>
+        </button>
+      </div>
 
-  <div class="action-row">
-    <button mat-icon-button [matTooltip]="'PROPS.TO_FRONT' | translate">
-      <mat-icon>flip_to_front</mat-icon>
-    </button>
-    <button mat-icon-button [matTooltip]="'PROPS.TO_BACK' | translate">
-      <mat-icon>flip_to_back</mat-icon>
-    </button>
-    <button mat-icon-button [matTooltip]="'PROPS.MOVE_UP' | translate">
-      <mat-icon>keyboard_arrow_up</mat-icon>
-    </button>
-    <button mat-icon-button [matTooltip]="'PROPS.MOVE_DOWN' | translate">
-      <mat-icon>keyboard_arrow_down</mat-icon>
-    </button>
-    <span class="spacer"></span>
-    <button mat-icon-button [matTooltip]="'PROPS.CLONE' | translate">
-      <mat-icon>content_copy</mat-icon>
-    </button>
-    <button mat-icon-button color="warn" [matTooltip]="'PROPS.DELETE' | translate">
-      <mat-icon>delete</mat-icon>
-    </button>
-  </div>
+      <div class="action-row">
+        <button mat-icon-button
+                [matTooltip]="'PROPS.TO_FRONT' | translate"
+                (click)="store.toFront(store.selection())">
+          <mat-icon>flip_to_front</mat-icon>
+        </button>
+        <button mat-icon-button
+                [matTooltip]="'PROPS.TO_BACK' | translate"
+                (click)="store.toBack(store.selection())">
+          <mat-icon>flip_to_back</mat-icon>
+        </button>
+        <button mat-icon-button
+                [matTooltip]="'PROPS.MOVE_UP' | translate"
+                (click)="store.moveUp(store.selection())">
+          <mat-icon>keyboard_arrow_up</mat-icon>
+        </button>
+        <button mat-icon-button
+                [matTooltip]="'PROPS.MOVE_DOWN' | translate"
+                (click)="store.moveDown(store.selection())">
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <span class="spacer"></span>
+        <button mat-icon-button
+                [matTooltip]="'PROPS.CLONE' | translate"
+                (click)="store.cloneSelected()">
+          <mat-icon>content_copy</mat-icon>
+        </button>
+        <button mat-icon-button color="warn"
+                [matTooltip]="'PROPS.DELETE' | translate"
+                (click)="store.removeNodes(store.selection())">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
 
-  <button mat-stroked-button class="full-width">
-    <mat-icon>restart_alt</mat-icon> {{ 'PROPS.RESET_TRANSFORM' | translate }}
-  </button>
+      <button mat-stroked-button class="full-width"
+              (click)="store.resetTransform(store.selection())">
+        <mat-icon>restart_alt</mat-icon> {{ 'PROPS.RESET_TRANSFORM' | translate }}
+      </button>
 
-  <mat-divider />
+      <mat-divider />
 
-  <div class="type-section">
-    <span class="field-label">{{ 'PROPS.ASSET_NAME' | translate }}</span>
-    <span class="field-value">Gordon Freeman</span>
-  </div>
+      <!-- ── Type sections ─────────────────────────────────────────── -->
+      @switch (node.type) {
+
+        @case ('primitive') {
+          <ng-container *ngIf="asPrimitive(node) as p">
+            <div class="row-2col-lock">
+              <mat-form-field appearance="fill" subscriptSizing="dynamic">
+                <mat-label>{{ 'PROPS.WIDTH' | translate }}</mat-label>
+                <input matInput type="number"
+                       [value]="p.w"
+                       (change)="onWidthChange($any($event.target).value)" />
+              </mat-form-field>
+              <mat-form-field appearance="fill" subscriptSizing="dynamic">
+                <mat-label>{{ 'PROPS.HEIGHT' | translate }}</mat-label>
+                <input matInput type="number"
+                       [value]="p.h"
+                       (change)="onHeightChange($any($event.target).value)" />
+              </mat-form-field>
+              <button mat-icon-button
+                      [matTooltip]="'PROPS.LOCK_ASPECT' | translate"
+           [class.active-btn]="lockAspect"
+                       (click)="lockAspect = !lockAspect">
+                <mat-icon>{{ lockAspect ? 'lock' : 'lock_open' }}</mat-icon>
+              </button>
+            </div>
+
+            @if (p.shape === 'polygon') {
+              <div class="row-2col">
+                <mat-form-field appearance="fill" subscriptSizing="dynamic">
+                  <mat-label>{{ 'PROPS.SIDES' | translate }}</mat-label>
+                  <input matInput type="number" min="3" max="32"
+                         [value]="p.sides ?? 3"
+                         (change)="onSidesChange($any($event.target).value)" />
+                </mat-form-field>
+                <mat-form-field appearance="fill" subscriptSizing="dynamic">
+                  <mat-label>{{ 'PROPS.VARIATION' | translate }}</mat-label>
+                  <input matInput type="number" min="0" max="1" step="0.05"
+                         [value]="p.variation ?? 0"
+                         (change)="onVariationChange($any($event.target).value)" />
+                </mat-form-field>
+              </div>
+            }
+
+            <div class="row-2col">
+              <div class="color-field">
+                <span class="field-label">{{ 'PROPS.FILL' | translate }}</span>
+                <div class="color-row">
+                  <button class="none-btn" [class.active]="p.fill === null"
+                          [matTooltip]="'PROPS.NONE_COLOR' | translate"
+                          (click)="toggleFill()">∅</button>
+                  <input type="color" class="color-input"
+                         [class.dimmed]="p.fill === null"
+                         [value]="colorToHex(p.fill)"
+                         (change)="onFillChange($any($event.target).value)" />
+                </div>
+              </div>
+               <div class="color-field">
+                 <span class="field-label">{{ 'PROPS.STROKE' | translate }}</span>
+                 <div class="color-row">
+                   <button class="none-btn" [class.active]="p.stroke === null"
+                           [matTooltip]="'PROPS.NONE_COLOR' | translate"
+                           (click)="toggleStroke()">∅</button>
+                   <input type="color" class="color-input"
+                          [class.dimmed]="p.stroke === null"
+                          [value]="colorToHex(p.stroke)"
+                          (change)="onStrokeChange($any($event.target).value)" />
+                 </div>
+               </div>
+            </div>
+
+            <mat-form-field appearance="fill" subscriptSizing="dynamic">
+              <mat-label>{{ 'PROPS.STROKE_WIDTH' | translate }}</mat-label>
+              <input matInput type="number"
+                     [value]="p.strokeWidth ?? 1"
+                     (change)="onStrokeWidthChange($any($event.target).value)" />
+            </mat-form-field>
+          </ng-container>
+        }
+
+        @case ('text') {
+          <ng-container *ngIf="asText(node) as t">
+            <mat-form-field appearance="fill" subscriptSizing="dynamic" class="text-content-field">
+              <mat-label>{{ 'PROPS.TEXT_CONTENT' | translate }}</mat-label>
+              <textarea matInput rows="5" class="text-content-area"
+                        [ngModel]="t.content"
+                        (ngModelChange)="onContentChange($event)"></textarea>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" subscriptSizing="dynamic">
+              <mat-label>{{ 'PROPS.FONT' | translate }}</mat-label>
+              <mat-select [value]="t.font" (selectionChange)="onFontChange($event.value)">
+                @for (f of fonts; track f.stack) {
+                  <mat-option [value]="f.stack">
+                    <span [style.font-family]="f.stack">{{ f.key | translate }}</span>
+                  </mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+
+            <div class="row-2col">
+              <mat-form-field appearance="fill" subscriptSizing="dynamic">
+                <mat-label>{{ 'PROPS.FONT_SIZE' | translate }}</mat-label>
+                <input matInput type="number"
+                       [value]="t.size"
+                       (change)="onFontSizeChange($any($event.target).value)" />
+              </mat-form-field>
+              <mat-form-field appearance="fill" subscriptSizing="dynamic">
+                <mat-label>{{ 'PROPS.FONT_STYLE' | translate }}</mat-label>
+                <mat-select [value]="t.style" (selectionChange)="onFontStyleChange($event.value)">
+                  <mat-option value="normal">{{ 'PROPS.FONT_STYLE_NORMAL' | translate }}</mat-option>
+                  <mat-option value="bold">{{ 'PROPS.FONT_STYLE_BOLD' | translate }}</mat-option>
+                  <mat-option value="italic">{{ 'PROPS.FONT_STYLE_ITALIC' | translate }}</mat-option>
+                  <mat-option value="bold italic">{{ 'PROPS.FONT_STYLE_BOLD_ITALIC' | translate }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="row-2col">
+              <div class="color-field">
+                <span class="field-label">{{ 'PROPS.FILL' | translate }}</span>
+                <div class="color-row">
+                  <button class="none-btn" [class.active]="t.color === null"
+                          [matTooltip]="'PROPS.NONE_COLOR' | translate"
+                          (click)="toggleTextColor()">∅</button>
+                  <input type="color" class="color-input"
+                         [class.dimmed]="t.color === null"
+                         [attr.disabled]="t.color === null ? '' : null"
+                         [value]="colorToHex(t.color)"
+                         (change)="onTextColorChange($any($event.target).value)" />
+                </div>
+              </div>
+
+              <div class="color-field">
+                <span class="field-label">{{ 'PROPS.STROKE' | translate }}</span>
+                <div class="color-row">
+                  <button class="none-btn" [class.active]="t.stroke == null"
+                          [matTooltip]="'PROPS.NONE_COLOR' | translate"
+                          (click)="toggleTextStroke()">∅</button>
+                  <input type="color" class="color-input"
+                         [class.dimmed]="t.stroke == null"
+                         [value]="colorToHex(t.stroke)"
+                         (change)="onTextStrokeChange($any($event.target).value)" />
+                </div>
+              </div>
+            </div>
+
+            <mat-form-field appearance="fill" subscriptSizing="dynamic">
+              <mat-label>{{ 'PROPS.STROKE_WIDTH' | translate }}</mat-label>
+              <input matInput type="number" min="0" step="0.5"
+                     [value]="t.strokeWidth ?? 0"
+                     (change)="onTextStrokeWidthChange($any($event.target).value)" />
+            </mat-form-field>
+          </ng-container>
+        }
+
+         @case ('svg-object') {
+           <div class="type-section">
+             <span class="field-label">{{ 'PROPS.TYPE_LABEL' | translate }}</span>
+             <span class="field-value">{{ 'NODE_TYPE.SVG_OBJECT' | translate }}</span>
+             <span class="field-label">{{ 'PROPS.ASSET_NAME' | translate }}</span>
+             <span class="field-value">{{ assetName(node.assetId) }}</span>
+             <span class="field-label">{{ 'PROPS.ASSET_ID' | translate }}</span>
+             <span class="field-value mono">{{ node.assetId }}</span>
+             @if (assetDescription(node.assetId)) {
+               <span class="field-label">{{ 'PROPS.ASSET_DESC' | translate }}</span>
+               <span class="field-value">{{ assetDescription(node.assetId) }}</span>
+             }
+           </div>
+         }
+
+        @case ('multicolor-object') {
+          <ng-container *ngIf="asMultiColor(node) as mc">
+            <div class="type-section">
+              <span class="field-label">{{ 'PROPS.TYPE_LABEL' | translate }}</span>
+              <span class="field-value">{{ 'NODE_TYPE.MULTICOLOR_OBJECT' | translate }}</span>
+              <span class="field-label">{{ 'PROPS.ASSET_NAME' | translate }}</span>
+              <span class="field-value">{{ assetName(node.assetId) }}</span>
+              <span class="field-label">{{ 'PROPS.ASSET_ID' | translate }}</span>
+              <span class="field-value mono">{{ node.assetId }}</span>
+              @if (assetDescription(node.assetId)) {
+                <span class="field-label">{{ 'PROPS.ASSET_DESC' | translate }}</span>
+                <span class="field-value">{{ assetDescription(node.assetId) }}</span>
+              }
+            </div>
+
+            @if (mcParts(node.assetId).length) {
+              <div class="parts-section">
+                <div class="parts-header">
+                  <span class="field-label">{{ 'PROPS.PARTS' | translate }}</span>
+                  <button mat-icon-button [matTooltip]="'PROPS.RESET_COLORS' | translate"
+                          (click)="resetAllParts()">
+                    <mat-icon>restart_alt</mat-icon>
+                  </button>
+                </div>
+                @for (part of mcParts(node.assetId); track part.id) {
+                  <div class="part-row">
+                    <div class="part-row-header">
+                      <span class="part-label">{{ part.label }}</span>
+                      <button mat-icon-button class="part-reset"
+                              [matTooltip]="'PROPS.PART_RESET' | translate"
+                              (click)="resetPart(part.id)">
+                        <mat-icon>restart_alt</mat-icon>
+                      </button>
+                    </div>
+
+                    <div class="color-field">
+                      <span class="field-label">{{ 'PROPS.FILL' | translate }}</span>
+                      <div class="color-toggle-row">
+                        <mat-checkbox
+                          class="override-toggle"
+                          [checked]="hasOverride(mc, part.id, 'fill')"
+                          [matTooltip]="'PROPS.PART_FILL_OVERRIDE' | translate"
+                          (change)="toggleOverride(part.id, 'fill', $any($event).checked)">
+                        </mat-checkbox>
+                        <input type="color" class="color-input"
+                               [value]="partFillHex(mc, part.id)"
+                               [disabled]="!hasOverride(mc, part.id, 'fill')"
+                               (change)="onPartFillChange(part.id, $any($event.target).value)" />
+                      </div>
+                    </div>
+
+                    <div class="color-field">
+                      <span class="field-label">{{ 'PROPS.STROKE' | translate }}</span>
+                      <div class="color-toggle-row">
+                        <mat-checkbox
+                          class="override-toggle"
+                          [checked]="hasOverride(mc, part.id, 'stroke')"
+                          [matTooltip]="'PROPS.PART_STROKE_OVERRIDE' | translate"
+                          (change)="toggleOverride(part.id, 'stroke', $any($event).checked)">
+                        </mat-checkbox>
+                        <input type="color" class="color-input"
+                               [value]="partStrokeHex(mc, part.id)"
+                               [disabled]="!hasOverride(mc, part.id, 'stroke')"
+                               (change)="onPartStrokeChange(part.id, $any($event.target).value)" />
+                        <mat-form-field appearance="fill" class="stroke-width-field"
+                                        subscriptSizing="dynamic">
+                          <input matInput type="number" min="0" step="0.5"
+                                 [value]="partStrokeWidth(mc, part.id)"
+                                 [disabled]="!hasOverride(mc, part.id, 'stroke')"
+                                 (change)="onPartStrokeWidthChange(part.id, $any($event.target).value)" />
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                }
+              </div>
+            }
+          </ng-container>
+        }
+
+        @case ('group') {
+          <ng-container *ngIf="asGroup(node) as g">
+            <div class="type-section">
+              <span class="field-label">{{ 'PROPS.TYPE_LABEL' | translate }}</span>
+              <span class="field-value">{{ 'NODE_TYPE.GROUP' | translate }}</span>
+              <span class="field-value">{{ 'PROPS.CHILDREN_COUNT' | translate: { n: g.nodes.length } }}</span>
+              <button mat-stroked-button class="full-width"
+                      (click)="store.ungroup(store.selection())">
+                <mat-icon>call_split</mat-icon> {{ 'PROPS.UNGROUP' | translate }}
+              </button>
+            </div>
+          </ng-container>
+        }
+      }
+
+    </ng-container>
+  } @else {
+    <div class="multi-select-header">{{ 'PROPS.MULTI_SELECTED' | translate: { n: selectionCount } }}</div>
+
+    <!-- ── Actions (multi-selection) ───────────────────────────────── -->
+    <div class="action-row">
+      <button mat-icon-button
+              [matTooltip]="'PROPS.FLIP_H' | translate"
+              (click)="store.flipH(store.selection())">
+        <mat-icon>flip</mat-icon>
+      </button>
+      <button mat-icon-button
+              [matTooltip]="'PROPS.FLIP_V' | translate"
+              (click)="store.flipV(store.selection())">
+        <mat-icon>flip</mat-icon>
+      </button>
+    </div>
+
+    <div class="action-row">
+      <button mat-icon-button
+              [matTooltip]="'PROPS.TO_FRONT' | translate"
+              (click)="store.toFront(store.selection())">
+        <mat-icon>flip_to_front</mat-icon>
+      </button>
+      <button mat-icon-button
+              [matTooltip]="'PROPS.TO_BACK' | translate"
+              (click)="store.toBack(store.selection())">
+        <mat-icon>flip_to_back</mat-icon>
+      </button>
+      <button mat-icon-button
+              [matTooltip]="'PROPS.MOVE_UP' | translate"
+              (click)="store.moveUp(store.selection())">
+        <mat-icon>keyboard_arrow_up</mat-icon>
+      </button>
+      <button mat-icon-button
+              [matTooltip]="'PROPS.MOVE_DOWN' | translate"
+              (click)="store.moveDown(store.selection())">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+      <span class="spacer"></span>
+      <button mat-icon-button
+              [matTooltip]="'PROPS.CLONE' | translate"
+              (click)="store.cloneSelected()">
+        <mat-icon>content_copy</mat-icon>
+      </button>
+      <button mat-icon-button color="warn"
+              [matTooltip]="'PROPS.DELETE' | translate"
+              (click)="store.removeNodes(store.selection())">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+
+    <button mat-stroked-button class="full-width"
+            (click)="store.resetTransform(store.selection())">
+      <mat-icon>restart_alt</mat-icon> {{ 'PROPS.RESET_TRANSFORM' | translate }}
+    </button>
+  }
 } @else {
   <div class="empty-state">
     <mat-icon>touch_app</mat-icon>

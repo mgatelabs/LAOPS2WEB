@@ -1,0 +1,156 @@
+{
+  "version": 2,
+  "savedAt": "2026-09-17T02:23:11.123Z",
+  "canvas": {
+    "width": 250,
+    "height": 310,
+    "backgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "borderColor": [
+      0,
+      0,
+      0
+    ]
+  },
+  "nodes": [
+    {
+      "id": "a21a3533-45e9-4eaf-94dd-19530194387f",
+      "type": "svg-object",
+      "assetId": "GS44",
+      "label": "GSG9",
+      "transform": {
+        "x": 34,
+        "y": 191,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "2478a1a9-7a3b-416c-8d88-1865dbc9c959",
+      "type": "svg-object",
+      "assetId": "PU139",
+      "label": "PUMPKIN",
+      "transform": {
+        "x": 12,
+        "y": 4,
+        "sx": 1.7999992,
+        "sy": 1.7999992,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "0adbc556-70e2-44e5-9230-dc91ac602cc1",
+      "type": "svg-object",
+      "assetId": "FO72",
+      "label": "Focus",
+      "transform": {
+        "x": 64,
+        "y": 65,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "14a27d52-95bd-4a4a-b68e-ab43cf10e63b",
+      "type": "svg-object",
+      "assetId": "DO68",
+      "label": "DOT",
+      "transform": {
+        "x": 86,
+        "y": 85,
+        "sx": 1.5449995,
+        "sy": 1.5449995,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "df285bfd-2cb7-41ef-b30a-d4c07b42b3fb",
+      "type": "svg-object",
+      "assetId": "DO68",
+      "label": "DOT",
+      "transform": {
+        "x": 142,
+        "y": 84,
+        "sx": 1.5449995,
+        "sy": 1.5449995,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "a30b588d-bd74-4c0c-8109-c02037ca51de",
+      "type": "svg-object",
+      "assetId": "BL100",
+      "label": "BLACK_YELLOW",
+      "transform": {
+        "x": 31,
+        "y": 245,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "2e2bb4f0-7bc0-482f-ad4f-e740c2bffa4e",
+      "type": "svg-object",
+      "assetId": "PI182",
+      "label": "PipeWrench",
+      "transform": {
+        "x": 8.104528430371126,
+        "y": 211.27611132612998,
+        "sx": 0.2800007,
+        "sy": 0.2800007,
+        "px": 0,
+        "py": 0,
+        "r": -0.5331701680037626
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "aeaadb73-1e89-47a1-a336-0512bb6b5609",
+      "type": "svg-object",
+      "assetId": "DE175",
+      "label": "Desert Eagle",
+      "transform": {
+        "x": 196.17160367722167,
+        "y": 225.5460289450864,
+        "sx": 0.54500073,
+        "sy": 0.54500073,
+        "px": 0,
+        "py": 0,
+        "r": 0.9895204301373676
+      },
+      "visible": true,
+      "locked": false
+    }
+  ]
+}

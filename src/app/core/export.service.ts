@@ -1,19 +1,18 @@
 import { Injectable, inject } from '@angular/core';
-import { Scene, SceneNode, CanvasSettings, Color } from './models';
+import { Scene, SceneNode, CanvasSettings, Color, MultiColorObjectNode } from './models';
 import { ToastService } from './toast.service';
+import { SvgCacheService } from './svg-cache.service';
+import { colorToCss, applyMultiColorPartOverrides } from './multicolor-override';
 
 export interface PngExportOptions {
   scale: number;
   transparent: boolean;
 }
 
-export function colorToCss(c: Color, alpha = 1): string {
-  return `rgba(${c[0]},${c[1]},${c[2]},${alpha})`;
-}
-
 @Injectable({ providedIn: 'root' })
 export class ExportService {
   private readonly toast = inject(ToastService);
+  private readonly svgCache = inject(SvgCacheService);
 
   readonly exporting = new Set<string>();
 
@@ -172,7 +171,12 @@ export class ExportService {
           if (node.style.includes('bold')) t.setAttribute('font-weight', 'bold');
           if (node.style.includes('italic')) t.setAttribute('font-style', 'italic');
         }
-        t.setAttribute('fill', colorToCss(node.color));
+        t.setAttribute('fill', node.color != null ? colorToCss(node.color) : 'none');
+        if (node.stroke) {
+          t.setAttribute('stroke', colorToCss(node.stroke));
+          t.setAttribute('stroke-width', String(node.strokeWidth ?? 0));
+          if ((node.strokeWidth ?? 0) > 0) t.setAttribute('paint-order', 'stroke fill');
+        }
         this.applyTransform(t, node);
         const lines = node.content.split('\n');
         if (lines.length <= 1) {
@@ -187,9 +191,25 @@ export class ExportService {
           }
         }
         parent.appendChild(t);
+      } else if (node.type === 'multicolor-object') {
+        const mc = node as MultiColorObjectNode;
+        const frag = this.svgCache.getSvgClone(mc.assetId);
+        if (!frag) continue;
+        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        const fragClone = frag.cloneNode(true) as DocumentFragment;
+        while (fragClone.firstChild) g.appendChild(fragClone.firstChild);
+        this.applyTransform(g, node);
+        applyMultiColorPartOverrides(g, mc.parts);
+        parent.appendChild(g);
+      } else if (node.type === 'svg-object') {
+        const frag = this.svgCache.getSvgClone(node.assetId);
+        if (!frag) continue;
+        const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        const fragClone = frag.cloneNode(true) as DocumentFragment;
+        while (fragClone.firstChild) g.appendChild(fragClone.firstChild);
+        this.applyTransform(g, node);
+        parent.appendChild(g);
       }
-      // svg-object / multicolor-object: their shapes are cloned at render time;
-      // for pure-SVG export the caller should use the live DOM node instead.
     }
   }
 

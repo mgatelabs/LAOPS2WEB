@@ -1,101 +1,348 @@
+<div style="position:fixed; visibility:hidden; pointer-events:none;"
+     [style.left.px]="ctxMenuX"
+     [style.top.px]="ctxMenuY"
+     [matMenuTriggerFor]="canvasMenu"
+     #ctxTrigger="matMenuTrigger">
+</div>
+
+<mat-menu #canvasMenu="matMenu">
+  <button mat-menu-item [class.active-tool]="toolState.activeTool() === 'select'"
+          (click)="setTool('select')">
+    <mat-icon>arrow_selector_tool</mat-icon>
+    {{ 'TOOL.SELECT' | translate }}
+  </button>
+  <button mat-menu-item [class.active-tool]="toolState.activeTool() === 'move'"
+          (click)="setTool('move')">
+    <mat-icon>open_with</mat-icon>
+    {{ 'TOOL.MOVE' | translate }}
+  </button>
+  <button mat-menu-item [class.active-tool]="toolState.activeTool() === 'scale'"
+          (click)="setTool('scale')">
+    <mat-icon>aspect_ratio</mat-icon>
+    {{ 'TOOL.SCALE' | translate }}
+  </button>
+  <button mat-menu-item [class.active-tool]="toolState.activeTool() === 'rotate'"
+          (click)="setTool('rotate')">
+    <mat-icon>rotate_right</mat-icon>
+    {{ 'TOOL.ROTATE' | translate }}
+  </button>
+  <button mat-menu-item [class.active-tool]="toolState.activeTool() === 'pan'"
+          (click)="setTool('pan')">
+    <mat-icon>pan_tool</mat-icon>
+    {{ 'TOOL.PAN' | translate }}
+  </button>
+
+  <mat-divider />
+
+  @if (store.selection().size > 0) {
+    <button mat-menu-item (click)="store.clearSelection()">
+      <mat-icon>deselect</mat-icon>
+      {{ 'EDIT.DESELECT' | translate }}
+    </button>
+  }
+  @if (store.selection().size === 0) {
+    <button mat-menu-item (click)="store.selectAll()">
+      <mat-icon>select_all</mat-icon>
+      {{ 'EDIT.SELECT_ALL' | translate }}
+    </button>
+  }
+
+  @if (store.selection().size >= 1) {
+    <mat-divider />
+    <button mat-menu-item (click)="cloneSelected()">
+      <mat-icon>content_copy</mat-icon>
+      {{ 'EDIT.CLONE' | translate }}
+    </button>
+    <button mat-menu-item (click)="deleteSelected()">
+      <mat-icon>delete</mat-icon>
+      {{ 'EDIT.DELETE' | translate }}
+    </button>
+    <mat-divider />
+    <button mat-menu-item (click)="flipHSelected()">
+      <mat-icon>flip</mat-icon>
+      {{ 'EDIT.FLIP_H' | translate }}
+    </button>
+    <button mat-menu-item (click)="flipVSelected()">
+      <mat-icon>flip</mat-icon>
+      {{ 'EDIT.FLIP_V' | translate }}
+    </button>
+  }
+
+  @if (store.selection().size > 0 && hasUnlockedSelected()) {
+    <mat-divider />
+    <button mat-menu-item (click)="lockSelected()">
+      <mat-icon>lock</mat-icon>
+      {{ 'EDIT.LOCK' | translate }}
+    </button>
+  }
+
+  @if (store.selection().size >= 2) {
+    <mat-divider />
+    <button mat-menu-item (click)="groupSelected()">
+      <mat-icon>group_work</mat-icon>
+      {{ 'EDIT.GROUP' | translate }}
+    </button>
+  }
+
+  @if (hasGroupSelected()) {
+    <button mat-menu-item (click)="ungroupSelected()">
+      <mat-icon>call_split</mat-icon>
+      {{ 'EDIT.UNGROUP' | translate }}
+    </button>
+  }
+
+  @if (store.selection().size > 0) {
+    <mat-divider />
+    <button mat-menu-item (click)="moveToFront()">
+      <mat-icon>flip_to_front</mat-icon>
+      {{ 'EDIT.BRING_TO_FRONT' | translate }}
+    </button>
+    <button mat-menu-item (click)="moveUp()">
+      <mat-icon>arrow_upward</mat-icon>
+      {{ 'EDIT.BRING_FORWARD' | translate }}
+    </button>
+    <button mat-menu-item (click)="moveDown()">
+      <mat-icon>arrow_downward</mat-icon>
+      {{ 'EDIT.SEND_BACKWARD' | translate }}
+    </button>
+    <button mat-menu-item (click)="moveToBack()">
+      <mat-icon>flip_to_back</mat-icon>
+      {{ 'EDIT.SEND_TO_BACK' | translate }}
+    </button>
+  }
+</mat-menu>
+
 <div class="viewport"
+     #viewport
+      [class.tool-pan]="toolState.activeTool() === 'pan'"
+      [class.tool-scale]="toolState.activeTool() === 'scale'"
+      [class.tool-draw]="toolState.activeTool() === 'rect'
+                  || toolState.activeTool() === 'ellipse'
+                  || toolState.activeTool() === 'polygon'"
+      [class.panning]="panningFlag"
+      [class.space-pan]="spaceHeldFlag && toolState.activeTool() !== 'pan'"
+     (contextmenu)="onContextMenu($event)"
+     (pointerdown)="onViewportPointerDown($event)"
      (pointermove)="onPointerMove($event)"
      (pointerup)="onPointerUp($event)">
-  <div class="canvas-wrapper">
+  @if (marqueeRect && marqueeRect.w > 2 && marqueeRect.h > 2) {
+    <div class="marquee-rect"
+         [style.left.px]="marqueeRect.x"
+         [style.top.px]="marqueeRect.y"
+         [style.width.px]="marqueeRect.w"
+         [style.height.px]="marqueeRect.h"></div>
+  }
+  <div class="canvas-wrapper" [style.transform]="workspaceTransform">
     <svg
       class="scene-svg"
       [attr.width]="canvasWidth()"
       [attr.height]="canvasHeight()"
       [attr.viewBox]="'0 0 ' + canvasWidth() + ' ' + canvasHeight()"
+      [attr.overflow]="clipCanvas ? 'hidden' : 'visible'"
       (pointerdown)="onCanvasPointerDown($event)"
     >
-      <rect class="background" width="100%" height="100%"
-            [attr.fill]="cssColor(store.canvas().backgroundColor)" />
+      @if (store.scene().canvas.transparentBackground) {
+        <defs>
+          <pattern id="checker" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+            <rect width="8" height="8" fill="#ccc"/>
+            <rect x="8" y="8" width="8" height="8" fill="#ccc"/>
+            <rect width="16" height="16" fill="white" opacity="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#checker)" data-laops-ui />
+      } @else {
+        <rect class="background" data-laops-bg width="100%" height="100%"
+              [attr.fill]="cssColor(store.scene().canvas.backgroundColor)" />
+      }
 
-      @for (node of store.nodes(); track node.id) {
-        @if (node.visible !== false) {
-          <g [attr.transform]="nodeTransform(node)"
-             (pointerdown)="onNodePointerDown($event, node)"
-             [style.cursor]="toolState.activeTool() === 'move' ? 'move' : 'default'"
-             [class.selected]="store.selectedIds().has(node.id)">
+      <!-- Recursive node rendering — groups render their children in place (MVP-58) -->
+      <ng-template #nodeList let-nodes="nodes">
+        @for (node of nodes; track node.id) {
+          @if (node.visible !== false) {
+            <g [attr.transform]="nodeTransform(node)"
+               [style.cursor]="toolState.activeTool() === 'move' ? 'move' : 'default'"
+               [class.selected]="store.selection().has(node.id)">
 
-            @if (node.type === 'svg-object') {
-              <rect x="0" y="0" width="64" height="64"
-                    fill="#ddd" stroke="#aaa" stroke-width="1" />
-              <text x="32" y="38" text-anchor="middle"
-                    font-size="9" fill="#888" font-family="Roboto,sans-serif">
-                {{ asSvgObject(node).assetId }}
-              </text>
-            }
-
-            @if (node.type === 'multicolor-object') {
-              <rect x="0" y="0" width="64" height="64"
-                    fill="#e8d8f0" stroke="#b090c0" stroke-width="1" />
-              <text x="32" y="38" text-anchor="middle"
-                    font-size="9" fill="#806090" font-family="Roboto,sans-serif">
-                {{ asMulticolor(node).assetId }}
-              </text>
-            }
-
-            @if (node.type === 'primitive' && asPrimitive(node).shape === 'rect') {
-              <rect x="0" y="0"
-                    [attr.width]="asPrimitive(node).w"
-                    [attr.height]="asPrimitive(node).h"
-                    [attr.fill]="cssColor(asPrimitive(node).fill)"
-                    [attr.stroke]="cssColor(asPrimitive(node).stroke)"
-                    [attr.stroke-width]="asPrimitive(node).strokeWidth ?? 0" />
-            }
-
-            @if (node.type === 'primitive' && asPrimitive(node).shape === 'ellipse') {
-              <ellipse
-                    [attr.cx]="asPrimitive(node).w / 2"
-                    [attr.cy]="asPrimitive(node).h / 2"
-                    [attr.rx]="asPrimitive(node).w / 2"
-                    [attr.ry]="asPrimitive(node).h / 2"
-                    [attr.fill]="cssColor(asPrimitive(node).fill)"
-                    [attr.stroke]="cssColor(asPrimitive(node).stroke)"
-                    [attr.stroke-width]="asPrimitive(node).strokeWidth ?? 0" />
-            }
-
-            @if (node.type === 'text') {
-              @for (line of asText(node).content.split('\n'); track $index) {
-                <text [attr.x]="0"
-                      [attr.y]="$index * asText(node).size * 1.2"
-                      [attr.font-family]="asText(node).font"
-                      [attr.font-size]="asText(node).size"
-                      [attr.font-weight]="asText(node).style.includes('bold') ? 'bold' : 'normal'"
-                      [attr.font-style]="asText(node).style.includes('italic') ? 'italic' : 'normal'"
-                      [attr.fill]="cssColor(asText(node).color)">
-                  {{ line }}
-                </text>
+              @if (node.type === 'svg-object') {
+                <g [id]="'asset-' + node.id"></g>
+                @if (!svgLoaded(node)) {
+                  <rect class="loading-placeholder" data-laops-ui
+                        x="0" y="0" width="64" height="64"
+                        rx="4" pointer-events="none" />
+                }
               }
-            }
 
-            @if (node.type === 'group') {
-              <rect x="0" y="0" width="80" height="80"
-                    fill="none" stroke="#80a0ff" stroke-width="1" stroke-dasharray="4 2" />
-              <text x="4" y="14" font-size="10" fill="#80a0ff" font-family="Roboto,sans-serif">
-                {{ asGroup(node).label }}
-              </text>
-            }
+              @if (node.type === 'multicolor-object') {
+                <g [id]="'asset-' + node.id"></g>
+                @if (!svgLoaded(node)) {
+                  <rect class="loading-placeholder" data-laops-ui
+                        x="0" y="0" width="64" height="64"
+                        rx="4" pointer-events="none" />
+                }
+              }
 
-            @if (store.selectedIds().has(node.id)) {
-              <rect class="selection-box"
-                    [attr.x]="-4"
-                    [attr.y]="-4"
-                    [attr.width]="nodeBoundsW(node) + 8"
-                    [attr.height]="nodeBoundsH(node) + 8"
-                    fill="none"
-                    stroke="#4285f4"
-                    stroke-width="1.5"
-                    stroke-dasharray="5 3"
+              @if (node.type === 'primitive' && asPrimitive(node).shape === 'rect') {
+                <rect x="0" y="0"
+                      [attr.width]="asPrimitive(node).w"
+                      [attr.height]="asPrimitive(node).h"
+                      [attr.fill]="cssColor(asPrimitive(node).fill)"
+                      [attr.stroke]="cssColor(asPrimitive(node).stroke)"
+                      [attr.stroke-width]="asPrimitive(node).strokeWidth ?? 0" />
+              }
+
+              @if (node.type === 'primitive' && asPrimitive(node).shape === 'ellipse') {
+                <ellipse
+                      [attr.cx]="asPrimitive(node).w / 2"
+                      [attr.cy]="asPrimitive(node).h / 2"
+                      [attr.rx]="asPrimitive(node).w / 2"
+                      [attr.ry]="asPrimitive(node).h / 2"
+                      [attr.fill]="cssColor(asPrimitive(node).fill)"
+                      [attr.stroke]="cssColor(asPrimitive(node).stroke)"
+                      [attr.stroke-width]="asPrimitive(node).strokeWidth ?? 0" />
+              }
+
+              @if (node.type === 'primitive' && asPrimitive(node).shape === 'polygon') {
+                <polygon
+                      [attr.points]="polygonPoints(
+                        asPrimitive(node).w,
+                        asPrimitive(node).h,
+                        asPrimitive(node).sides ?? 3,
+                        asPrimitive(node).variation ?? 0
+                      )"
+                      [attr.fill]="cssColor(asPrimitive(node).fill)"
+                      [attr.stroke]="cssColor(asPrimitive(node).stroke)"
+                      [attr.stroke-width]="asPrimitive(node).strokeWidth ?? 0" />
+              }
+
+              @if (node.type === 'text') {
+                @for (line of asText(node).content.split('\n'); track $index) {
+                  <text [attr.x]="0"
+                        [attr.y]="asText(node).size + $index * asText(node).size * 1.2"
+                        [attr.font-family]="asText(node).font"
+                        [attr.font-size]="asText(node).size"
+                        [attr.font-weight]="asText(node).style.includes('bold') ? 'bold' : 'normal'"
+                        [attr.font-style]="asText(node).style.includes('italic') ? 'italic' : 'normal'"
+                        [attr.fill]="asText(node).color ? cssColor(asText(node).color) : 'none'"
+                        [attr.stroke]="cssColor(asText(node).stroke)"
+                        [attr.stroke-width]="asText(node).strokeWidth ?? 0"
+                        [attr.paint-order]="(asText(node).strokeWidth ?? 0) > 0 ? 'stroke fill' : null">
+                    {{ line }}
+                  </text>
+                }
+              }
+
+              @if (node.type === 'group') {
+                @if (asGroup(node).nodes.length > 0) {
+                  <ng-container [ngTemplateOutlet]="nodeList"
+                                [ngTemplateOutletContext]="{ nodes: asGroup(node).nodes }"></ng-container>
+                } @else {
+                  <rect x="0" y="0" width="80" height="80"
+                        fill="none" stroke="#80a0ff" stroke-width="1" stroke-dasharray="4 2" />
+                  <text x="4" y="14" font-size="10" fill="#80a0ff" font-family="Roboto,sans-serif">
+                    {{ asGroup(node).label }}
+                  </text>
+                }
+              }
+
+              @if (store.selection().has(node.id)) {
+                <rect class="selection-box" data-laops-ui
+                      [attr.x]="nodeBoundsX(node) - 4"
+                      [attr.y]="nodeBoundsY(node) - 4"
+                      [attr.width]="nodeBoundsW(node) + 8"
+                      [attr.height]="nodeBoundsH(node) + 8"
+                      fill="none"
+                      stroke="#4285f4"
+                      stroke-width="1.5"
+                      stroke-dasharray="5 3"
+                      pointer-events="none" />
+
+              }
+
+              <!-- Transparent hit area covering the full node bounds — always clickable -->
+               <rect class="hit-area" data-laops-ui
+                     [attr.x]="nodeBoundsX(node)"
+                     [attr.y]="nodeBoundsY(node)"
+                     [attr.width]="nodeBoundsW(node)"
+                     [attr.height]="nodeBoundsH(node)"
+                    fill="transparent"
+                    stroke="none"
+                    (pointerdown)="onNodePointerDown($event, node)" />
+
+              @if (store.selection().has(node.id) &&
+                  toolState.activeTool() === 'scale' && node.type === 'primitive') {
+                @for (h of scaleHandles(node); track h.pos) {
+                  <rect class="scale-handle" data-laops-ui
+                        [attr.x]="h.x" [attr.y]="h.y"
+                        width="8" height="8"
+                        [attr.data-pos]="h.pos"
+                        (pointerdown)="onHandlePointerDown($event, node, h.pos)" />
+                }
+              }
+
+            </g>
+          }
+        }
+      </ng-template>
+
+      <ng-container [ngTemplateOutlet]="nodeList"
+                    [ngTemplateOutletContext]="{ nodes: store.scene().nodes }"></ng-container>
+
+      <!-- Pivot dot at (x,y) — the rotation origin, always fixed in world space.
+           Markers resolve to world coords for nodes at any nesting depth (MVP-58). -->
+      @for (pm of pivotMarkers(); track pm.node.id) {
+        <g class="pivot-marker" data-laops-ui
+           [attr.transform]="'translate(' + pm.x + ',' + pm.y + ')'"
+           style="pointer-events: none;">
+          <circle class="pivot-hit" cx="0" cy="0" r="8" />
+          <line x1="-6" y1="0" x2="6" y2="0" />
+          <line x1="0" y1="-6" x2="0" y2="6" />
+          <circle cx="0" cy="0" r="3.5" />
+        </g>
+      }
+
+      <ng-container *ngIf="scaleXYActive && getScaleNode() as snode">
+        <text class="scale-readout" data-laops-ui
+              [attr.x]="snode.transform.x + nodeBoundsW(snode) / 2"
+              [attr.y]="snode.transform.y - 8">
+          {{ (snode.transform.sx * 100 | number:'1.0-0') }}% ×
+          {{ (snode.transform.sy * 100 | number:'1.0-0') }}%
+        </text>
+      </ng-container>
+
+      @if (drawPreview) {
+        @if (drawPreview.tool === 'rect') {
+          <rect class="draw-preview" data-laops-ui
+                [attr.x]="drawPreview.x" [attr.y]="drawPreview.y"
+                [attr.width]="drawPreview.w" [attr.height]="drawPreview.h"
+                pointer-events="none" />
+        }
+        @if (drawPreview.tool === 'ellipse') {
+          <ellipse class="draw-preview" data-laops-ui
+                    [attr.cx]="drawPreview.x + drawPreview.w / 2"
+                    [attr.cy]="drawPreview.y + drawPreview.h / 2"
+                    [attr.rx]="drawPreview.w / 2"
+                    [attr.ry]="drawPreview.h / 2"
                     pointer-events="none" />
-            }
-
+        }
+        @if (drawPreview.tool === 'polygon') {
+          <g [attr.transform]="'translate(' + drawPreview.x + ',' + drawPreview.y + ')'">
+            <polygon class="draw-preview" data-laops-ui
+                     [attr.points]="polygonPoints(
+                       drawPreview.w, drawPreview.h,
+                       activeSides, activeVariation
+                     )"
+                     pointer-events="none" />
           </g>
         }
       }
     </svg>
+
+    @if (!clipCanvas) {
+      <div class="canvas-boundary"
+           [style.width.px]="canvasWidth()"
+           [style.height.px]="canvasHeight()">
+      </div>
+    }
   </div>
 </div>
 
@@ -103,26 +350,50 @@
   <input
     class="zoom-input"
     type="number"
-    [(ngModel)]="zoomLevel"
+    [value]="zoomLevel"
+    (change)="onZoomInput(+$any($event.target).value)"
     min="10"
     max="800"
   />
   <span class="zoom-pct">%</span>
 
-  <mat-select class="zoom-select" [(ngModel)]="zoomLevel">
+  <mat-select class="zoom-select" [value]="zoomLevel"
+              (valueChange)="onZoomPreset($event)">
     @for (p of zoomPresets; track p) {
       <mat-option [value]="p">{{ p }}%</mat-option>
     }
     <mat-option [value]="0">{{ 'STATUS.ZOOM_FIT' | translate }}</mat-option>
   </mat-select>
 
-  <button mat-icon-button [matTooltip]="'STATUS.FIT_TO_WINDOW' | translate">
+  <button mat-icon-button [matTooltip]="'STATUS.FIT_TO_WINDOW' | translate"
+          (click)="fitToWindow()">
     <mat-icon>fit_screen</mat-icon>
   </button>
 
-  <button mat-icon-button [matTooltip]="'STATUS.ZOOM_RESET' | translate">
+  <button mat-icon-button [matTooltip]="'STATUS.ZOOM_RESET' | translate"
+          (click)="resetZoom()">
     <mat-icon>zoom_out_map</mat-icon>
   </button>
+
+  <button mat-icon-button
+          [matTooltip]="(clipCanvas ? 'STATUS.CLIP_OFF' : 'STATUS.CLIP_ON') | translate"
+          [class.active-btn]="!clipCanvas"
+          (click)="clipCanvas = !clipCanvas">
+    <mat-icon>{{ clipCanvas ? 'crop' : 'crop_free' }}</mat-icon>
+  </button>
+
+  @if (toolState.activeTool() === 'polygon') {
+    <span class="status-label">{{ 'STATUS.SIDES' | translate }}</span>
+    <input class="sides-input" type="number"
+           [value]="activeSides"
+           min="3" max="32"
+           (change)="onSidesStatusChange($any($event.target).value)" />
+    <span class="status-label">{{ 'STATUS.VARIATION' | translate }}</span>
+    <input class="variation-input" type="number"
+           [value]="activeVariation"
+           min="0" max="1" step="0.05"
+           (change)="onVariationStatusChange($any($event.target).value)" />
+  }
 
   <span class="canvas-size">
     {{ 'STATUS.CANVAS_SIZE' | translate: { w: canvasWidth(), h: canvasHeight() } }}

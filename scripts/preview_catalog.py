@@ -72,16 +72,13 @@ def render_folder(
             stats["errors"] += 1
             continue
 
-        asset_id = item_meta["id"]
-        sidecar  = svg.with_suffix(".json")
-        rel      = svg.relative_to(content_root)
-        prev_dest = tmp_previews / rel.with_suffix(".webp")
-
-        existing = previews_root / rel.with_suffix(".webp")
+        asset_id  = item_meta["id"]
+        sidecar   = svg.with_suffix(".json")
+        prev_dest = tmp_previews / f"{asset_id}.webp"
+        existing  = previews_root / f"{asset_id}.webp"
 
         if not force and preview_is_fresh(asset_id, svg, sidecar, index) and existing.exists():
             # Copy the cached preview into the temp tree so publish_dir includes it
-            prev_dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(existing, prev_dest)
             stats["skipped"] += 1
         else:
@@ -89,6 +86,7 @@ def render_folder(
                 render_preview(svg, prev_dest)
                 update_index_entry(asset_id, svg, sidecar, index)
                 stats["rendered"] += 1
+                rel = svg.relative_to(content_root)
                 print(f"  rendered {rel}")
             except Exception as e:
                 errors.append(f"Preview failed for {svg}: {e}")
@@ -135,6 +133,7 @@ def main() -> None:
 
     tmp_root     = Path(tempfile.mkdtemp(prefix="laops_previews_"))
     tmp_previews = tmp_root / "previews"
+    tmp_previews.mkdir()
 
     try:
         if target == content:

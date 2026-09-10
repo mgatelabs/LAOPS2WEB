@@ -7,8 +7,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { TranslateModule } from '@ngx-translate/core';
+import { MatDialog } from '@angular/material/dialog';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ScenesCatalogService, SceneItem, SceneFolder } from '../core/scenes-catalog.service';
+import { SceneStore } from '../core/scene-store';
+import { FileIoService } from '../core/file-io.service';
+import { ConfirmDialogComponent } from '../shared/confirm-dialog.component';
+import { LoadingOverlayComponent } from '../shared/loading-overlay.component';
 
 @Component({
   selector: 'app-scene-panel',
@@ -23,13 +28,19 @@ import { ScenesCatalogService, SceneItem, SceneFolder } from '../core/scenes-cat
     MatTooltipModule,
     MatProgressSpinnerModule,
     TranslateModule,
+    LoadingOverlayComponent,
   ],
   templateUrl: './scene-panel.component.html',
   styleUrl: './scene-panel.component.scss',
 })
 export class ScenePanelComponent implements OnInit {
   readonly scenes = inject(ScenesCatalogService);
+  readonly store = inject(SceneStore);
+  readonly fileIo = inject(FileIoService);
+  private readonly dialog = inject(MatDialog);
+  private readonly translate = inject(TranslateService);
   searchQuery = '';
+  pendingLoad = false;
 
   private readonly expanded = new Set<string>();
 
@@ -57,7 +68,30 @@ export class ScenePanelComponent implements OnInit {
   }
 
   async loadScene(item: SceneItem): Promise<void> {
-    await this.scenes.loadScene(item);
+    if (this.fileIo.busy() || this.pendingLoad) return;
+    if (this.store.dirty()) {
+      const ok = this.dialog.open(ConfirmDialogComponent, {
+        data: { message: this.translate.instant('DIALOG.DISCARD_CHANGES') },
+      });
+      const result = await ok.afterClosed().toPromise();
+      if (result !== true) return;
+    }
+    this.pendingLoad = true;
+    try {
+      await this.scenes.loadScene(item);
+    } finally {
+      this.pendingLoad = false;
+    }
+  }
+
+  async importAsGroup(item: SceneItem): Promise<void> {
+    if (this.fileIo.busy() || this.pendingLoad) return;
+    this.pendingLoad = true;
+    try {
+      await this.scenes.importAsGroup(item);
+    } finally {
+      this.pendingLoad = false;
+    }
   }
 
   getFolders(): SceneFolder[] {

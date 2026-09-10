@@ -2,7 +2,7 @@ import { Injectable, signal } from '@angular/core';
 
 export type ToolId =
   | 'select' | 'move' | 'scale' | 'rotate'
-  | 'pivot'  | 'pan'  | 'rect'  | 'ellipse' | 'text';
+  | 'pivot'  | 'pan'  | 'rect'  | 'ellipse' | 'polygon' | 'text';
 
 @Injectable({ providedIn: 'root' })
 export class ToolStateService {

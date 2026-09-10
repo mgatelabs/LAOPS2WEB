@@ -1,4 +1,5 @@
 import { Injectable, signal, inject } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
 import { TranslateService } from '@ngx-translate/core';
 
 export interface LocaleInfo {
@@ -13,16 +14,20 @@ interface LocalesFile {
 
 const THEME_KEY = 'laops.theme';
 const LANG_KEY = 'laops.lang';
+const RIGHT_PANEL_KEY = 'laops.rightPanelOpen';
 
 const THEMES = ['auto', 'light', 'dark'] as const;
+const SUPPORTED_LANGS = ['en', 'fr', 'de', 'es', 'ru', 'it', 'da', 'fi', 'el', 'hu', 'ga', 'pl', 'pt', 'sv', 'spooky'];
 export type Theme = typeof THEMES[number];
 
 @Injectable({ providedIn: 'root' })
 export class SettingsService {
   private readonly translate = inject(TranslateService);
+  private readonly overlay = inject(OverlayContainer);
 
   theme = signal<Theme>('auto');
   language = signal<string>('en');
+  rightPanelOpen = signal<boolean>(true);
   locales = signal<LocaleInfo[]>([{ code: 'en', label: 'English' }]);
   resolvedTheme = signal<'light' | 'dark'>('dark');
 
@@ -44,8 +49,16 @@ export class SettingsService {
     } catch {
       // ignore
     }
-    if (lang !== 'en' && lang !== 'de' && lang !== 'fr') lang = 'en';
+    if (!SUPPORTED_LANGS.includes(lang)) lang = 'en';
     this.language.set(lang);
+
+    let panelOpen = true;
+    try {
+      panelOpen = localStorage.getItem(RIGHT_PANEL_KEY) !== 'false';
+    } catch {
+      // ignore
+    }
+    this.rightPanelOpen.set(panelOpen);
     if (lang !== 'en') {
       this.translate.use(lang);
       document.documentElement.lang = lang;
@@ -65,6 +78,16 @@ export class SettingsService {
       // ignore
     }
     this.applyTheme();
+  }
+
+  toggleRightPanel(): void {
+    const next = !this.rightPanelOpen();
+    this.rightPanelOpen.set(next);
+    try {
+      localStorage.setItem(RIGHT_PANEL_KEY, String(next));
+    } catch {
+      // ignore
+    }
   }
 
   setLanguage(lang: string): void {
@@ -88,11 +111,11 @@ export class SettingsService {
     const t = this.theme();
     const mode = t === 'auto' ? (this.media?.matches ? 'dark' : 'light') : t;
     this.resolvedTheme.set(mode);
-    const body = document.body;
-    body.classList.remove('laops-light-theme', 'laops-dark-theme');
-    body.classList.add(mode === 'dark' ? 'laops-dark-theme' : 'laops-light-theme');
-    if (!silent) {
-      // no extra work needed
-    }
+    const classList = document.body.classList;
+    classList.remove('laops-light-theme', 'laops-dark-theme');
+    classList.add(mode === 'dark' ? 'laops-dark-theme' : 'laops-light-theme');
+    const overlayEl = this.overlay.getContainerElement();
+    overlayEl.classList.remove('laops-light-theme', 'laops-dark-theme');
+    overlayEl.classList.add(mode === 'dark' ? 'laops-dark-theme' : 'laops-light-theme');
   }
 }

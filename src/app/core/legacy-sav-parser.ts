@@ -57,8 +57,10 @@ export function parseLegacySav(text: string): ParseResult {
         nodes.push(parseText(f, warnings, idx));
         break;
       case 'GROUP_V2':
+        warnings.push(`Record ${idx}: GROUP_V2 (embedded scene) skipped — not supported in browser import`);
+        break;
       case 'PART':
-        warnings.push(`Record ${idx}: unsupported token "${token}" skipped`);
+        nodes.push(parsePart(f, warnings, idx));
         break;
       default:
         warnings.push(`Record ${idx}: unknown token "${token}" skipped`);
@@ -156,7 +158,8 @@ function transformOf(s: ShapeFields): SceneNode['transform'] {
 }
 
 function parseObject(f: string[], warnings: string[], idx: number): SceneNode {
-  const path = f[1] ?? '';
+  const rawPath = f[1] ?? '';
+  const path = rawPath.replace(/\\/g, '/');
   const t = parseTransformAt(f, 2, warnings, idx);
   if (!path) {
     warnings.push(`Record ${idx}: OBJECT_V2 missing path — emitted grey placeholder rect`);
@@ -171,6 +174,41 @@ function parseObject(f: string[], warnings: string[], idx: number): SceneNode {
     type: 'svg-object',
     assetId: path,
     label: baseName(path),
+    transform: transformOf(t),
+    visible: true,
+    locked: false
+  };
+}
+
+function parsePart(f: string[], warnings: string[], idx: number): SceneNode {
+  // PART&{filePath}&{colorInfo}&{x}&{y}&{sX}&{sY}&{tX}&{tY}&{r}&
+  const path = f[1] ?? '';
+  const colorInfo = f[2] ?? '';
+  const t = parseTransformAt(f, 3, warnings, idx);
+
+  if (!path) {
+    warnings.push(`Record ${idx}: PART missing path — emitted placeholder`);
+    return {
+      id: newId(), type: 'primitive', shape: 'rect', label: 'Part',
+      transform: transformOf(t), visible: true, locked: false,
+      w: 64, h: 64, fill: [200, 200, 200], stroke: null, strokeWidth: 0
+    };
+  }
+
+  const normalizedPath = path.replace(/\\/g, '/');
+
+  if (colorInfo && colorInfo !== '') {
+    warnings.push(
+      `Record ${idx}: PART "${normalizedPath}" color tint "${colorInfo}" not applied ` +
+      `(svg-object tinting not supported)`
+    );
+  }
+
+  return {
+    id: newId(),
+    type: 'svg-object',
+    assetId: normalizedPath,
+    label: baseName(normalizedPath),
     transform: transformOf(t),
     visible: true,
     locked: false
@@ -286,7 +324,7 @@ function parseText(f: string[], warnings: string[], idx: number): SceneNode {
     content,
     font: safe,
     size: fontSize,
-    style,
+    style: style ?? 'normal',
     color: fill,
     transform: transformOf(t),
     visible: true,

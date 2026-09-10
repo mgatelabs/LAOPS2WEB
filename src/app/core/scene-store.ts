@@ -1,8 +1,9 @@
 import { Injectable, signal, computed, inject, DestroyRef } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import {
-  Scene, SceneNode, CanvasSettings, Transform, cloneNode, cloneTransform,
-  defaultScene, defaultCanvas, identityTransform
+  Scene, SceneNode, CanvasSettings, Transform,
+  MultiColorObjectNode, MultiColorPart,
+  defaultScene, IDENTITY_TRANSFORM
 } from './models';
 import { composeTransforms } from './transform-math';
 
@@ -17,11 +18,11 @@ export class SceneStore {
   selection = signal<ReadonlySet<string>>(new Set());
   dirty = signal(false);
 
-  private readonly undoStack: Scene[] = [];
-  private readonly redoStack: Scene[] = [];
+  private readonly undoStack: { scene: Scene; label: string | null }[] = [];
+  private readonly redoStack: { scene: Scene; label: string | null }[] = [];
 
-  readonly canUndo = computed(() => this.undoStack.length > 0);
-  readonly canRedo = computed(() => this.redoStack.length > 0);
+  readonly canUndo = signal(false);
+  readonly canRedo = signal(false);
 
   readonly selectedNodes = computed<SceneNode[]>(() => this.scene().nodes.filter(n => this.selection().has(n.id)));
 
@@ -30,24 +31,52 @@ export class SceneStore {
   undoLabel = signal<string | null>(null);
   redoLabel = signal<string | null>(null);
 
+  // MVP-81: bumped after a loadScene/open-import so the canvas re-injects
+  // SVGs whose data-svg-rendered marker outlived the load while the SVG
+  // cache only got populated mid-load.
+  readonly svgReinjectTick = signal(0);
+
+  triggerSvgReinject(): void {
+    this.svgReinjectTick.update(n => n + 1);
+  }
+
+  private activeGesture: { undoIndex: number; label: string } | null = null;
+
   constructor() {
     this.destroyRef.onDestroy(() => {
       this.undoStack.length = 0;
       this.redoStack.length = 0;
+      this.syncUndoRedoState();
     });
+  }
+
+  private syncUndoRedoState(): void {
+    this.canUndo.set(this.undoStack.length > 0);
+    this.canRedo.set(this.redoStack.length > 0);
   }
 
   // ---------- core ----------
 
   commit(next: Scene, label?: string): void {
-    this.undoStack.push(this.scene());
-    if (this.undoStack.length > MAX_UNDO) this.undoStack.shift();
-    this.undoLabel.set(label ?? null);
+    if (this.activeGesture && this.activeGesture.undoIndex < 0) {
+      // First commit of a gesture — mark the pre-gesture state as its undo
+      // entry. Commits after this skip the push, so the whole gesture
+      // collapses into a single undo step.
+      this.undoStack.push({ scene: this.scene(), label: this.activeGesture.label });
+      if (this.undoStack.length > MAX_UNDO) this.undoStack.shift();
+      this.activeGesture.undoIndex = this.undoStack.length - 1;
+      this.undoLabel.set(this.activeGesture.label);
+    } else if (!this.activeGesture) {
+      this.undoStack.push({ scene: this.scene(), label: label ?? null });
+      if (this.undoStack.length > MAX_UNDO) this.undoStack.shift();
+      this.undoLabel.set(label ?? null);
+    }
     this.redoStack.length = 0;
     this.redoLabel.set(null);
     pruneSelection(this, next);
     this.scene.update(() => next);
     this.dirty.set(true);
+    this.syncUndoRedoState();
   }
 
   updateCanvas(updater: Partial<CanvasSettings>): void {
@@ -84,6 +113,13 @@ export class SceneStore {
     this.selection.set(new Set([node.id]));
   }
 
+  addNodes(nodes: SceneNode[], label?: string): void {
+    if (nodes.length === 0) return;
+    const cur = this.scene();
+    this.commit({ ...cur, nodes: [...cur.nodes, ...nodes] }, label);
+    this.selection.set(new Set(nodes.map(n => n.id)));
+  }
+
   updateNode(id: string, updater: (node: SceneNode) => SceneNode): void {
     const cur = this.scene();
     const mapNode = (n: SceneNode): SceneNode => {
@@ -98,6 +134,56 @@ export class SceneStore {
     };
     const nodes = cur.nodes.map(mapNode);
     this.commit({ ...cur, nodes });
+  }
+
+  updateTransform(id: string, transform: Transform): void {
+    this.updateNode(id, n => ({ ...n, transform }));
+  }
+
+  findNode(id: string): SceneNode | undefined {
+    const search = (nodes: SceneNode[]): SceneNode | undefined => {
+      for (const n of nodes) {
+        if (n.id === id) return n;
+        if (n.type === 'group') {
+          const found = search(n.nodes);
+          if (found) return found;
+        }
+      }
+      return undefined;
+    };
+    return search(this.scene().nodes);
+  }
+
+  updateMultiColorPart(nodeId: string, partId: string, patch: Partial<MultiColorPart>): void {
+    this.updateNode(nodeId, n => {
+      if (n.type !== 'multicolor-object') return n;
+      const mc = n as MultiColorObjectNode;
+      const existing = mc.parts.find(p => p.id === partId);
+      let newParts: MultiColorPart[];
+      if (existing) {
+        newParts = mc.parts.map(p =>
+          p.id === partId ? { ...p, ...patch } : p
+        );
+      } else {
+        newParts = [...mc.parts, { id: partId, ...patch }];
+      }
+      return { ...mc, parts: newParts } as SceneNode;
+    });
+  }
+
+  resetMultiColorParts(nodeId: string): void {
+    this.updateNode(nodeId, n => {
+      if (n.type !== 'multicolor-object') return n;
+      return { ...(n as MultiColorObjectNode), parts: [] } as SceneNode;
+    });
+  }
+
+  batchTransform(
+    ids: ReadonlySet<string>,
+    updater: (n: SceneNode) => Transform,
+    label?: string,
+  ): void {
+    this.batch(ids, n => ({ ...n, transform: updater(n) }), true, label);
   }
 
   removeNodes(ids: ReadonlySet<string>): void {
@@ -162,7 +248,7 @@ export class SceneStore {
     this.batch(this.selection(), n => ({
       ...n,
       transform: { ...n.transform, x: n.transform.x + dx, y: n.transform.y + dy }
-    }), label);
+    }), undefined, label);
   }
 
   flipH(ids: ReadonlySet<string>, commitOnce = true): void {
@@ -173,8 +259,28 @@ export class SceneStore {
     this.batch(ids, n => ({ ...n, transform: { ...n.transform, sy: -n.transform.sy } }), commitOnce, this.t('MENU.EDIT_FLIP_V'));
   }
 
+  lockNodes(ids: ReadonlySet<string>): void {
+    if (ids.size === 0) return;
+    const cur = this.scene();
+    const nodes = cur.nodes.map(n => ids.has(n.id) ? { ...n, locked: true } : n);
+    this.commit({ ...cur, nodes }, this.t('EDIT.LOCK'));
+    // A locked node cannot be selected — drop it from the current selection.
+    const sel = new Set(this.selection());
+    for (const id of ids) sel.delete(id);
+    this.selection.set(sel);
+  }
+
   resetTransform(ids: ReadonlySet<string>): void {
-    this.batch(ids, n => ({ ...n, transform: identityTransform() }), true, this.t('PROPS.RESET_TRANSFORM'));
+    this.batch(ids, n => ({ ...n, transform: { ...IDENTITY_TRANSFORM } }), true, this.t('PROPS.RESET_TRANSFORM'));
+  }
+
+  setVisibility(ids: ReadonlySet<string>, visible: boolean): void {
+    this.batch(
+      ids,
+      n => ({ ...n, visible }),
+      true,
+      visible ? this.t('LAYERS.SHOW_SELECTED') : this.t('LAYERS.HIDE_SELECTED'),
+    );
   }
 
   cloneSelected(): void {
@@ -185,7 +291,8 @@ export class SceneStore {
     const pushClones = (nodes: SceneNode[]) => {
       for (const n of nodes) {
         if (ids.has(n.id)) {
-          const c = cloneNode(n);
+          const c = structuredClone(n) as SceneNode;
+          c.id = cryptoUUID();
           c.transform = { ...c.transform, x: c.transform.x + 16, y: c.transform.y + 16 };
           clones.push(c);
         }
@@ -212,7 +319,7 @@ export class SceneStore {
       type: 'group',
       label: this.t('NODE_TYPE.GROUP') + ' ' + (cur.nodes.length - members.length + 1),
       sourceName: '',
-      transform: identityTransform(),
+      transform: { ...IDENTITY_TRANSFORM },
       visible: true,
       locked: false,
       nodes: members
@@ -264,24 +371,60 @@ export class SceneStore {
     this.clearSelection();
   }
 
+  // ---------- gestures (single undo step per pointer interaction) ----------
+
+  snapshot(): Map<string, SceneNode> {
+    const out = new Map<string, SceneNode>();
+    const walk = (ns: SceneNode[]): void => {
+      for (const n of ns) {
+        if (!out.has(n.id)) out.set(n.id, structuredClone(n));
+        if (n.type === 'group') walk(n.nodes);
+      }
+    };
+    walk(this.scene().nodes);
+    return out;
+  }
+
+  beginGesture(label: string): void {
+    this.activeGesture = { undoIndex: -1, label };
+  }
+
+  endGesture(): void {
+    // If the gesture committed at least once, its first commit already pushed
+    // the pre-gesture snapshot with this label — the stack is in final shape.
+    // If it never committed, the stack was never touched — nothing to restore.
+    this.activeGesture = null;
+  }
+
   undo(): void {
     if (this.undoStack.length === 0) return;
-    this.redoStack.push(this.scene());
-    this.redoLabel.set(this.undoLabel());
+    this.activeGesture = null;
     const prev = this.undoStack.pop()!;
-    pruneSelection(this, prev);
-    this.scene.set(prev);
+    this.redoStack.push({ scene: this.scene(), label: prev.label });
+    this.undoLabel.set(
+      this.undoStack.length ? this.undoStack[this.undoStack.length - 1].label : null,
+    );
+    this.redoLabel.set(prev.label);
+    pruneSelection(this, prev.scene);
+    this.scene.set(prev.scene);
     this.dirty.set(true);
+    this.syncUndoRedoState();
   }
 
   redo(): void {
     if (this.redoStack.length === 0) return;
-    this.undoStack.push(this.scene());
-    this.undoLabel.set(this.redoLabel());
+    this.activeGesture = null;
     const next = this.redoStack.pop()!;
-    pruneSelection(this, next);
-    this.scene.set(next);
+    this.undoStack.push({ scene: this.scene(), label: next.label });
+    if (this.undoStack.length > MAX_UNDO) this.undoStack.shift();
+    this.undoLabel.set(next.label);
+    this.redoLabel.set(
+      this.redoStack.length ? this.redoStack[this.redoStack.length - 1].label : null,
+    );
+    pruneSelection(this, next.scene);
+    this.scene.set(next.scene);
     this.dirty.set(true);
+    this.syncUndoRedoState();
   }
 
   private batch(ids: ReadonlySet<string>, updater: (n: SceneNode) => SceneNode, commitOnce?: boolean, label?: string): void {

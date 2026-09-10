@@ -189,6 +189,39 @@ def render_preview(svg_path: Path, out_path: Path, size: int = 128, pad: int = 4
     bg.convert("RGB").save(str(out_path), "WEBP", quality=90)
 
 
+def render_transparent_png(svg_path: Path, size: int = 512) -> bytes:
+    """
+    Render *svg_path* to a *size*×*size* PNG with a transparent background.
+
+    The SVG is fitted into the tile without distortion (aspect ratio
+    preserved, centred).  Returns the PNG as bytes — the caller decides
+    where to put it.  Useful for feeding the artwork to vision LLMs that
+    cannot parse raw SVG.
+    """
+    check_deps()
+
+    clean = sanitize_svg(svg_path)
+    try:
+        png_bytes = cairosvg.svg2png(
+            url=str(clean),
+            output_width=size,
+            output_height=size,
+            background_color=None,
+        )
+    finally:
+        clean.unlink(missing_ok=True)
+
+    img = Image.open(io.BytesIO(png_bytes)).convert("RGBA")
+    img.thumbnail((size, size), Image.LANCZOS)
+
+    canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    canvas.alpha_composite(img, dest=((size - img.width) // 2, (size - img.height) // 2))
+
+    buf = io.BytesIO()
+    canvas.save(buf, "PNG")
+    return buf.getvalue()
+
+
 # ---------------------------------------------------------------------------
 # Sidecar validation
 # ---------------------------------------------------------------------------

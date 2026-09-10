@@ -1,0 +1,190 @@
+{
+  "version": 2,
+  "savedAt": "2026-09-17T02:19:24.241Z",
+  "canvas": {
+    "width": 300,
+    "height": 300,
+    "backgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "borderColor": [
+      0,
+      0,
+      0
+    ]
+  },
+  "nodes": [
+    {
+      "id": "5ad13c90-5132-4ca2-a5b9-dd997a98191c",
+      "type": "svg-object",
+      "assetId": "MO55",
+      "label": "mossman",
+      "transform": {
+        "x": 65,
+        "y": 183,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "629edaac-e04f-4462-9a89-32aaa5d3dc2b",
+      "type": "svg-object",
+      "assetId": "HE193",
+      "label": "head",
+      "transform": {
+        "x": 59,
+        "y": 21,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "7e2c9e68-73ff-4fb1-9c28-acb9b444f8da",
+      "type": "svg-object",
+      "assetId": "HA192",
+      "label": "hand",
+      "transform": {
+        "x": 211,
+        "y": 241,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "7bb3bb83-6df4-43cb-9f5a-b2604e934810",
+      "type": "svg-object",
+      "assetId": "HA192",
+      "label": "hand",
+      "transform": {
+        "x": 65,
+        "y": 242,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "ca9dd664-4ae3-4ba8-b695-2b1fdb509f9b",
+      "type": "svg-object",
+      "assetId": "TI236",
+      "label": "tired",
+      "transform": {
+        "x": 99,
+        "y": 113,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "9aa78f9c-c5cb-41b4-80db-1e4e212f2696",
+      "type": "svg-object",
+      "assetId": "TI236",
+      "label": "tired",
+      "transform": {
+        "x": 209,
+        "y": 114,
+        "sx": -1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "43c4b465-cce5-4eef-a1aa-93965c2c5f83",
+      "type": "svg-object",
+      "assetId": "DO226",
+      "label": "dot",
+      "transform": {
+        "x": 134,
+        "y": 124,
+        "sx": 1.2349998,
+        "sy": 1.5449995,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "c48658b4-26d8-4e2f-9f8a-e0ba06da19fd",
+      "type": "svg-object",
+      "assetId": "DO226",
+      "label": "dot",
+      "transform": {
+        "x": 166,
+        "y": 124,
+        "sx": 1.2349998,
+        "sy": 1.5449995,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "c11c5c53-0a19-4fe9-b7b7-1e2955ca4ade",
+      "type": "svg-object",
+      "assetId": "MO85",
+      "label": "Mossman",
+      "transform": {
+        "x": 56,
+        "y": 3,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "42c8c900-744c-431a-8877-6068a490c945",
+      "type": "svg-object",
+      "assetId": "1X213",
+      "label": "1",
+      "transform": {
+        "x": 133,
+        "y": 180,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    }
+  ]
+}

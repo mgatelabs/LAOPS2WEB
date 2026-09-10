@@ -11,6 +11,7 @@ let nextId = 1;
 
 export interface ToastParams {
   duration?: number;
+  [key: string]: unknown;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -20,7 +21,7 @@ export class ToastService {
   toasts = signal<Toast[]>([]);
 
   toast(messageKey: string, variant: Toast['variant'] = 'info', params?: ToastParams): void {
-    const message = this.translate.instant(messageKey);
+    const message = this.translate.instant(messageKey, { ...params });
     const id = nextId++;
     this.toasts.update(list => [...list, { id, message, variant }]);
     setTimeout(() => {

@@ -1,4 +1,6 @@
 <app-menu-bar />
 <app-tool-bar />
 <app-canvas />
-<app-right-panel-host />
+@if (settings.rightPanelOpen()) {
+  <app-right-panel-host />
+}

@@ -28,8 +28,12 @@ $laops-dark-theme: mat.define-dark-theme((
 
 @mixin laops-component-themes($theme) {
   @include mat.button-theme($theme);
+  @include mat.button-toggle-theme($theme);
   @include mat.checkbox-theme($theme);
+  @include mat.dialog-theme($theme);
   @include mat.form-field-theme($theme);
+  @include mat.icon-theme($theme);
+  @include mat.icon-button-theme($theme);
   @include mat.input-theme($theme);
   @include mat.list-theme($theme);
   @include mat.menu-theme($theme);
@@ -37,20 +41,57 @@ $laops-dark-theme: mat.define-dark-theme((
   @include mat.select-theme($theme);
   @include mat.slide-toggle-theme($theme);
   @include mat.tabs-theme($theme);
+  @include mat.tooltip-theme($theme);
 }
 
+// Emit core (MDC base tokens) once at html level with light as the
+// default so there's no flash of unstyled content while JS loads.
 html {
   @include mat.core-theme($laops-light-theme);
 }
 
 .laops-light-theme {
+  // Re-emit core so MDC tokens update when class is applied at runtime.
+  @include mat.core-theme($laops-light-theme);
   @include laops-component-themes($laops-light-theme);
   @include mat.typography-hierarchy($laops-light-theme);
+
+  // ── Surface tokens ────────────────────────────────────────────────
+  --laops-bg:            #f0f0f0;
+  --laops-surface:       #ffffff;
+  --laops-surface-2:     #ebebeb;
+  --laops-border:        rgba(0, 0, 0, 0.15);
+  --laops-text:          #212121;
+  --laops-text-muted:    rgba(0, 0, 0, 0.54);
+  --laops-hover:         rgba(0, 0, 0, 0.07);
+  --laops-selected:      rgba(33, 150, 243, 0.18);
+  --laops-scrollbar:     rgba(0, 0, 0, 0.25);
+  --laops-canvas-bg:     rgba(0, 0, 0, 0.05);
+  --laops-canvas-stripe: rgba(0, 0, 0, 0.03);
+  --laops-input-bg:      rgba(0, 0, 0, 0.06);
+  --laops-input-bg-hover: rgba(0, 0, 0, 0.10);
 }
 
 .laops-dark-theme {
+  // Re-emit core so MDC tokens update when class is applied at runtime.
+  @include mat.core-theme($laops-dark-theme);
   @include laops-component-themes($laops-dark-theme);
   @include mat.typography-hierarchy($laops-dark-theme);
+
+  // ── Surface tokens ────────────────────────────────────────────────
+  --laops-bg:            #1e1e1e;
+  --laops-surface:       #2a2a2a;
+  --laops-surface-2:     #333333;
+  --laops-border:        rgba(255, 255, 255, 0.10);
+  --laops-text:          #e0e0e0;
+  --laops-text-muted:    rgba(255, 255, 255, 0.54);
+  --laops-hover:         rgba(255, 255, 255, 0.08);
+  --laops-selected:      rgba(33, 150, 243, 0.30);
+  --laops-scrollbar:     rgba(255, 255, 255, 0.22);
+  --laops-canvas-bg:     rgba(255, 255, 255, 0.04);
+  --laops-canvas-stripe: rgba(255, 255, 255, 0.025);
+  --laops-input-bg:      rgba(255, 255, 255, 0.08);
+  --laops-input-bg-hover: rgba(255, 255, 255, 0.13);
 }
 
 * {
@@ -62,6 +103,8 @@ body {
   height: 100%;
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--laops-bg);
+  color: var(--laops-text);
 }
 
 .material-icons {
@@ -79,12 +122,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(128, 128, 128, 0.4);
+  background: var(--laops-scrollbar);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(128, 128, 128, 0.6);
+  background: var(--laops-scrollbar);
+  filter: brightness(1.25);
 }
 
 ::-webkit-scrollbar-corner {
@@ -98,6 +142,8 @@ body {
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  background-color: var(--laops-bg);
+  color: var(--laops-text);
 }
 
 .laops-main {
@@ -119,8 +165,8 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-left: 1px solid rgba(128, 128, 128, 0.25);
-  background: rgba(128, 128, 128, 0.06);
+  border-left: 1px solid var(--laops-border);
+  background: var(--laops-surface);
 }
 
 .laops-panel-header {
@@ -132,6 +178,9 @@ body {
   font-weight: 600;
   letter-spacing: 0.4px;
   text-transform: uppercase;
+  color: var(--laops-text);
+  background: var(--laops-surface-2);
+  border-bottom: 1px solid var(--laops-border);
 
   .material-icons {
     font-size: 16px;
@@ -164,7 +213,7 @@ body {
     width: 22px;
     height: 22px;
     border-radius: 4px;
-    border: 1px solid rgba(128, 128, 128, 0.5);
+    border: 1px solid var(--laops-border);
     flex: none;
 
     &.none {
@@ -209,8 +258,8 @@ body {
   flex: 1;
   overflow: hidden;
   background:
-    repeating-linear-gradient(45deg, rgba(128, 128, 128, 0.06) 0 12px, transparent 12px 24px),
-    rgba(128, 128, 128, 0.1);
+    repeating-linear-gradient(45deg, var(--laops-canvas-stripe) 0 12px, transparent 12px 24px),
+    var(--laops-canvas-bg);
 }
 
 .laops-canvas-viewport {
@@ -336,6 +385,7 @@ body {
   font-size: 13px;
   user-select: none;
   margin-left: 0;
+  color: var(--laops-text);
 
   .layer-type {
     font-size: 14px;
@@ -355,12 +405,16 @@ body {
     gap: 2px;
   }
 
-  &:hover .layer-toggles {
-    display: flex;
+  &:hover {
+    background: var(--laops-hover);
+
+    .layer-toggles {
+      display: flex;
+    }
   }
 
   &.selected {
-    background: rgba(33, 150, 243, 0.25);
+    background: var(--laops-selected);
   }
 
   &.hidden .layer-label {
@@ -380,7 +434,7 @@ body {
     }
 
     &:hover {
-      background: rgba(128, 128, 128, 0.2);
+      background: var(--laops-hover);
     }
 
     &.active {
@@ -419,9 +473,10 @@ body {
   cursor: grab;
   user-select: none;
   border: 1px solid transparent;
+  color: var(--laops-text);
 
   &:hover {
-    background: rgba(128, 128, 128, 0.15);
+    background: var(--laops-hover);
   }
 
   .lib-preview {
@@ -459,6 +514,7 @@ body {
     letter-spacing: 0.3px;
     padding: 2px 4px;
     opacity: 0.75;
+    color: var(--laops-text-muted);
   }
 }
 
@@ -467,12 +523,14 @@ body {
   font-size: 12px;
   opacity: 0.7;
   text-align: center;
+  color: var(--laops-text-muted);
 }
 
 // ---------- properties ----------
 
 .props-section {
   margin-bottom: 12px;
+  color: var(--laops-text);
 
   h4 {
     margin: 0 0 6px;
@@ -495,6 +553,7 @@ body {
     width: 26px;
     font-size: 12px;
     opacity: 0.8;
+    color: var(--laops-text-muted);
   }
 
   input[type='number'],
@@ -514,6 +573,7 @@ body {
   font-size: 12px;
   opacity: 0.7;
   padding: 8px 4px;
+  color: var(--laops-text-muted);
 }
 
 // ---------- menubar ----------
@@ -524,6 +584,9 @@ body {
   height: 32px;
   flex: none;
   user-select: none;
+  background: var(--laops-surface);
+  border-bottom: 1px solid var(--laops-border);
+  color: var(--laops-text);
 
   .menu-title {
     font-weight: 600;
@@ -541,7 +604,7 @@ body {
     cursor: pointer;
 
     &:hover {
-      background: rgba(128, 128, 128, 0.2);
+      background: var(--laops-hover);
     }
   }
 
@@ -549,7 +612,7 @@ body {
     width: 1px;
     align-self: stretch;
     margin: 6px 4px;
-    background: rgba(128, 128, 128, 0.3);
+    background: var(--laops-border);
   }
 }
 
@@ -561,7 +624,8 @@ body {
   flex: none;
   gap: 2px;
   padding: 2px 6px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+  border-bottom: 1px solid var(--laops-border);
+  background: var(--laops-surface);
   flex-wrap: wrap;
 
   .tool-btn {
@@ -570,14 +634,14 @@ body {
     padding: 4px;
     border-radius: 4px;
     cursor: pointer;
-    color: inherit;
+    color: var(--laops-text);
 
     .material-icons {
       font-size: 20px;
     }
 
     &:hover {
-      background: rgba(128, 128, 128, 0.2);
+      background: var(--laops-hover);
     }
 
     &.active {
@@ -590,7 +654,7 @@ body {
     height: 22px;
     align-self: center;
     margin: 0 4px;
-    background: rgba(128, 128, 128, 0.3);
+    background: var(--laops-border);
   }
 }
 
@@ -603,7 +667,9 @@ body {
   gap: 12px;
   padding: 2px 10px;
   font-size: 12px;
-  border-top: 1px solid rgba(128, 128, 128, 0.25);
+  border-top: 1px solid var(--laops-border);
+  background: var(--laops-surface);
+  color: var(--laops-text);
 
   .sb-item {
     white-space: nowrap;
@@ -616,10 +682,56 @@ body {
 
 // ---------- misc ----------
 
+.cdk-overlay-container {
+  z-index: 1000;
+}
+
 .mat-mdc-menu-panel {
   min-width: 220px;
 }
 
+// ---------- context menu ----------
+
+.mat-mdc-menu-panel .active-tool .mat-icon {
+  color: #4285f4;
+}
+
 input[type='number'] {
   font-family: inherit;
+}
+
+// ---------- MDC form field overrides — theme-aware fill colour ----------
+// MDC uses a hardcoded rgba that doesn't respond to Angular theme class swaps.
+// Override here so inputs in both themes are readable.
+
+.laops-light-theme,
+.laops-dark-theme {
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: var(--laops-input-bg);
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled):hover {
+    background-color: var(--laops-input-bg-hover);
+  }
+
+  // Make sure labels and input text use the theme text colour
+  .mdc-text-field .mdc-floating-label,
+  .mdc-text-field input {
+    color: var(--laops-text);
+  }
+
+  // Icon buttons inside panels inherit the theme text colour
+  .mat-mdc-icon-button {
+    color: var(--laops-text);
+  }
+}
+
+// ---------- tooltip background (MVP-39) ----------
+
+.mat-mdc-tooltip .mdc-tooltip__surface {
+  background-color: rgba(40, 40, 40, 0.95) !important;
+  color: #f0f0f0 !important;
+  font-size: 12px !important;
+  outline: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }

@@ -1,0 +1,84 @@
+@if (hasSelection) {
+  <div class="transform-header">
+    <span class="section-label">{{ 'TRANSFORM.TITLE' | translate }}</span>
+    <mat-button-toggle-group [(ngModel)]="transformMode" class="mode-toggle">
+      <mat-button-toggle value="individual"
+        [matTooltip]="'TRANSFORM.MODE_INDIVIDUAL' | translate">
+        <mat-icon>grid_view</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="global"
+        [matTooltip]="'TRANSFORM.MODE_GLOBAL' | translate">
+        <mat-icon>select_all</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <!-- Translate -->
+  <div class="tx-section-label">{{ 'TRANSFORM.TRANSLATE' | translate }}</div>
+  <div class="row-2col">
+    <mat-form-field appearance="fill" subscriptSizing="dynamic">
+      <mat-label>{{ 'TRANSFORM.DX' | translate }}</mat-label>
+      <input matInput type="number" [(ngModel)]="tdx" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" subscriptSizing="dynamic">
+      <mat-label>{{ 'TRANSFORM.DY' | translate }}</mat-label>
+      <input matInput type="number" [(ngModel)]="tdy" />
+    </mat-form-field>
+  </div>
+  <button mat-stroked-button class="full-width apply-btn"
+          (click)="applyTranslate()">
+    {{ 'TRANSFORM.APPLY' | translate }}
+  </button>
+
+  <!-- Rotate -->
+  <div class="tx-section-label">{{ 'TRANSFORM.ROTATE' | translate }}</div>
+  <div class="row-2col">
+    <mat-form-field appearance="fill" subscriptSizing="dynamic">
+      <mat-label>{{ 'TRANSFORM.ANGLE' | translate }}</mat-label>
+      <input matInput type="number" [(ngModel)]="tAngle" />
+      <span matSuffix>°</span>
+    </mat-form-field>
+  </div>
+  <button mat-stroked-button class="full-width apply-btn"
+          (click)="applyRotate()">
+    {{ 'TRANSFORM.APPLY' | translate }}
+  </button>
+
+  <!-- Scale -->
+  <div class="tx-section-label">{{ 'TRANSFORM.SCALE' | translate }}</div>
+  <div class="row-2col-lock">
+    <mat-form-field appearance="fill" subscriptSizing="dynamic">
+      <mat-label>{{ 'TRANSFORM.SCALE_X' | translate }}</mat-label>
+      <input matInput type="number" [(ngModel)]="tsx"
+             (ngModelChange)="onTsxChange($event)" />
+      <span matSuffix>%</span>
+    </mat-form-field>
+    <mat-form-field appearance="fill" subscriptSizing="dynamic">
+      <mat-label>{{ 'TRANSFORM.SCALE_Y' | translate }}</mat-label>
+      <input matInput type="number" [(ngModel)]="tsy"
+             (ngModelChange)="onTsyChange($event)" />
+      <span matSuffix>%</span>
+    </mat-form-field>
+    <button mat-icon-button
+            [matTooltip]="'TRANSFORM.LOCK_ASPECT' | translate"
+            [class.active-btn]="lockAspect"
+            (click)="lockAspect = !lockAspect">
+      <mat-icon>{{ lockAspect ? 'lock' : 'lock_open' }}</mat-icon>
+    </button>
+  </div>
+  <button mat-stroked-button class="full-width apply-btn"
+          (click)="applyScale()">
+    {{ 'TRANSFORM.APPLY' | translate }}
+  </button>
+
+  <button mat-button class="reset-btn"
+          (click)="resetFields()">
+    <mat-icon>restart_alt</mat-icon>
+    {{ 'TRANSFORM.RESET' | translate }}
+  </button>
+} @else {
+  <div class="empty-state">
+    <mat-icon>touch_app</mat-icon>
+    <span>{{ 'PANEL.NOTHING_SELECTED' | translate }}</span>
+  </div>
+}

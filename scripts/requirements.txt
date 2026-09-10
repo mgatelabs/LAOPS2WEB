@@ -1,0 +1,14 @@
+# Python dependencies for LAOPS asset pipeline scripts
+#
+# Install with pip (see README.md for version-pinning guidance):
+#   pip install -r scripts/requirements.txt
+
+# SVG → PNG rendering (used by preview_catalog.py)
+cairosvg>=2.7.0
+
+# Image processing and WebP output (used by preview_catalog.py)
+Pillow>=10.0.0
+
+# OpenAI-compatible client — works with Ollama and real OpenAI
+# (used by examine_catalog.py)
+openai>=1.0.0

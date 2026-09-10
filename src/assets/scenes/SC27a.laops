@@ -1,0 +1,122 @@
+{
+  "version": 2,
+  "savedAt": "2026-09-17T02:17:14.960Z",
+  "canvas": {
+    "width": 300,
+    "height": 300,
+    "backgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "borderColor": [
+      0,
+      0,
+      0
+    ]
+  },
+  "nodes": [
+    {
+      "id": "db9663a9-31b7-47fc-8f1b-16d4099090e2",
+      "type": "svg-object",
+      "assetId": "ME54",
+      "label": "MetroCop",
+      "transform": {
+        "x": 67,
+        "y": 178,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "0278e17e-3a72-446d-814b-bfe5ee436f56",
+      "type": "svg-object",
+      "assetId": "HE193",
+      "label": "head",
+      "transform": {
+        "x": 57,
+        "y": 16,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "19e6f372-839e-4475-b1a9-eb3783f4412b",
+      "type": "svg-object",
+      "assetId": "BA80",
+      "label": "Barney",
+      "transform": {
+        "x": 58,
+        "y": 10,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "c83d6653-b9e9-4f1b-b10d-51f1b20d0d05",
+      "type": "svg-object",
+      "assetId": "BL97",
+      "label": "Black",
+      "transform": {
+        "x": 64,
+        "y": 237,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "81bc45b9-b598-423f-9833-3b1e077b95cc",
+      "type": "svg-object",
+      "assetId": "NO70",
+      "label": "Normal",
+      "transform": {
+        "x": 97,
+        "y": 93,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "2ec51f65-d4e6-47cb-ba70-56f7595b8c85",
+      "type": "svg-object",
+      "assetId": "MO159",
+      "label": "MOUTH-2",
+      "transform": {
+        "x": 131,
+        "y": 160,
+        "sx": 0.6950001,
+        "sy": 0.9050001,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    }
+  ]
+}

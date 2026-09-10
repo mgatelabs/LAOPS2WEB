@@ -5,7 +5,7 @@
   <div class="tool-btn-wrap" [class.active]="toolState.activeTool() === tool.id">
     <button
       mat-icon-button
-      [matTooltip]="tool.key | translate"
+      [matTooltip]="(tool.key | translate) + '  (' + tool.shortcut + ')'"
       matTooltipPosition="right"
       (click)="selectTool(tool.id)"
     >

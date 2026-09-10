@@ -1,5 +1,132 @@
 {
   "version": 1,
-  "generated": "2026-09-09T04:54:54Z",
-  "folders": []
+  "generated": "2026-09-17T02:47:43Z",
+  "folders": [
+    {
+      "id": "SFa8",
+      "label": "Characters",
+      "description": "South Park-inspired cartoon character assets, featuring a medic and Gargantuan-themed figures.",
+      "author": "",
+      "folders": [],
+      "items": [
+        {
+          "id": "SC27a",
+          "label": "Barney",
+          "description": "A South Park-style portrait of Barney, the bald security guard from Half-Life, wearing a dark tactical vest and smiling gently against a plain background.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC27a.laops",
+          "preview": "scenes/SC27a.webp"
+        },
+        {
+          "id": "SC27b",
+          "label": "Breen",
+          "description": "A stern, balding white-haired man with a goatee in a dark shirt, depicted as a South Park-style portrait of Director Breen.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC27b.laops",
+          "preview": "scenes/SC27b.webp"
+        },
+        {
+          "id": "SC278",
+          "label": "Garg-O-Holics",
+          "description": "A South Park\u2013style group of Gargantua characters sits in a circle for a humorous support meeting, blending Half-Life monsters with a playful recovery mood.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC278.laops",
+          "preview": "scenes/SC278.webp"
+        },
+        {
+          "id": "SC27c",
+          "label": "Dr Kleiner",
+          "description": "A South Park-style portrait of Dr.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC27c.laops",
+          "preview": "scenes/SC27c.webp"
+        },
+        {
+          "id": "SC279",
+          "label": "Medic",
+          "description": "A South Park-style Counter-Strike medic character stands with a medical kit, projecting a calm, supportive mood in this Characters preset.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC279.laops",
+          "preview": "scenes/SC279.webp"
+        },
+        {
+          "id": "SC27d",
+          "label": "Dr Mossman",
+          "description": "A South Park-style portrait of Dr.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC27d.laops",
+          "preview": "scenes/SC27d.webp"
+        },
+        {
+          "id": "SC27e",
+          "label": "Pumpkin Dude",
+          "description": "A South Park-style character with a grinning pumpkin head wears a tactical vest and wields a shotgun and pistol, exuding a menacing, armed Halloween vibe.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC27e.laops",
+          "preview": "scenes/SC27e.webp"
+        }
+      ]
+    },
+    {
+      "id": "SFa6",
+      "label": "Features",
+      "description": "A South Park-style cartoon folder containing a simple circle face feature.",
+      "author": "",
+      "folders": [],
+      "items": [
+        {
+          "id": "SC275",
+          "label": "Shape Test",
+          "description": "A flat yellow circular face with mismatched, wandering eyes and a straight rectangular mouth conveys a deadpan, confused expression against a plain white background.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC275.laops",
+          "preview": "scenes/SC275.webp"
+        }
+      ]
+    },
+    {
+      "id": "SFa7",
+      "label": "Scenes",
+      "description": "A South Park-inspired scene of an elite figure in a city, likely Counter-Strike-themed.",
+      "author": "",
+      "folders": [],
+      "items": [
+        {
+          "id": "SC277",
+          "label": "Alyx on a train",
+          "description": "A confused South Park-style Alyx Vance stands inside a train, holding a device and wondering about the gray structure visible through the windows.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC277.laops",
+          "preview": "scenes/SC277.webp"
+        },
+        {
+          "id": "SC276",
+          "label": "Elite solider in city 17",
+          "description": "A HEV-suited figure stands before a burning, smoke-filled city, declaring \"Wake up and smell the ashes\" in a grim, post-apocalyptic scene.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC276.laops",
+          "preview": "scenes/SC276.webp"
+        },
+        {
+          "id": "SC27f",
+          "label": "Really love Half-Life 2",
+          "description": "A giant yellow Half-Life 2 lambda logo dominates a green wall, surrounded by floating red hearts that express deep affection for the game.",
+          "author": "",
+          "tags": [],
+          "path": "scenes/SC27f.laops",
+          "preview": "scenes/SC27f.webp"
+        }
+      ]
+    }
+  ]
 }

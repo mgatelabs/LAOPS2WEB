@@ -44,7 +44,7 @@ export class ScenesCatalogService {
     if (this.loaded() || this.loading()) return;
     this.loading.set(true);
     try {
-      const res = await fetch('/assets/scenes.json');
+      const res = await fetch('assets/scenes.json');
       if (!res.ok) throw new Error('scenes.json not found');
       const data = (await res.json()) as ScenesCatalog;
       this.catalog.set(data);
@@ -58,7 +58,7 @@ export class ScenesCatalogService {
 
   /** Build a fetchable URL from the asset-relative path. */
   urlFor(relPath: string): string {
-    return '/assets/' + relPath.replace(/^\/+/, '');
+    return 'assets/' + relPath.replace(/^\/+/, '');
   }
 
   /** Flatten all items across nested folders, preserving order. */
@@ -83,5 +83,17 @@ export class ScenesCatalogService {
     if (!res.ok) return false;
     const text = await res.text();
     return this.fileIo.loadFromText(text, item.id + '.laops');
+  }
+
+  /**
+   * Fetch a built-in scene and add it to the current scene as a group,
+   * centred on the canvas. The source scene's canvas settings are ignored.
+   * Returns true when the group was added.
+   */
+  async importAsGroup(item: SceneItem): Promise<boolean> {
+    const res = await fetch(this.urlFor(item.path));
+    if (!res.ok) return false;
+    const text = await res.text();
+    return this.fileIo.importAsGroupFromText(text, item.label);
   }
 }

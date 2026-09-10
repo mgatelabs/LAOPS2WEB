@@ -81,7 +81,6 @@
   align-items: center;
   padding: 6px 8px 6px 24px;
   gap: 8px;
-  cursor: pointer;
   &:hover { background: rgba(128,128,128,0.1); }
   &:hover .load-btn { visibility: visible; }
 }
@@ -93,6 +92,12 @@
   border-radius: 3px;
   flex-shrink: 0;
   overflow: hidden;
+
+  &.clickable {
+    cursor: pointer;
+    transition: opacity 0.1s ease;
+    &:hover { opacity: 0.8; }
+  }
 
   img {
     width: 100%;
@@ -111,12 +116,18 @@
   );
 }
 
-.scene-desc {
-  font-size: 11px;
-  opacity: 0.6;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.scene-desc-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+  cursor: default;
+
+  mat-icon {
+    font-size: 15px;
+    height: 15px;
+    width: 15px;
+  }
 }
 
 .load-btn {

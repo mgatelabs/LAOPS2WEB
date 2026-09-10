@@ -2,11 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": false
   },
   "newProjectRoot": "projects",
   "projects": {
-    "laops-reloaded": {
+    "LAOPS2WEB": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -42,7 +43,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/laops-reloaded",
+            "outputPath": {
+              "base": "dist",
+                "browser": ""
+            },
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -55,6 +59,8 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/cdk/a11y-prebuilt.css",
+              "@angular/cdk/overlay-prebuilt.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -87,10 +93,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "laops-reloaded:build:production"
+              "buildTarget": "LAOPS2WEB:build:production"
             },
             "development": {
-              "buildTarget": "laops-reloaded:build:development"
+              "buildTarget": "LAOPS2WEB:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,7 +104,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "laops-reloaded:build"
+            "buildTarget": "LAOPS2WEB:build"
           }
         },
         "test": {

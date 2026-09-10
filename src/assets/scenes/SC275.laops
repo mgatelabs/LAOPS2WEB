@@ -1,0 +1,220 @@
+{
+  "version": 2,
+  "savedAt": "2026-09-17T00:17:55.021Z",
+  "canvas": {
+    "width": 320,
+    "height": 240,
+    "backgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "borderColor": [
+      180,
+      180,
+      180
+    ],
+    "transparentBackground": false
+  },
+  "nodes": [
+    {
+      "id": "03b9314e-ed4d-47ee-aa74-2e84d5bade3d",
+      "type": "group",
+      "label": "Group 1",
+      "sourceName": "",
+      "transform": {
+        "x": -0.8663502198058805,
+        "y": -15.594541910331385,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": 0,
+        "py": 0
+      },
+      "visible": true,
+      "locked": false,
+      "nodes": [
+        {
+          "id": "1e54a6dd-73cd-4da7-bbc5-85add9b30e54",
+          "type": "primitive",
+          "label": "Ellipse",
+          "shape": "ellipse",
+          "w": 204.65762098920317,
+          "h": 207.25293681569343,
+          "fill": [
+            255,
+            255,
+            0
+          ],
+          "stroke": [
+            100,
+            100,
+            100
+          ],
+          "strokeWidth": 1,
+          "transform": {
+            "x": 47.12315787115484,
+            "y": 31.17135905457074,
+            "sx": 1,
+            "sy": 1,
+            "r": 0,
+            "px": 0,
+            "py": 0
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "b2e7711f-419a-4d77-b5c6-cce7734a503a",
+          "type": "primitive",
+          "label": "Ellipse",
+          "shape": "ellipse",
+          "w": 54.87196746285194,
+          "h": 53.01817892987488,
+          "fill": [
+            255,
+            255,
+            255
+          ],
+          "stroke": [
+            100,
+            100,
+            100
+          ],
+          "strokeWidth": 1,
+          "transform": {
+            "x": 79.59796649613313,
+            "y": 68.98854669034586,
+            "sx": 1,
+            "sy": 1,
+            "r": 0,
+            "px": 0,
+            "py": 0
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "e9ea5e93-aab1-4b92-8fe7-8c0960e73d40",
+          "type": "primitive",
+          "label": "Ellipse",
+          "shape": "ellipse",
+          "w": 54.87196746285194,
+          "h": 53.01817892987488,
+          "fill": [
+            255,
+            255,
+            255
+          ],
+          "stroke": [
+            100,
+            100,
+            100
+          ],
+          "strokeWidth": 1,
+          "transform": {
+            "x": 165.67095919686307,
+            "y": 70.15827237030763,
+            "sx": 1,
+            "sy": 1,
+            "r": 0,
+            "px": 0,
+            "py": 0
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "c36d8903-833f-463c-988d-2f87cb8a7751",
+          "type": "primitive",
+          "label": "Ellipse",
+          "shape": "ellipse",
+          "w": 22.98687937195865,
+          "h": 20.39158900330206,
+          "fill": [
+            0,
+            0,
+            0
+          ],
+          "stroke": [
+            100,
+            100,
+            100
+          ],
+          "strokeWidth": 0,
+          "transform": {
+            "x": 95.28463758906848,
+            "y": 75.03557511622354,
+            "sx": 1,
+            "sy": 1,
+            "r": 0,
+            "px": 0,
+            "py": 0
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "824e1956-131a-46b4-9190-410f5772a16e",
+          "type": "primitive",
+          "label": "Ellipse",
+          "shape": "ellipse",
+          "w": 22.98687937195865,
+          "h": 20.39158900330206,
+          "fill": [
+            0,
+            0,
+            0
+          ],
+          "stroke": [
+            100,
+            100,
+            100
+          ],
+          "strokeWidth": 0,
+          "transform": {
+            "x": 183.21141882277547,
+            "y": 94.74313521028854,
+            "sx": 1,
+            "sy": 1,
+            "r": 0,
+            "px": 0,
+            "py": 0
+          },
+          "visible": true,
+          "locked": false
+        },
+        {
+          "id": "5b1c8b46-9142-42bd-85c3-40fea6741de3",
+          "type": "primitive",
+          "label": "Rectangle",
+          "shape": "rect",
+          "w": 101.21654501216545,
+          "h": 13.71798762274068,
+          "fill": [
+            255,
+            255,
+            255
+          ],
+          "stroke": [
+            100,
+            100,
+            100
+          ],
+          "strokeWidth": 1,
+          "transform": {
+            "x": 99.02910950534407,
+            "y": 170.57582564846197,
+            "sx": 1,
+            "sy": 1,
+            "r": 0,
+            "px": 0,
+            "py": 0
+          },
+          "visible": true,
+          "locked": false
+        }
+      ]
+    }
+  ]
+}

@@ -47,6 +47,7 @@ from _common import (
     publish_file,
     ValidationError,
 )
+from compile_svg_bundle import build_bundle
 
 
 # ---------------------------------------------------------------------------
@@ -122,17 +123,15 @@ def build_folder(
             stats["errors"] += 1
             continue
 
-        rel      = svg.relative_to(content_root)
-        lib_dest = tmp_library / rel
+        asset_id  = item_meta["id"]
+        lib_dest  = tmp_library / f"{asset_id}.svg"
+        prev_src  = previews_root / f"{asset_id}.webp"
+        prev_dest = tmp_previews  / f"{asset_id}.webp"
 
-        lib_dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(svg, lib_dest)
 
         # Copy existing preview; warn if missing but keep building
-        prev_src  = previews_root / rel.with_suffix(".webp")
-        prev_dest = tmp_previews  / rel.with_suffix(".webp")
         if prev_src.exists():
-            prev_dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(prev_src, prev_dest)
         else:
             errors.append(f"Missing preview (run preview_catalog.py): {prev_src}")
@@ -141,13 +140,13 @@ def build_folder(
         is_mc, mc_parts = detect_multicolor(svg)
 
         items.append({
-            "id":          item_meta["id"],
+            "id":          asset_id,
             "label":       item_meta["label"],
             "description": item_meta.get("description", ""),
             "author":      item_meta.get("author", ""),
             "tags":        item_meta.get("tags", []),
-            "path":        str(rel).replace("\\", "/"),
-            "preview":     str(rel.with_suffix(".webp")).replace("\\", "/"),
+            "path":        f"library/{asset_id}.svg",
+            "preview":     f"previews/{asset_id}.webp",
             "multiColor":  is_mc,
             "parts":       mc_parts,
         })
@@ -190,6 +189,9 @@ def build_assets(
     tmp_library  = tmp_root / "library"
     tmp_previews = tmp_root / "previews"
     tmp_json     = tmp_root / "assets.json"
+
+    tmp_library.mkdir()
+    tmp_previews.mkdir()
 
     try:
         section_labels = {"objects": "Objects", "parts": "Parts", "multicolor": "Multi-Color"}
@@ -257,6 +259,8 @@ def build_scenes(
     tmp_dist = tmp_root / "dist"
     tmp_json = tmp_root / "scenes.json"
 
+    tmp_dist.mkdir()
+
     try:
         def process_folder(folder: Path) -> dict | None:
             try:
@@ -292,22 +296,20 @@ def build_scenes(
                     errors.append(f"Missing 'label' in {json_sidecar}")
                     continue
 
-                rel        = laops.relative_to(scenes_root)
-                dest_laops = tmp_dist / rel
-                dest_webp  = tmp_dist / rel.with_suffix(".webp")
-                dest_laops.parent.mkdir(parents=True, exist_ok=True)
+                scene_id   = meta["id"]
+                dest_laops = tmp_dist / f"{scene_id}.laops"
+                dest_webp  = tmp_dist / f"{scene_id}.webp"
                 shutil.copy2(laops, dest_laops)
                 shutil.copy2(webp_preview, dest_webp)
 
-                rel_str = str(rel).replace("\\", "/")
                 items.append({
-                    "id":          meta["id"],
+                    "id":          scene_id,
                     "label":       meta["label"],
                     "description": meta.get("description", ""),
                     "author":      meta.get("author", ""),
                     "tags":        meta.get("tags", []),
-                    "path":        f"scenes/{rel_str}",
-                    "preview":     f"scenes/{str(rel.with_suffix('.webp')).replace(chr(92), '/')}",
+                    "path":        f"scenes/{scene_id}.laops",
+                    "preview":     f"scenes/{scene_id}.webp",
                 })
 
             for sub in sorted(folder.iterdir(), key=lambda p: p.name.lower()):
@@ -372,6 +374,8 @@ def main() -> None:
     parser.add_argument("--scenes-output", type=Path, default=None, help="Output path for scenes.json")
     parser.add_argument("--scenes-dist",   type=Path, default=None, help="Output directory for copied scene files")
 
+    parser.add_argument("--bundle", type=Path, default=None, help="Output path for the compiled SVG bundle (library.pack)")
+
     args = parser.parse_args()
 
     scene_args = [args.scenes, args.scenes_output, args.scenes_dist]
@@ -392,6 +396,17 @@ def main() -> None:
             scenes_output = args.scenes_output.resolve(),
         )
         ok = ok and ok_scenes
+
+    if args.bundle:
+        try:
+            build_bundle(
+                library = args.library.resolve(),
+                catalog = args.output.resolve(),
+                output  = args.bundle.resolve(),
+            )
+        except Exception as e:
+            print(f"\nBundle build failed: {e}")
+            ok = False
 
     if not ok:
         sys.exit(1)
