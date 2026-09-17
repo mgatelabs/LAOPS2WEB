@@ -1,0 +1,173 @@
+{
+  "version": 2,
+  "savedAt": "2026-09-17T02:20:20.912Z",
+  "canvas": {
+    "width": 800,
+    "height": 600,
+    "backgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "borderColor": [
+      0,
+      0,
+      0
+    ]
+  },
+  "nodes": [
+    {
+      "id": "ff8b30e4-5261-49f6-a466-dc4ca4763bac",
+      "type": "svg-object",
+      "assetId": "5X25",
+      "label": "5",
+      "transform": {
+        "x": -176,
+        "y": -28,
+        "sx": 1.8899995,
+        "sy": 1.8899995,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "8eabf34c-67b4-40f4-890e-4fd6a6e9c481",
+      "type": "svg-object",
+      "assetId": "SY243",
+      "label": "symbol_heart",
+      "transform": {
+        "x": 12,
+        "y": 116,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": -0.007068582946978259
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "3e96098a-13ce-416e-b124-91b39b42b4b8",
+      "type": "svg-object",
+      "assetId": "SY243",
+      "label": "symbol_heart",
+      "transform": {
+        "x": 278,
+        "y": 122,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0.009861111320965513
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "97c9c8bb-75be-4d18-b9c8-7836e26d60f7",
+      "type": "svg-object",
+      "assetId": "SY243",
+      "label": "symbol_heart",
+      "transform": {
+        "x": 479,
+        "y": 296,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": -0.015097097157086323
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "f79fea2e-fbbc-4717-a894-84bf58864cae",
+      "type": "svg-object",
+      "assetId": "SY243",
+      "label": "symbol_heart",
+      "transform": {
+        "x": 724,
+        "y": 187,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0.007853980935842782
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "1cf90059-89f4-4813-8d10-37585e30b6dc",
+      "type": "svg-object",
+      "assetId": "SY244",
+      "label": "symbol_HL2",
+      "transform": {
+        "x": 131,
+        "y": 46,
+        "sx": 1.4,
+        "sy": 1.4,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "7c33fdfe-b7d5-4229-96b6-b73b57af8504",
+      "type": "svg-object",
+      "assetId": "SY244",
+      "label": "symbol_HL2",
+      "transform": {
+        "x": 129,
+        "y": 45,
+        "sx": 1.4,
+        "sy": 1.4,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "d2d04874-ba1f-49b1-bddb-e1b83f8993fa",
+      "type": "svg-object",
+      "assetId": "SY246",
+      "label": "symbol_LOPS",
+      "transform": {
+        "x": 638,
+        "y": 564,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "17cd2a58-18cf-4b68-b7c4-82ad79c18783",
+      "type": "svg-object",
+      "assetId": "SY246",
+      "label": "symbol_LOPS",
+      "transform": {
+        "x": 637,
+        "y": 563,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "version": 2,
+  "savedAt": "2026-09-17T02:21:31.036Z",
+  "canvas": {
+    "width": 300,
+    "height": 300,
+    "backgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "borderColor": [
+      0,
+      0,
+      0
+    ]
+  },
+  "nodes": [
+    {
+      "id": "3d2a16ea-ed51-48ab-b78f-ff994035bbef",
+      "type": "svg-object",
+      "assetId": "KL49",
+      "label": "kleiner",
+      "transform": {
+        "x": 68,
+        "y": 174,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "c21cdab6-e83d-4cb9-9324-5b9dfd8e7be1",
+      "type": "svg-object",
+      "assetId": "HE193",
+      "label": "head",
+      "transform": {
+        "x": 58,
+        "y": 10,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "87f0a156-3453-4675-9223-8c3d7b662b91",
+      "type": "svg-object",
+      "assetId": "HA192",
+      "label": "hand",
+      "transform": {
+        "x": 210,
+        "y": 231,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "17c6eebc-43a5-4dcb-a43f-db213754ad50",
+      "type": "svg-object",
+      "assetId": "HA192",
+      "label": "hand",
+      "transform": {
+        "x": 64,
+        "y": 231,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "9e447f5c-548d-4f25-b1a4-041d477ccee7",
+      "type": "svg-object",
+      "assetId": "NO73",
+      "label": "Normal",
+      "transform": {
+        "x": 98,
+        "y": 94,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "fd647c73-61cb-4a62-9f06-fb5d946a4850",
+      "type": "svg-object",
+      "assetId": "DO226",
+      "label": "dot",
+      "transform": {
+        "x": 133,
+        "y": 115,
+        "sx": 1.3399997,
+        "sy": 1.3399997,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "e07c3846-3867-4126-b695-426e7044466f",
+      "type": "svg-object",
+      "assetId": "DO226",
+      "label": "dot",
+      "transform": {
+        "x": 165,
+        "y": 115,
+        "sx": 1.3399997,
+        "sy": 1.3399997,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "f294d290-e7e2-4c67-9744-0a468e60b8c1",
+      "type": "svg-object",
+      "assetId": "MO159",
+      "label": "MOUTH-2",
+      "transform": {
+        "x": 139,
+        "y": 161,
+        "sx": 0.49500048,
+        "sy": 0.43000054,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "3bb3f684-3bbf-4973-95ea-5ce6cadf5f24",
+      "type": "svg-object",
+      "assetId": "KL209",
+      "label": "kleiner",
+      "transform": {
+        "x": 59,
+        "y": 49,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "5d8b797b-e857-4d79-98e6-9c8a76e4210c",
+      "type": "svg-object",
+      "assetId": "KL203",
+      "label": "kleiner",
+      "transform": {
+        "x": 58,
+        "y": 94,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    }
+  ]
+}

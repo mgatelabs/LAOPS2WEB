@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 11.0, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="81" height="41" viewBox="0 0 81 41" overflow="visible" enable-background="new 0 0 81 41" xml:space="preserve">
+	
+		<g id="BoxColor">
+			<rect x="5.5" y="5.5" fill="#0000FF" stroke="#000000" width="70" height="30"/> 
+		</g>
+		<g id="SourceFortsLogo">
+			<g>
+				<rect x="37.212" y="10.5" fill="#FFFFFF" width="6.452" height="6.451"/> 
+				<rect x="33.784" y="16.951" fill="#FFFFFF" width="6.451" height="6.452"/> 
+				<rect x="30.5" y="23.403" fill="#FFFFFF" width="6.452" height="6.451"/> 
+				<rect x="40.497" y="16.951" fill="#FFFFFF" width="6.452" height="6.452"/> 
+				<rect x="37.242" y="23.403" fill="#FFFFFF" width="6.452" height="6.451"/> 
+				<rect x="43.983" y="23.403" fill="#FFFFFF" width="6.452" height="6.451"/> 
+			</g>
+		</g>
+		<g id="BoxPoints">
+			<rect x="0.5" y="0.5" fill="#999999" stroke="#000000" width="10" height="10"/> 
+			<rect x="70.5" y="0.5" fill="#999999" stroke="#000000" width="10" height="10"/> 
+			<rect x="0.5" y="30.5" fill="#999999" stroke="#000000" width="10" height="10"/> 
+			<rect x="70.5" y="30.5" fill="#999999" stroke="#000000" width="10" height="10"/> 
+		</g>
+	</svg>

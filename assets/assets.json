@@ -1,0 +1,3961 @@
+{
+  "version": 1,
+  "generated": "2026-09-17T02:47:42Z",
+  "sections": [
+    {
+      "id": "objects",
+      "label": "Objects",
+      "folders": [
+        {
+          "id": "B6e",
+          "label": "Backgrounds",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "B6f",
+              "label": "Back Mesa",
+              "description": "Maybe: \"South Park-style background props for Back Mesa, featuring a bathroom, lockers, and a tram from Half-Life/Counter-Strike settings.\" Count: South(1) Park-style2 background3 props4 for5 Back6",
+              "author": "",
+              "folders": [
+                {
+                  "id": "H70",
+                  "label": "Halls",
+                  "description": "South Park-style cartoon background plates for the Back Mesa halls, numbered 1 through 5.",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X21",
+                      "label": "Black Mesa Hallway Opening",
+                      "description": "The label is \"1\" which is unhelpful, but the folder path is \"objects/Backgrounds/Back Mesa/Halls\" and the image shows a flat cartoon wall with three colore",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/1X21.svg",
+                      "preview": "previews/1X21.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X22",
+                      "label": "Black Mesa Hallway Door",
+                      "description": "The image shows a flat cartoon-style background: a green paneled wall with a gray door featuring left-pointing arrows, a dark top trim, and a checkere",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/2X22.svg",
+                      "preview": "previews/2X22.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X23",
+                      "label": "Black Mesa Hallway Board",
+                      "description": "A gray wall with a slanted white roof/awning on top, a tan bulletin board with white papers pinned to it",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/3X23.svg",
+                      "preview": "previews/3X23.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "4X24",
+                      "label": "Black Mesa Snack Break",
+                      "description": "A hallway wall featuring a red soda machine and a green snack machine in cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/4X24.svg",
+                      "preview": "previews/4X24.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "5X25",
+                      "label": "Black Mesa Hallway Plain",
+                      "description": "A flat green paneled wall with a checkered floor, in cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/5X25.svg",
+                      "preview": "previews/5X25.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                }
+              ],
+              "items": [
+                {
+                  "id": "BA18",
+                  "label": "Black Mesa Bathroom",
+                  "description": "A tiled public restroom with two stalls and a no-smoking sign, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/BA18.svg",
+                  "preview": "previews/BA18.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "LO19",
+                  "label": "Black Mesa Lockers",
+                  "description": "A yellow wall with gray lockers, one open showing a shirt, in flat cartoon",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/LO19.svg",
+                  "preview": "previews/LO19.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "TR20",
+                  "label": "Black Mesa Tram",
+                  "description": "The image shows a flat, cartoonish tram with a brown slatted body, white roof and base, and a gray front cab with",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/TR20.svg",
+                  "preview": "previews/TR20.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "H71",
+              "label": "Half-Life 2",
+              "description": "A South Park-inspired cartoon background folder for Half-Life 2, containing the City 17 scene.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "CA28",
+                  "label": "Canal",
+                  "description": "A flat cartoon canal scene with a gray wall, dirt bank, and purple water.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/CA28.svg",
+                  "preview": "previews/CA28.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "Layer_4",
+                      "label": "Layer_4"
+                    },
+                    {
+                      "id": "Layer_1",
+                      "label": "Layer_1"
+                    },
+                    {
+                      "id": "Layer_2",
+                      "label": "Layer_2"
+                    }
+                  ]
+                },
+                {
+                  "id": "CI26",
+                  "label": "City 17 Burning",
+                  "description": "The burning city of City 17 with smoking buildings, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/CI26.svg",
+                  "preview": "previews/CI26.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "Layer_2",
+                      "label": "Layer_2"
+                    },
+                    {
+                      "id": "Layer_4",
+                      "label": "Layer_4"
+                    },
+                    {
+                      "id": "Layer_1",
+                      "label": "Layer_1"
+                    },
+                    {
+                      "id": "Layer_3",
+                      "label": "Layer_3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "M72",
+              "label": "Misc",
+              "description": "Miscellaneous South Park-inspired cartoon backgrounds, including beach, canal, boat, and card scenes.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "BE27",
+                  "label": "Beach",
+                  "description": "A flat cartoon beach backdrop with sandy shore, blue ocean, green hills, and a single cloud.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/BE27.svg",
+                  "preview": "previews/BE27.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "Layer_2_1_",
+                      "label": "Layer_2_1_"
+                    },
+                    {
+                      "id": "Layer_1_copy",
+                      "label": "Layer_1_copy"
+                    }
+                  ]
+                },
+                {
+                  "id": "CA29",
+                  "label": "Desert at night",
+                  "description": "A flat cartoon night landscape with rolling brown hills, a blue river, and a cratered moon.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/CA29.svg",
+                  "preview": "previews/CA29.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "ON30",
+                  "label": "Were on a boat",
+                  "description": "A nighttime boat deck with white railing and wooden floor, set against a starry moonlit sky.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/ON30.svg",
+                  "preview": "previews/ON30.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "Layer_2",
+                      "label": "Layer_2"
+                    },
+                    {
+                      "id": "Layer_3",
+                      "label": "Layer_3"
+                    },
+                    {
+                      "id": "Layer_5",
+                      "label": "Layer_5"
+                    },
+                    {
+                      "id": "Layer_1",
+                      "label": "Layer_1"
+                    },
+                    {
+                      "id": "Layer_4",
+                      "label": "Layer_4"
+                    },
+                    {
+                      "id": "Layer_6",
+                      "label": "Layer_6"
+                    }
+                  ]
+                },
+                {
+                  "id": "WO31",
+                  "label": "The end of WON",
+                  "description": "A gray tombstone marker reading WON, set in a flat cartoon meadow landscape.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/WO31.svg",
+                  "preview": "previews/WO31.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": []
+        },
+        {
+          "id": "B73",
+          "label": "Beards",
+          "description": "South Park-inspired beard objects for guerrilla and VIP characters.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "GU32",
+              "label": "Guerilla",
+              "description": "A scruffy, rugged goatee beard in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GU32.svg",
+              "preview": "previews/GU32.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "VI33",
+              "label": "VIP",
+              "description": "A flat tan cartoon beard shape with pointed sideburns.",
+              "author": "",
+              "tags": [],
+              "path": "library/VI33.svg",
+              "preview": "previews/VI33.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "B74",
+          "label": "Bodys",
+          "description": "South Park-style cartoon body assets for Half-Life and Counter-Strike characters, military units, and themed variants.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "AL34",
+              "label": "alyx",
+              "description": "Alyx Vance's torso in her brown jacket and blue pants, flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/AL34.svg",
+              "preview": "previews/AL34.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "AR35",
+              "label": "ARTIC",
+              "description": "A white sleeveless top with a gray camouflage pattern, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/AR35.svg",
+              "preview": "previews/AR35.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "AU36",
+              "label": "AUBURN",
+              "description": "A blue Auburn jersey bodysuit with orange and white striped sleeves.",
+              "author": "",
+              "tags": [],
+              "path": "library/AU36.svg",
+              "preview": "previews/AU36.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BA37",
+              "label": "BARNEY",
+              "description": "Barney's blue and gray security uniform torso, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BA37.svg",
+              "preview": "previews/BA37.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BM38",
+              "label": "BMT",
+              "description": "A dark gray bodysuit with red and yellow stripes, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BM38.svg",
+              "preview": "previews/BM38.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BR39",
+              "label": "breen",
+              "description": "Dr.",
+              "author": "",
+              "tags": [],
+              "path": "library/BR39.svg",
+              "preview": "previews/BR39.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CO40",
+              "label": "Combine_Elite",
+              "description": "The armored gray torso of a Combine Elite soldier, with the Combine emblem on the chest.",
+              "author": "",
+              "tags": [],
+              "path": "library/CO40.svg",
+              "preview": "previews/CO40.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ET41",
+              "label": "ETAC",
+              "description": "A gray ETAC uniform torso, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/ET41.svg",
+              "preview": "previews/ET41.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GA42",
+              "label": "Garg_O_Holics",
+              "description": "A blue t-shirt featuring three cartoon Gargantua heads and the text Garg-O-Holics.",
+              "author": "",
+              "tags": [],
+              "path": "library/GA42.svg",
+              "preview": "previews/GA42.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GO43",
+              "label": "GORDON",
+              "description": "Gordon Freeman's torso in his orange HEV suit, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GO43.svg",
+              "preview": "previews/GO43.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GS44",
+              "label": "GSG9",
+              "description": "A dark blue GSG9 tactical vest torso in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GS44.svg",
+              "preview": "previews/GS44.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GU45",
+              "label": "Guerilla",
+              "description": "A guerrilla torso wearing a green tactical vest with pouches, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GU45.svg",
+              "preview": "previews/GU45.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL46",
+              "label": "HL2",
+              "description": "A black Half-Life 2 resistance bodysuit with a yellow lambda emblem.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL46.svg",
+              "preview": "previews/HL46.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL47",
+              "label": "HL_COLA",
+              "description": "A red Half-Life Cola t-shirt with bubble graphics, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL47.svg",
+              "preview": "previews/HL47.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "IL48",
+              "label": "ILOVEHL2",
+              "description": "A white t-shirt featuring an I love Half-Life 2 design with a red heart.",
+              "author": "",
+              "tags": [],
+              "path": "library/IL48.svg",
+              "preview": "previews/IL48.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "KL49",
+              "label": "kleiner",
+              "description": "A stained white lab coat with blue shirt and tie, representing Kleiner, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/KL49.svg",
+              "preview": "previews/KL49.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                },
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                }
+              ]
+            },
+            {
+              "id": "LE50",
+              "label": "LEET",
+              "description": "A green short-sleeved shirt with a brown hem, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/LE50.svg",
+              "preview": "previews/LE50.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "LI51",
+              "label": "LIGHT_BLUE",
+              "description": "A light blue short-sleeved shirt with tan cuffs, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/LI51.svg",
+              "preview": "previews/LI51.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MA52",
+              "label": "MANDALORIAN",
+              "description": "A Mandalorian armored torso with green plating, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MA52.svg",
+              "preview": "previews/MA52.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ME53",
+              "label": "MEDIC",
+              "description": "A green medic torso with red cross patches, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/ME53.svg",
+              "preview": "previews/ME53.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ME54",
+              "label": "MetroCop",
+              "description": "A cartoon police officer's torso wearing a gray tactical vest with a magazine rig.",
+              "author": "",
+              "tags": [],
+              "path": "library/ME54.svg",
+              "preview": "previews/ME54.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_3",
+                  "label": "Layer_3"
+                },
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                },
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                }
+              ]
+            },
+            {
+              "id": "MO55",
+              "label": "mossman",
+              "description": "A pale Mossman body with a simple mouth line, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MO55.svg",
+              "preview": "previews/MO55.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "OB56",
+              "label": "OBJ9",
+              "description": "A green tactical bodysuit upper half with a grey belt and tan chest piece.",
+              "author": "",
+              "tags": [],
+              "path": "library/OB56.svg",
+              "preview": "previews/OB56.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "PU57",
+              "label": "PUNISHER",
+              "description": "A black bodysuit featuring the white Punisher skull and bandolier emblem.",
+              "author": "",
+              "tags": [],
+              "path": "library/PU57.svg",
+              "preview": "previews/PU57.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "RE58",
+              "label": "RECON",
+              "description": "A green recon unit bodysuit with harness and pouches, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/RE58.svg",
+              "preview": "previews/RE58.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SA59",
+              "label": "SAS",
+              "description": "A dark SAS tactical vest with pouches, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SA59.svg",
+              "preview": "previews/SA59.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ST60",
+              "label": "STEAM",
+              "description": "A cartoon character torso with the white Steam logo on a blue shirt.",
+              "author": "",
+              "tags": [],
+              "path": "library/ST60.svg",
+              "preview": "previews/ST60.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "VI61",
+              "label": "VIP",
+              "description": "The VIP's torso in a white shirt and black tactical vest, cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/VI61.svg",
+              "preview": "previews/VI61.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "E75",
+          "label": "Effects",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "F76",
+              "label": "Fire",
+              "description": "South Park-inspired cartoon fire effect assets for Half-Life and Counter-Strike scenes.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "1X62",
+                  "label": "1",
+                  "description": "A stylized red and yellow flame effect in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/1X62.svg",
+                  "preview": "previews/1X62.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "2X63",
+                  "label": "2",
+                  "description": "A flat cartoon flame effect in orange and yellow with trailing pointed edges.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/2X63.svg",
+                  "preview": "previews/2X63.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "3X64",
+                  "label": "3",
+                  "description": "A red and yellow starburst fire effect in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/3X64.svg",
+                  "preview": "previews/3X64.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "S77",
+              "label": "Streaks",
+              "description": "South Park-style black, light blue, and white streak effect objects for Half-Life and Counter-Strike scenes.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "BL65",
+                  "label": "BLACK",
+                  "description": "A black streak effect, drawn in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/BL65.svg",
+                  "preview": "previews/BL65.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "LI66",
+                  "label": "LIGHT_BLUE",
+                  "description": "A vertical light blue light streak effect.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/LI66.svg",
+                  "preview": "previews/LI66.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "WH67",
+                  "label": "WHITE",
+                  "description": "A thin white vertical streak with pointed ends, used as a motion effect.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/WH67.svg",
+                  "preview": "previews/WH67.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": []
+        },
+        {
+          "id": "E78",
+          "label": "Eyes",
+          "description": "South Park-style cartoon eye objects with dot, focused, normal, and tired variants.",
+          "author": "",
+          "folders": [
+            {
+              "id": "B79",
+              "label": "Blank",
+              "description": "This folder contains South Park-style blank eye variants, including focused, normal, and tired expressions.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "FO72",
+                  "label": "Focus",
+                  "description": "A pair of focused, angled cartoon eyes with flat upper lids.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/FO72.svg",
+                  "preview": "previews/FO72.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "NO73",
+                  "label": "Normal",
+                  "description": "A pair of plain white eye whites, blank and unadorned, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/NO73.svg",
+                  "preview": "previews/NO73.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "TI74",
+                  "label": "TIRED",
+                  "description": "A pair of half-lidded, tired eyes in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/TI74.svg",
+                  "preview": "previews/TI74.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "S7a",
+              "label": "Single",
+              "description": "A small folder of single South Park-style eye assets, including U and X, for Half-Life or Counter-Strike-inspired 2D scenes.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "UX75",
+                  "label": "U",
+                  "description": "A single cartoon eye prop in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/UX75.svg",
+                  "preview": "previews/UX75.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "XX76",
+                  "label": "X",
+                  "description": "A single cartoon eye prop in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/XX76.svg",
+                  "preview": "previews/XX76.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "DO68",
+              "label": "DOT",
+              "description": "A simple black dot representing a pupil or eye, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/DO68.svg",
+              "preview": "previews/DO68.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "FO69",
+              "label": "Focus",
+              "description": "A pair of intense, focused cartoon eyes with angled brows in flat style.",
+              "author": "",
+              "tags": [],
+              "path": "library/FO69.svg",
+              "preview": "previews/FO69.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "NO70",
+              "label": "Normal",
+              "description": "A pair of wide, neutral cartoon eyes with small black pupils.",
+              "author": "",
+              "tags": [],
+              "path": "library/NO70.svg",
+              "preview": "previews/NO70.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "TI71",
+              "label": "TIRED",
+              "description": "A pair of half-lidded, tired eyes in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/TI71.svg",
+              "preview": "previews/TI71.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H7b",
+          "label": "Hair",
+          "description": "South Park-inspired hair sprites for Half-Life and Counter-Strike characters, plus bald, anime, and themed style variants.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "AL77",
+              "label": "Alyx",
+              "description": "Alyx Vance's brown hair piece, drawn in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/AL77.svg",
+              "preview": "previews/AL77.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                },
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                }
+              ]
+            },
+            {
+              "id": "AN78",
+              "label": "anime",
+              "description": "A spiky green anime-style hair piece in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/AN78.svg",
+              "preview": "previews/AN78.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BA79",
+              "label": "BALDING",
+              "description": "A balding hair patch with gray side tufts, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BA79.svg",
+              "preview": "previews/BA79.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BA80",
+              "label": "Barney",
+              "description": "A messy, disheveled hairpiece for Barney, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BA80.svg",
+              "preview": "previews/BA80.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                },
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                }
+              ]
+            },
+            {
+              "id": "ET81",
+              "label": "ETAC",
+              "description": "A patch of short brown hair, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/ET81.svg",
+              "preview": "previews/ET81.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GO82",
+              "label": "GORDON",
+              "description": "A brown hair piece for Gordon, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GO82.svg",
+              "preview": "previews/GO82.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GU83",
+              "label": "Guerilla",
+              "description": "A guerrilla-style hair cutout with a red headband, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GU83.svg",
+              "preview": "previews/GU83.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "LE84",
+              "label": "LEET",
+              "description": "A spiky brown hairstyle with two central points, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/LE84.svg",
+              "preview": "previews/LE84.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO85",
+              "label": "Mossman",
+              "description": "A dark red, side-swept tuft of hair in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MO85.svg",
+              "preview": "previews/MO85.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "PU86",
+              "label": "PUNISHER",
+              "description": "A dark, angular hair piece in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/PU86.svg",
+              "preview": "previews/PU86.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "VI87",
+              "label": "VIP",
+              "description": "A beige hair cutout with dark brown tufts, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/VI87.svg",
+              "preview": "previews/VI87.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H7c",
+          "label": "Half-Life 2",
+          "description": "A South Park-style Half-Life 2 folder with ammo, battery, health, scanner, and Strider items.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "HL88",
+              "label": "HL2-Ammo-AR2",
+              "description": "A yellow AR2 ammo crate with a bullet icon, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL88.svg",
+              "preview": "previews/HL88.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL89",
+              "label": "HL2-Ammo-Gernade",
+              "description": "A green grenade ammo crate with a yellow grenade emblem, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL89.svg",
+              "preview": "previews/HL89.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL90",
+              "label": "HL2-Ammo-Rocket",
+              "description": "A green rocket ammo crate with a yellow rocket symbol, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL90.svg",
+              "preview": "previews/HL90.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL91",
+              "label": "HL2-Ammo-SMG",
+              "description": "A green submachine gun ammo box with a yellow band and bullet icon.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL91.svg",
+              "preview": "previews/HL91.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL92",
+              "label": "HL2-Battery",
+              "description": "A glowing cyan Half-Life 2 battery cell with a dark casing and dial, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL92.svg",
+              "preview": "previews/HL92.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL93",
+              "label": "HL2-Health_Small",
+              "description": "A green first-aid health tank with a red cross label, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL93.svg",
+              "preview": "previews/HL93.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_3",
+                  "label": "Layer_3"
+                },
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                }
+              ]
+            },
+            {
+              "id": "HL94",
+              "label": "HL2-Scanner",
+              "description": "A floating Scanner device from Half-Life 2, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL94.svg",
+              "preview": "previews/HL94.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL95",
+              "label": "HL2-Strider",
+              "description": "A towering three-legged Strider mech from Half-Life 2, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL95.svg",
+              "preview": "previews/HL95.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H7d",
+          "label": "Hands",
+          "description": "South Park-inspired cartoon hand objects in assorted color variants.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "BL96",
+              "label": "Black GREY",
+              "description": "A black and grey hand in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BL96.svg",
+              "preview": "previews/BL96.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BL97",
+              "label": "Black",
+              "description": "A black-skinned hand prop in flat South Park cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BL97.svg",
+              "preview": "previews/BL97.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BL98",
+              "label": "BLACK_BLUE",
+              "description": "A pair of flat cartoon eyes, black with blue highlights.",
+              "author": "",
+              "tags": [],
+              "path": "library/BL98.svg",
+              "preview": "previews/BL98.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BL99",
+              "label": "BLACK_RED",
+              "description": "A pair of black and red hands in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BL99.svg",
+              "preview": "previews/BL99.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BL100",
+              "label": "BLACK_YELLOW",
+              "description": "A pair of round black and yellow eyes in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BL100.svg",
+              "preview": "previews/BL100.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BR101",
+              "label": "BROWN",
+              "description": "A pair of brown cartoon hands in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BR101.svg",
+              "preview": "previews/BR101.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GR102",
+              "label": "GREY",
+              "description": "Two grey cartoon hands in a flat cutout style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GR102.svg",
+              "preview": "previews/GR102.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H7e",
+          "label": "Hats",
+          "description": "South Park-inspired cartoon hat and mask objects, including Half-Life and Counter-Strike themed headgear.",
+          "author": "",
+          "folders": [
+            {
+              "id": "R7f",
+              "label": "Recon",
+              "description": "Contains South Park-style Recon hat color variants in blue, green, grey, red, and yellow.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "BL115",
+                  "label": "BLUE",
+                  "description": "A blue team headband with a yellow emblem, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/BL115.svg",
+                  "preview": "previews/BL115.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "GR116",
+                  "label": "GREEN",
+                  "description": "A green military beret with a small gold emblem, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/GR116.svg",
+                  "preview": "previews/GR116.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "GR117",
+                  "label": "GREY",
+                  "description": "A grey Recon cap with a yellow emblem, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/GR117.svg",
+                  "preview": "previews/GR117.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "RE118",
+                  "label": "RECON",
+                  "description": "A purple Recon headband with a yellow emblem, drawn in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/RE118.svg",
+                  "preview": "previews/RE118.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "RE119",
+                  "label": "RED",
+                  "description": "A red team headband with a small emblem, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/RE119.svg",
+                  "preview": "previews/RE119.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "YE120",
+                  "label": "YELLOW",
+                  "description": "A yellow recon cap with a small emblem, drawn in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/YE120.svg",
+                  "preview": "previews/YE120.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "BA103",
+              "label": "BARNEY",
+              "description": "A gray cap, as worn by Barney, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BA103.svg",
+              "preview": "previews/BA103.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BA104",
+              "label": "BARNEY_BACK",
+              "description": "The back of Barney's flat cartoon hat, in South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BA104.svg",
+              "preview": "previews/BA104.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CO105",
+              "label": "Combine_Elite",
+              "description": "A gray Combine Elite helmet with a red visor and single eye lens, in cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/CO105.svg",
+              "preview": "previews/CO105.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "FO106",
+              "label": "FOOTBALL",
+              "description": "A white baseball cap with blue and yellow stripes, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/FO106.svg",
+              "preview": "previews/FO106.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GS107",
+              "label": "GSG9-BACK",
+              "description": "A GSG 9 tactical hat shown from the back, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GS107.svg",
+              "preview": "previews/GS107.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GS108",
+              "label": "GSG9",
+              "description": "A tan camouflage GSG-9 cap with a gray patch, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GS108.svg",
+              "preview": "previews/GS108.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GS109",
+              "label": "GSGS-MASK",
+              "description": "A black GSG 9 balaclava mask, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GS109.svg",
+              "preview": "previews/GS109.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MA110",
+              "label": "MANDALORIAN",
+              "description": "A green Mandalorian helmet with a T-shaped visor, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MA110.svg",
+              "preview": "previews/MA110.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MA111",
+              "label": "MASK-1",
+              "description": "A gas mask, drawn in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MA111.svg",
+              "preview": "previews/MA111.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MA112",
+              "label": "MASK-MOUTH",
+              "description": "A tan oval mouth piece for a mask, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MA112.svg",
+              "preview": "previews/MA112.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "OB113",
+              "label": "OBJ9",
+              "description": "A tan cartoon helmet with a teal visor and angular facial features.",
+              "author": "",
+              "tags": [],
+              "path": "library/OB113.svg",
+              "preview": "previews/OB113.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SA114",
+              "label": "SAS",
+              "description": "A black SAS balaclava mask with eye holes, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SA114.svg",
+              "preview": "previews/SA114.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H80",
+          "label": "Heads",
+          "description": "A folder of three numbered head items, likely South Park\u2013style cartoon heads for Half-Life or Counter-Strike scenes.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "1X121",
+              "label": "1",
+              "description": "A plain, featureless tan head shape in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/1X121.svg",
+              "preview": "previews/1X121.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "2X122",
+              "label": "2",
+              "description": "A blank skin-toned circular head base in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/2X122.svg",
+              "preview": "previews/2X122.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "3X123",
+              "label": "3",
+              "description": "A plain skin-toned circular head shape, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/3X123.svg",
+              "preview": "previews/3X123.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "H81",
+          "label": "Helpers",
+          "description": "Contains South Park-style cartoon body helper objects for Alyx and standard characters.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "BO124",
+              "label": "Body_Alyx",
+              "description": "A flat cartoon body shape representing Alyx Vance, used as a scene helper.",
+              "author": "",
+              "tags": [],
+              "path": "library/BO124.svg",
+              "preview": "previews/BO124.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BO125",
+              "label": "Body_Standard",
+              "description": "A simple, basic placeholder shape used as a scene helper.",
+              "author": "",
+              "tags": [],
+              "path": "library/BO125.svg",
+              "preview": "previews/BO125.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "M82",
+          "label": "Misc",
+          "description": "A miscellaneous set of small South Park-style props, including weapons, drinks, medical icons, and quirky Half-Life/CS items.",
+          "author": "",
+          "folders": [
+            {
+              "id": "C83",
+              "label": "Computers",
+              "description": "South Park-inspired cartoon computer case and monitor objects for Half-Life and Counter-Strike scenes.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "CO145",
+                  "label": "COMPUTER-CASE",
+                  "description": "A tall gray computer tower case with drive bays and two front buttons.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/CO145.svg",
+                  "preview": "previews/CO145.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "CO146",
+                  "label": "COMPUTER-MONITOR",
+                  "description": "A gray desktop monitor showing a green hill landscape, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/CO146.svg",
+                  "preview": "previews/CO146.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "F84",
+              "label": "Flowers",
+              "description": "A miscellaneous collection of colorful South Park-inspired cartoon flowers.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "MI147",
+                  "label": "MISC-Flower-BLUE",
+                  "description": "Two blue hexagonal flowers with green stems, drawn in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/MI147.svg",
+                  "preview": "previews/MI147.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI148",
+                  "label": "MISC-Flower-PINK",
+                  "description": "Two pink hexagonal cartoon flowers on green stems.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/MI148.svg",
+                  "preview": "previews/MI148.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI149",
+                  "label": "MISC-Flower-PURPLE",
+                  "description": "A pair of purple hexagonal flowers on green stems, drawn in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/MI149.svg",
+                  "preview": "previews/MI149.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI150",
+                  "label": "MISC-Flower-RED",
+                  "description": "A pair of red hexagonal flowers on green stems, drawn in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/MI150.svg",
+                  "preview": "previews/MI150.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI151",
+                  "label": "MISC-Flower-WHITE",
+                  "description": "Two white hexagonal flowers with gray centers on green stems, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/MI151.svg",
+                  "preview": "previews/MI151.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI152",
+                  "label": "MISC-Flower-YELLOW",
+                  "description": "Two yellow hexagonal flowers on green stems, drawn in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/MI152.svg",
+                  "preview": "previews/MI152.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MI153",
+                  "label": "MISC-Flower",
+                  "description": "Two simple cartoon flowers with hexagonal yellow petals and green stems.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/MI153.svg",
+                  "preview": "previews/MI153.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "R85",
+              "label": "Rocks",
+              "description": "A set of four cartoon rocks in a South Park-inspired style.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "1X154",
+                  "label": "1",
+                  "description": "A simple gray cartoon rock with a flat, angular shape.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/1X154.svg",
+                  "preview": "previews/1X154.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "2X155",
+                  "label": "2",
+                  "description": "A flat, angular gray rock in simple cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/2X155.svg",
+                  "preview": "previews/2X155.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "3X156",
+                  "label": "3",
+                  "description": "A simple gray rock in flat cartoon South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/3X156.svg",
+                  "preview": "previews/3X156.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "4X157",
+                  "label": "4",
+                  "description": "A gray rounded rock, drawn in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/4X157.svg",
+                  "preview": "previews/4X157.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "BU126",
+              "label": "BULLET",
+              "description": "A simple gray bullet with a rounded tip, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BU126.svg",
+              "preview": "previews/BU126.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CA127",
+              "label": "Camp_Fire",
+              "description": "A small campfire with crossed logs and yellow-orange flames, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/CA127.svg",
+              "preview": "previews/CA127.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CH128",
+              "label": "CHICKEN",
+              "description": "A white cartoon chicken with a red comb and orange beak, in flat cutout style.",
+              "author": "",
+              "tags": [],
+              "path": "library/CH128.svg",
+              "preview": "previews/CH128.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CI129",
+              "label": "CIG",
+              "description": "A white cigarette with a tan filter, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/CI129.svg",
+              "preview": "previews/CI129.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "EL130",
+              "label": "Elite Beer",
+              "description": "A brown beer bottle with a white label and black diamond logo.",
+              "author": "",
+              "tags": [],
+              "path": "library/EL130.svg",
+              "preview": "previews/EL130.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "EL131",
+              "label": "Elite_Symbol",
+              "description": "A gray triangular emblem with a stylized mask face, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/EL131.svg",
+              "preview": "previews/EL131.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GL132",
+              "label": "GLASSES",
+              "description": "A pair of rectangular eyeglasses with dark lenses, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GL132.svg",
+              "preview": "previews/GL132.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GU133",
+              "label": "Guitar",
+              "description": "A red electric guitar with a long neck, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GU133.svg",
+              "preview": "previews/GU133.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HL134",
+              "label": "HL2",
+              "description": "The Half-Life 2 logo, a yellow lambda symbol with a superscript two.",
+              "author": "",
+              "tags": [],
+              "path": "library/HL134.svg",
+              "preview": "previews/HL134.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "LO135",
+              "label": "LOPS",
+              "description": "A blocky L.O.P.S logo sign in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/LO135.svg",
+              "preview": "previews/LO135.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MA136",
+              "label": "MARSEMELLOW",
+              "description": "A white marshmallow with a green topping, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MA136.svg",
+              "preview": "previews/MA136.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ME137",
+              "label": "MEDIC_LOGO",
+              "description": "A white circular emblem with a bold red cross, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/ME137.svg",
+              "preview": "previews/ME137.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "NO138",
+              "label": "NO_SMOKING",
+              "description": "A round no-smoking sign with a crossed-out cigarette, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/NO138.svg",
+              "preview": "previews/NO138.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "PU139",
+              "label": "PUMPKIN",
+              "description": "A carved orange jack-o'-lantern with a green stem, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/PU139.svg",
+              "preview": "previews/PU139.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "RE140",
+              "label": "RED_POINT",
+              "description": "A red laser sight reticle with three radiating spikes, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/RE140.svg",
+              "preview": "previews/RE140.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SH141",
+              "label": "SHINY HEAD",
+              "description": "A plain beige oval depicting a shiny bald head, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SH141.svg",
+              "preview": "previews/SH141.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SM142",
+              "label": "SMOKE-1",
+              "description": "Two wisps of gray smoke rising upward, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SM142.svg",
+              "preview": "previews/SM142.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ST143",
+              "label": "Stethascope",
+              "description": "A simple cartoon stethoscope with a chest piece and earpieces, flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/ST143.svg",
+              "preview": "previews/ST143.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "TE144",
+              "label": "Tear",
+              "description": "A single blue teardrop, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/TE144.svg",
+              "preview": "previews/TE144.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "M86",
+          "label": "Mouth",
+          "description": "A set of seven South Park\u2013style cartoon mouth assets for Half-Life and Counter-Strike characters.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "MO158",
+              "label": "MOUTH-1",
+              "description": "A cartoon mouth object in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MO158.svg",
+              "preview": "previews/MO158.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO159",
+              "label": "MOUTH-2",
+              "description": "A cartoon mouth expression cutout, second variation, in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MO159.svg",
+              "preview": "previews/MO159.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO160",
+              "label": "MOUTH-3",
+              "description": "A simple cartoon mouth cutout, third variation, in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MO160.svg",
+              "preview": "previews/MO160.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO161",
+              "label": "MOUTH-4",
+              "description": "A cartoon mouth prop, drawn in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MO161.svg",
+              "preview": "previews/MO161.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO162",
+              "label": "MOUTH-5",
+              "description": "A simple cartoon mouth showing two flat white teeth in South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MO162.svg",
+              "preview": "previews/MO162.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO163",
+              "label": "MOUTH-6",
+              "description": "A wide, toothy grin made of white rectangular teeth in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MO163.svg",
+              "preview": "previews/MO163.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MO164",
+              "label": "MOUTH-7",
+              "description": "A simple two-tone cartoon mouth shape in white and yellow.",
+              "author": "",
+              "tags": [],
+              "path": "library/MO164.svg",
+              "preview": "previews/MO164.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "P87",
+          "label": "Packs",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "P88",
+              "label": "Pimp",
+              "description": "",
+              "author": "",
+              "folders": [
+                {
+                  "id": "B89",
+                  "label": "Bling",
+                  "description": "",
+                  "author": "",
+                  "folders": [
+                    {
+                      "id": "N8a",
+                      "label": "Necklass",
+                      "description": "Two South Park-inspired cartoon necklace bling assets for the Pimp pack.",
+                      "author": "",
+                      "folders": [],
+                      "items": [
+                        {
+                          "id": "1X165",
+                          "label": "1",
+                          "description": "A thin chain necklace with a diamond-encrusted dollar sign pendant, in flat cartoon style.",
+                          "author": "",
+                          "tags": [],
+                          "path": "library/1X165.svg",
+                          "preview": "previews/1X165.webp",
+                          "multiColor": false,
+                          "parts": []
+                        },
+                        {
+                          "id": "2X166",
+                          "label": "2",
+                          "description": "A diamond-studded dollar sign pendant on a chain, in flat cartoon style.",
+                          "author": "",
+                          "tags": [],
+                          "path": "library/2X166.svg",
+                          "preview": "previews/2X166.webp",
+                          "multiColor": false,
+                          "parts": []
+                        }
+                      ]
+                    }
+                  ],
+                  "items": []
+                },
+                {
+                  "id": "C8b",
+                  "label": "Cane",
+                  "description": "A South Park-inspired cartoon pack of cane objects for Pimp.",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X167",
+                      "label": "1",
+                      "description": "A slender black cane with a blue and white handle, in flat cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/1X167.svg",
+                      "preview": "previews/1X167.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X168",
+                      "label": "2",
+                      "description": "A simple black walking cane with a blue knob handle, in flat cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/2X168.svg",
+                      "preview": "previews/2X168.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X169",
+                      "label": "3",
+                      "description": "A black cane with a white knob handle, in flat cartoon South Park style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/3X169.svg",
+                      "preview": "previews/3X169.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "H8c",
+                  "label": "Hat",
+                  "description": "A South Park-style cartoon hat asset for the Pimp pack, likely a Half-Life or Counter-Strike inspired accessory.",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X170",
+                      "label": "1",
+                      "description": "A purple fedora hat with a tan diamond-patterned band, in flat cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/1X170.svg",
+                      "preview": "previews/1X170.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                }
+              ],
+              "items": []
+            }
+          ],
+          "items": []
+        },
+        {
+          "id": "W8d",
+          "label": "Weapons",
+          "description": "A South Park-inspired cartoon set of Half-Life and Counter-Strike weapons, explosives, and utility items.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "35171",
+              "label": "357",
+              "description": "A .357 Magnum revolver with a brown grip, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/35171.svg",
+              "preview": "previews/35171.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "AU172",
+              "label": "AUG",
+              "description": "An AUG bullpup assault rifle in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/AU172.svg",
+              "preview": "previews/AU172.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "AW173",
+              "label": "AWP",
+              "description": "An AWP sniper rifle with a green body and scope, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/AW173.svg",
+              "preview": "previews/AW173.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Barrel",
+                  "label": "Barrel"
+                },
+                {
+                  "id": "TriPod",
+                  "label": "TriPod"
+                },
+                {
+                  "id": "Trigger",
+                  "label": "Trigger"
+                },
+                {
+                  "id": "Clip",
+                  "label": "Clip"
+                },
+                {
+                  "id": "Layer_10",
+                  "label": "Layer_10"
+                },
+                {
+                  "id": "Layer_8",
+                  "label": "Layer_8"
+                },
+                {
+                  "id": "Layer_7",
+                  "label": "Layer_7"
+                },
+                {
+                  "id": "Scope",
+                  "label": "Scope"
+                }
+              ]
+            },
+            {
+              "id": "C4174",
+              "label": "C4",
+              "description": "A green C4 explosive block with a red wire and detonator, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/C4174.svg",
+              "preview": "previews/C4174.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "DE175",
+              "label": "Desert Eagle",
+              "description": "A silver Desert Eagle pistol with a black grip, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/DE175.svg",
+              "preview": "previews/DE175.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GA176",
+              "label": "GAUSS",
+              "description": "The Gauss rifle from Half-Life, drawn in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GA176.svg",
+              "preview": "previews/GA176.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "GO177",
+              "label": "Golden_Uzi",
+              "description": "A golden Uzi submachine gun in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/GO177.svg",
+              "preview": "previews/GO177.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "KN178",
+              "label": "KNIFE",
+              "description": "A simple gray combat knife with a flat blade, drawn in cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/KN178.svg",
+              "preview": "previews/KN178.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "ME179",
+              "label": "MedPack",
+              "description": "A first aid sign with a red cross and upward arrows, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/ME179.svg",
+              "preview": "previews/ME179.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "MP180",
+              "label": "MP5",
+              "description": "An MP5 submachine gun in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MP180.svg",
+              "preview": "previews/MP180.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "NO181",
+              "label": "NOMAD",
+              "description": "A Nomad scoped sniper rifle, drawn in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/NO181.svg",
+              "preview": "previews/NO181.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "PI182",
+              "label": "PipeWrench",
+              "description": "A red pipe wrench with a gray jaw, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/PI182.svg",
+              "preview": "previews/PI182.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "RG183",
+              "label": "RGP",
+              "description": "A long green sniper rifle with a scope, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/RG183.svg",
+              "preview": "previews/RG183.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "RP184",
+              "label": "RPG_ROCKET",
+              "description": "A gray RPG rocket with a red nose cone, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/RP184.svg",
+              "preview": "previews/RP184.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                },
+                {
+                  "id": "Layer_3",
+                  "label": "Layer_3"
+                }
+              ]
+            },
+            {
+              "id": "SA185",
+              "label": "Sachel",
+              "description": "A green camouflaged satchel charge with a yellow danger tag, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SA185.svg",
+              "preview": "previews/SA185.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_3",
+                  "label": "Layer_3"
+                },
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                },
+                {
+                  "id": "Layer_2",
+                  "label": "Layer_2"
+                }
+              ]
+            },
+            {
+              "id": "SH186",
+              "label": "SHOTGUN",
+              "description": "A gray pump-action shotgun in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SH186.svg",
+              "preview": "previews/SH186.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SW187",
+              "label": "SWORD",
+              "description": "A silver-bladed sword with a dark crossguard and red accents, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SW187.svg",
+              "preview": "previews/SW187.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "WA188",
+              "label": "WARHAMMER",
+              "description": "A gray warhammer with a red rune mark, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/WA188.svg",
+              "preview": "previews/WA188.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parts",
+      "label": "Parts",
+      "folders": [
+        {
+          "id": "B8f",
+          "label": "Body Parts",
+          "description": "Modular cartoon body parts and clothing accessories for assembling South Park-style Half-Life and Counter-Strike characters.",
+          "author": "",
+          "folders": [
+            {
+              "id": "B90",
+              "label": "Beard",
+              "description": "Cartoon South Park-style beard parts for Half-Life and Counter-Strike characters, featuring Breen and grizzled beard styles.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "BR201",
+                  "label": "breen",
+                  "description": "A white goatee with long sideburns, matching Breen's beard in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/BR201.svg",
+                  "preview": "previews/BR201.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "GR202",
+                  "label": "grizzle",
+                  "description": "A patchy, grizzled beard formed by sparse dots, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/GR202.svg",
+                  "preview": "previews/GR202.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "G91",
+              "label": "Glasses",
+              "description": "South Park-inspired cartoon glasses part for Dr.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "KL203",
+                  "label": "kleiner",
+                  "description": "Dr.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/KL203.svg",
+                  "preview": "previews/KL203.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "H92",
+              "label": "Hair",
+              "description": "South Park-inspired cartoon hair body parts, including numbered generic styles and Half-Life character hair for Breen and Kleiner.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "1X204",
+                  "label": "1",
+                  "description": "A generic flat cartoon hair piece, drawn in simple South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/1X204.svg",
+                  "preview": "previews/1X204.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "2X205",
+                  "label": "2",
+                  "description": "A second hair variant for a flat cartoon character head.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/2X205.svg",
+                  "preview": "previews/2X205.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "3X206",
+                  "label": "3",
+                  "description": "A flat cartoon hair piece, numbered three, for character heads.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/3X206.svg",
+                  "preview": "previews/3X206.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "4X207",
+                  "label": "4",
+                  "description": "A cartoon hair piece, variant four, for character customization.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/4X207.svg",
+                  "preview": "previews/4X207.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "BR208",
+                  "label": "breen",
+                  "description": "A white hair piece for Dr.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/BR208.svg",
+                  "preview": "previews/BR208.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "KL209",
+                  "label": "kleiner",
+                  "description": "Isaac Kleiner's hair, a flat black cutout with thin side strands.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/KL209.svg",
+                  "preview": "previews/KL209.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "M93",
+              "label": "Misc",
+              "description": "A miscellaneous body-parts folder containing a mask asset in South Park-inspired cartoon style.",
+              "author": "",
+              "folders": [
+                {
+                  "id": "S94",
+                  "label": "shards",
+                  "description": "Miscellaneous shard body parts in a South Park-inspired cartoon style.",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X211",
+                      "label": "1",
+                      "description": "A dark, angular shard fragment in flat cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/1X211.svg",
+                      "preview": "previews/1X211.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X212",
+                      "label": "2",
+                      "description": "A flat, dark gray shard fragment in simple cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/2X212.svg",
+                      "preview": "previews/2X212.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                }
+              ],
+              "items": [
+                {
+                  "id": "MA210",
+                  "label": "mask",
+                  "description": "A simple cartoon mask, drawn in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/MA210.svg",
+                  "preview": "previews/MA210.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "M95",
+              "label": "Mouth",
+              "description": "A South Park\u2013style collection of numbered mouth parts and a smirk for Half-Life/Counter-Strike character heads.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "1X213",
+                  "label": "1",
+                  "description": "A simple cartoon mouth piece, drawn in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/1X213.svg",
+                  "preview": "previews/1X213.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "10214",
+                  "label": "10",
+                  "description": "A cartoon mouth expression variant, labeled ten, in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/10214.svg",
+                  "preview": "previews/10214.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "11215",
+                  "label": "11",
+                  "description": "An interchangeable cartoon mouth piece, variant eleven, for character assembly.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/11215.svg",
+                  "preview": "previews/11215.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "12216",
+                  "label": "12",
+                  "description": "A cartoon mouth expression variant, drawn in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/12216.svg",
+                  "preview": "previews/12216.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "2X217",
+                  "label": "2",
+                  "description": "A simple cartoon mouth shape, drawn in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/2X217.svg",
+                  "preview": "previews/2X217.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "3X218",
+                  "label": "3",
+                  "description": "A flat cartoon mouth expression, the third variant in a body parts set.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/3X218.svg",
+                  "preview": "previews/3X218.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "4X219",
+                  "label": "4",
+                  "description": "A cartoon mouth part, variant four, in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/4X219.svg",
+                  "preview": "previews/4X219.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "5X220",
+                  "label": "5",
+                  "description": "A cartoon mouth expression variant, drawn in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/5X220.svg",
+                  "preview": "previews/5X220.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "6X221",
+                  "label": "6",
+                  "description": "A cartoon mouth expression variant, drawn in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/6X221.svg",
+                  "preview": "previews/6X221.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "7X222",
+                  "label": "7",
+                  "description": "A cartoon mouth prop, variation seven, in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/7X222.svg",
+                  "preview": "previews/7X222.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "8X223",
+                  "label": "8",
+                  "description": "A cartoon mouth piece, variant eight, for character customization in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/8X223.svg",
+                  "preview": "previews/8X223.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "9X224",
+                  "label": "9",
+                  "description": "A cartoon mouth prop, the ninth variation in a set of interchangeable facial parts.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/9X224.svg",
+                  "preview": "previews/9X224.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "SM225",
+                  "label": "Smirk",
+                  "description": "A smirking mouth expression part in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/SM225.svg",
+                  "preview": "previews/SM225.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "AR189",
+              "label": "arm",
+              "description": "A detached cartoon arm, drawn in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/AR189.svg",
+              "preview": "previews/AR189.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "BE190",
+              "label": "belt",
+              "description": "A simple cartoon waist belt with a buckle, in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/BE190.svg",
+              "preview": "previews/BE190.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "CO191",
+              "label": "colar",
+              "description": "A red collar, drawn in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/CO191.svg",
+              "preview": "previews/CO191.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HA192",
+              "label": "hand",
+              "description": "A cartoon hand in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/HA192.svg",
+              "preview": "previews/HA192.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "HE193",
+              "label": "head",
+              "description": "A plain beige circular head shape, a base part for character assembly.",
+              "author": "",
+              "tags": [],
+              "path": "library/HE193.svg",
+              "preview": "previews/HE193.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "JA194",
+              "label": "jacket",
+              "description": "A cartoon jacket, drawn in flat South Park style, for character customization.",
+              "author": "",
+              "tags": [],
+              "path": "library/JA194.svg",
+              "preview": "previews/JA194.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "PA195",
+              "label": "pant",
+              "description": "A pair of cartoon pants, drawn in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/PA195.svg",
+              "preview": "previews/PA195.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SH196",
+              "label": "shirt",
+              "description": "A plain shirt garment piece for character customization.",
+              "author": "",
+              "tags": [],
+              "path": "library/SH196.svg",
+              "preview": "previews/SH196.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SH197",
+              "label": "shoe",
+              "description": "A single cartoon shoe in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SH197.svg",
+              "preview": "previews/SH197.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SU198",
+              "label": "suit",
+              "description": "A flat cartoon suit torso piece for character assembly.",
+              "author": "",
+              "tags": [],
+              "path": "library/SU198.svg",
+              "preview": "previews/SU198.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "VE199",
+              "label": "vest - B",
+              "description": "A bright green vest with a deep V-neckline, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/VE199.svg",
+              "preview": "previews/VE199.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "VE200",
+              "label": "vest",
+              "description": "A tactical bulletproof vest in flat cartoon South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/VE200.svg",
+              "preview": "previews/VE200.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "E96",
+          "label": "Eyes",
+          "description": "Small dot eye parts for South Park-style cartoon characters.",
+          "author": "",
+          "folders": [
+            {
+              "id": "D97",
+              "label": "Double",
+              "description": "South Park-inspired cartoon double eye parts for focused, normal, and tired expressions.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "FO227",
+                  "label": "focus",
+                  "description": "A pair of flat, squinting white eyes with a focused, intense cartoon stare.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/FO227.svg",
+                  "preview": "previews/FO227.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "NO228",
+                  "label": "normal",
+                  "description": "A pair of plain white cartoon eyes with a neutral expression.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/NO228.svg",
+                  "preview": "previews/NO228.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "TI229",
+                  "label": "tired",
+                  "description": "A pair of half-closed, tired eyes in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/TI229.svg",
+                  "preview": "previews/TI229.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "E98",
+              "label": "Eyebrow",
+              "description": "South Park-style eyebrow parts for Alyx, Barney, Breen, and Mossman from Half-Life and Counter-Strike.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "AL230",
+                  "label": "alyx",
+                  "description": "Alyx Vance's eyebrow part in flat cartoon South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/AL230.svg",
+                  "preview": "previews/AL230.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "BA231",
+                  "label": "barney",
+                  "description": "A cartoon eyebrow piece for the character Barney, in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/BA231.svg",
+                  "preview": "previews/BA231.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "BR232",
+                  "label": "breen",
+                  "description": "A pair of flat, dark cartoon eyebrows for a character face.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/BR232.svg",
+                  "preview": "previews/BR232.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "MO233",
+                  "label": "mossman",
+                  "description": "A pair of dark red, flat cartoon eyebrows in South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/MO233.svg",
+                  "preview": "previews/MO233.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            },
+            {
+              "id": "S99",
+              "label": "Single",
+              "description": "Single South Park-style Half-Life/Counter-Strike eye parts with focused, normal, and tired expressions.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "FO234",
+                  "label": "focus",
+                  "description": "A white eye focus part, drawn as a flat cartoon pupil shape.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/FO234.svg",
+                  "preview": "previews/FO234.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "NO235",
+                  "label": "normal",
+                  "description": "A single open eye in a neutral state, rendered in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/NO235.svg",
+                  "preview": "previews/NO235.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "TI236",
+                  "label": "tired",
+                  "description": "A single half-lidded eye piece showing a tired, drooping expression in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/TI236.svg",
+                  "preview": "previews/TI236.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "DO226",
+              "label": "dot",
+              "description": "A small black eye dot, used as a pupil in cartoon character eyes.",
+              "author": "",
+              "tags": [],
+              "path": "library/DO226.svg",
+              "preview": "previews/DO226.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        },
+        {
+          "id": "M9a",
+          "label": "Misc",
+          "description": "",
+          "author": "",
+          "folders": [
+            {
+              "id": "R9b",
+              "label": "Rocks",
+              "description": "A set of four South Park-style cartoon rock pieces for miscellaneous scene composition.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "1X237",
+                  "label": "1",
+                  "description": "A flat gray rock shape in simple cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/1X237.svg",
+                  "preview": "previews/1X237.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "2X238",
+                  "label": "2",
+                  "description": "A gray angular rock prop in flat cartoon South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/2X238.svg",
+                  "preview": "previews/2X238.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "3X239",
+                  "label": "3",
+                  "description": "A simple gray cartoon rock, drawn in flat South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/3X239.svg",
+                  "preview": "previews/3X239.webp",
+                  "multiColor": false,
+                  "parts": []
+                },
+                {
+                  "id": "4X240",
+                  "label": "4",
+                  "description": "A simple gray rock in flat cartoon South Park style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/4X240.svg",
+                  "preview": "previews/4X240.webp",
+                  "multiColor": false,
+                  "parts": []
+                }
+              ]
+            }
+          ],
+          "items": []
+        },
+        {
+          "id": "S9c",
+          "label": "Symbols",
+          "description": "Cartoon-style symbol assets including fish, heart, HL2, lightning, LOPS, moon, speech, star, and tear icons.",
+          "author": "",
+          "folders": [
+            {
+              "id": "39d",
+              "label": "3D2Toy",
+              "description": "",
+              "author": "",
+              "folders": [
+                {
+                  "id": "B9e",
+                  "label": "Bullsquid",
+                  "description": "Four numbered South Park-style cartoon symbols for the Bullsquid.",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X251",
+                      "label": "1",
+                      "description": "A Bullsquid leg with a clawed foot, in flat cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/1X251.svg",
+                      "preview": "previews/1X251.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X252",
+                      "label": "2",
+                      "description": "A Bullsquid head and upper body, drawn in flat cartoon South Park style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/2X252.svg",
+                      "preview": "previews/2X252.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X253",
+                      "label": "3",
+                      "description": "A cartoon hand gripping a long pointed dagger, in flat South Park style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/3X253.svg",
+                      "preview": "previews/3X253.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "4X254",
+                      "label": "4",
+                      "description": "A Bullsquid clawed arm, shown as a red wireframe outline.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/4X254.svg",
+                      "preview": "previews/4X254.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "C9f",
+                  "label": "Chumtoad",
+                  "description": "Four numbered Chumtoad symbol parts for a South Park-style 3D toy asset.",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X255",
+                      "label": "1",
+                      "description": "A Chumtoad creature with head spikes, drawn in flat cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/1X255.svg",
+                      "preview": "previews/1X255.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X256",
+                      "label": "2",
+                      "description": "A wide, toothy Chumtoad mouth rendered as a blue line outline.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/2X256.svg",
+                      "preview": "previews/2X256.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X257",
+                      "label": "3",
+                      "description": "An angular blue wireframe component from the Chumtoad toy set.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/3X257.svg",
+                      "preview": "previews/3X257.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "4X258",
+                      "label": "4",
+                      "description": "A cartoon toad with a spiky head, in flat South Park style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/4X258.svg",
+                      "preview": "previews/4X258.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "Ha0",
+                  "label": "Headcrab",
+                  "description": "South Park-inspired cartoon symbol pieces for a Half-Life headcrab, numbered 1 through 7.",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X259",
+                      "label": "1",
+                      "description": "A cartoon headcrab part or symbol in flat South Park style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/1X259.svg",
+                      "preview": "previews/1X259.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X260",
+                      "label": "2",
+                      "description": "A second Headcrab part piece, drawn in flat cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/2X260.svg",
+                      "preview": "previews/2X260.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X261",
+                      "label": "3",
+                      "description": "The third Headcrab part in flat cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/3X261.svg",
+                      "preview": "previews/3X261.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "4X262",
+                      "label": "4",
+                      "description": "A numbered symbol part for a cartoon Headcrab prop.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/4X262.svg",
+                      "preview": "previews/4X262.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "5X263",
+                      "label": "5",
+                      "description": "A numbered component part for a cartoon Headcrab figure.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/5X263.svg",
+                      "preview": "previews/5X263.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "6X264",
+                      "label": "6",
+                      "description": "A numbered symbol part for a Headcrab toy set.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/6X264.svg",
+                      "preview": "previews/6X264.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "7X265",
+                      "label": "7",
+                      "description": "A numbered symbol part for a Headcrab toy figure.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/7X265.svg",
+                      "preview": "previews/7X265.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "Ha1",
+                  "label": "Houndeye",
+                  "description": "Four South Park-inspired Houndeye symbol assets for 3D-toy scene composition.",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X266",
+                      "label": "1",
+                      "description": "A Houndeye creature, rendered as a red wireframe outline.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/1X266.svg",
+                      "preview": "previews/1X266.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X267",
+                      "label": "2",
+                      "description": "A red line-art outline of a hound, in simple cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/2X267.svg",
+                      "preview": "previews/2X267.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "3X268",
+                      "label": "3",
+                      "description": "A red line-art outline of a Houndeye head in flat cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/3X268.svg",
+                      "preview": "previews/3X268.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "4X269",
+                      "label": "4",
+                      "description": "A red-outlined hound shape, a component of a cartoon dog character.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/4X269.svg",
+                      "preview": "previews/4X269.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "Sa2",
+                  "label": "Snark",
+                  "description": "Two numbered South Park-style cartoon symbol parts for a Snark 3D-toy asset.",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "1X270",
+                      "label": "1",
+                      "description": "A Snark symbol part, drawn in flat cartoon style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/1X270.svg",
+                      "preview": "previews/1X270.webp",
+                      "multiColor": false,
+                      "parts": []
+                    },
+                    {
+                      "id": "2X271",
+                      "label": "2",
+                      "description": "A cartoon Snark symbol piece, drawn in flat South Park style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/2X271.svg",
+                      "preview": "previews/2X271.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                },
+                {
+                  "id": "Sa3",
+                  "label": "Snarknest",
+                  "description": "A South Park-inspired cartoon symbol folder containing a single Snarknest 3D-toy graphic.",
+                  "author": "",
+                  "folders": [],
+                  "items": [
+                    {
+                      "id": "SN272",
+                      "label": "Snarknest",
+                      "description": "A Snark nest from Half-Life, drawn in flat cartoon South Park style.",
+                      "author": "",
+                      "tags": [],
+                      "path": "library/SN272.svg",
+                      "preview": "previews/SN272.webp",
+                      "multiColor": false,
+                      "parts": []
+                    }
+                  ]
+                }
+              ],
+              "items": []
+            }
+          ],
+          "items": [
+            {
+              "id": "PO241",
+              "label": "POINT",
+              "description": "A red four-pointed pointer symbol with a round center, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/PO241.svg",
+              "preview": "previews/PO241.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY242",
+              "label": "symbol_fish",
+              "description": "A simple flat fish symbol, drawn in a basic cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SY242.svg",
+              "preview": "previews/SY242.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY243",
+              "label": "symbol_heart",
+              "description": "A solid red heart symbol in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SY243.svg",
+              "preview": "previews/SY243.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY244",
+              "label": "symbol_HL2",
+              "description": "The yellow Half-Life 2 lambda logo symbol in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SY244.svg",
+              "preview": "previews/SY244.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY245",
+              "label": "symbol_lightning",
+              "description": "A stylized lightning bolt symbol in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SY245.svg",
+              "preview": "previews/SY245.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY246",
+              "label": "symbol_LOPS",
+              "description": "The L.O.P.S.",
+              "author": "",
+              "tags": [],
+              "path": "library/SY246.svg",
+              "preview": "previews/SY246.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY247",
+              "label": "symbol_moon",
+              "description": "A red-outlined crescent moon symbol in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SY247.svg",
+              "preview": "previews/SY247.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY248",
+              "label": "symbol_speach",
+              "description": "A cartoon speech bubble symbol in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SY248.svg",
+              "preview": "previews/SY248.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "SY249",
+              "label": "symbol_star",
+              "description": "A red-outlined five-pointed star symbol in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/SY249.svg",
+              "preview": "previews/SY249.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "TE250",
+              "label": "tear",
+              "description": "A flat blue teardrop symbol, drawn in simple cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/TE250.svg",
+              "preview": "previews/TE250.webp",
+              "multiColor": false,
+              "parts": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multicolor",
+      "label": "Multi-Color",
+      "folders": [
+        {
+          "id": "B66",
+          "label": "Bodys",
+          "description": "Multicolor South Park-style cartoon body variants for army and normal characters.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "AR3",
+              "label": "army",
+              "description": "A green army bodysuit torso with a belt and pouches, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/AR3.svg",
+              "preview": "previews/AR3.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Pants",
+                  "label": "Pants"
+                },
+                {
+                  "id": "Shoes",
+                  "label": "Shoes"
+                },
+                {
+                  "id": "Arms",
+                  "label": "Arms"
+                },
+                {
+                  "id": "Base_Shirt",
+                  "label": "Base_Shirt"
+                },
+                {
+                  "id": "Shirt_Opening_C",
+                  "label": "Shirt_Opening_C"
+                },
+                {
+                  "id": "Strap",
+                  "label": "Strap"
+                },
+                {
+                  "id": "Shirt_Opening_B",
+                  "label": "Shirt_Opening_B"
+                },
+                {
+                  "id": "Shirt_Opening_A",
+                  "label": "Shirt_Opening_A"
+                },
+                {
+                  "id": "Belt",
+                  "label": "Belt"
+                },
+                {
+                  "id": "Belt_Overlay",
+                  "label": "Belt_Overlay"
+                },
+                {
+                  "id": "Squigles",
+                  "label": "Squigles"
+                }
+              ]
+            },
+            {
+              "id": "NO4",
+              "label": "normal",
+              "description": "A plain blue shirt torso with tan arms, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/NO4.svg",
+              "preview": "previews/NO4.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Pants",
+                  "label": "Pants"
+                },
+                {
+                  "id": "Shoes",
+                  "label": "Shoes"
+                },
+                {
+                  "id": "Arms",
+                  "label": "Arms"
+                },
+                {
+                  "id": "Shirt",
+                  "label": "Shirt"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C67",
+          "label": "Canes",
+          "description": "Three multicolor cane graphics in a South Park-inspired cartoon style, likely for Half-Life or Counter-Strike scenes.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "1X5",
+              "label": "1",
+              "description": "A black cane with a blue and white top, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/1X5.svg",
+              "preview": "previews/1X5.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Layer_1",
+                  "label": "Layer_1"
+                },
+                {
+                  "id": "Ball",
+                  "label": "Ball"
+                },
+                {
+                  "id": "Metal",
+                  "label": "Metal"
+                },
+                {
+                  "id": "Shine",
+                  "label": "Shine"
+                }
+              ]
+            },
+            {
+              "id": "2X6",
+              "label": "2",
+              "description": "A slender black cane topped with a blue gem in a silver setting, cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/2X6.svg",
+              "preview": "previews/2X6.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Stick",
+                  "label": "Stick"
+                },
+                {
+                  "id": "Ball",
+                  "label": "Ball"
+                },
+                {
+                  "id": "Metal",
+                  "label": "Metal"
+                },
+                {
+                  "id": "Shine",
+                  "label": "Shine"
+                }
+              ]
+            },
+            {
+              "id": "3X7",
+              "label": "3",
+              "description": "A walking cane with a white knob handle and black shaft, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/3X7.svg",
+              "preview": "previews/3X7.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Stick",
+                  "label": "Stick"
+                },
+                {
+                  "id": "Ball",
+                  "label": "Ball"
+                },
+                {
+                  "id": "Metal",
+                  "label": "Metal"
+                },
+                {
+                  "id": "Shine",
+                  "label": "Shine"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "H68",
+          "label": "Hair",
+          "description": "Multicolor hair assets in a South Park-inspired cartoon style.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "1X8",
+              "label": "1",
+              "description": "A dark red cartoon hairstyle with a side part and swooping bangs.",
+              "author": "",
+              "tags": [],
+              "path": "library/1X8.svg",
+              "preview": "previews/1X8.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Base",
+                  "label": "Base"
+                },
+                {
+                  "id": "Overlay",
+                  "label": "Overlay"
+                }
+              ]
+            },
+            {
+              "id": "2X9",
+              "label": "2",
+              "description": "A sparse, dark hair piece with a few stray tufts, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/2X9.svg",
+              "preview": "previews/2X9.webp",
+              "multiColor": false,
+              "parts": []
+            },
+            {
+              "id": "3X10",
+              "label": "3",
+              "description": "A spiky green hair piece with red highlights, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/3X10.svg",
+              "preview": "previews/3X10.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Base",
+                  "label": "Base"
+                },
+                {
+                  "id": "Sparky",
+                  "label": "Sparky"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "H69",
+          "label": "Hat",
+          "description": "South Park-style multicolor hats featuring Mandalorian, pimp, and Recon designs.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "MA11",
+              "label": "mandalorian",
+              "description": "A green Mandalorian helmet with a black T-visor, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/MA11.svg",
+              "preview": "previews/MA11.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Antenna",
+                  "label": "Antenna"
+                },
+                {
+                  "id": "Head_Point",
+                  "label": "Head_Point"
+                },
+                {
+                  "id": "Base",
+                  "label": "Base"
+                },
+                {
+                  "id": "Eye_Outline",
+                  "label": "Eye_Outline"
+                },
+                {
+                  "id": "Eye",
+                  "label": "Eye"
+                },
+                {
+                  "id": "Specks",
+                  "label": "Specks"
+                },
+                {
+                  "id": "Dark_Spot",
+                  "label": "Dark_Spot"
+                }
+              ]
+            },
+            {
+              "id": "PI12",
+              "label": "pimp",
+              "description": "A purple fedora hat with a tan band and black diamond pattern, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/PI12.svg",
+              "preview": "previews/PI12.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Rim",
+                  "label": "Rim"
+                },
+                {
+                  "id": "Center",
+                  "label": "Center"
+                },
+                {
+                  "id": "Wrap",
+                  "label": "Wrap"
+                },
+                {
+                  "id": "Specks",
+                  "label": "Specks"
+                }
+              ]
+            },
+            {
+              "id": "RE13",
+              "label": "recon",
+              "description": "A blue cartoon headband with a yellow emblem, in flat South Park style.",
+              "author": "",
+              "tags": [],
+              "path": "library/RE13.svg",
+              "preview": "previews/RE13.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Hair",
+                  "label": "Hair"
+                },
+                {
+                  "id": "Hat_Back",
+                  "label": "Hat_Back"
+                },
+                {
+                  "id": "Hat_Front",
+                  "label": "Hat_Front"
+                },
+                {
+                  "id": "Emblem",
+                  "label": "Emblem"
+                },
+                {
+                  "id": "Squigle",
+                  "label": "Squigle"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "M6a",
+          "label": "Misc",
+          "description": "A South Park-style cartoon miscellaneous folder containing a multicolor flower.",
+          "author": "",
+          "folders": [
+            {
+              "id": "S6b",
+              "label": "SourceForts",
+              "description": "Multicolor South Park-style SourceForts misc boxes, including long and small variants.",
+              "author": "",
+              "folders": [],
+              "items": [
+                {
+                  "id": "BO15",
+                  "label": "Box-Long",
+                  "description": "A long blue box banner with gray corner brackets and a white block pyramid.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/BO15.svg",
+                  "preview": "previews/BO15.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "BoxColor",
+                      "label": "BoxColor"
+                    },
+                    {
+                      "id": "BoxPoints",
+                      "label": "BoxPoints"
+                    }
+                  ]
+                },
+                {
+                  "id": "BO16",
+                  "label": "Box-Small",
+                  "description": "A small blue box with a white stacked-square pattern, in flat cartoon style.",
+                  "author": "",
+                  "tags": [],
+                  "path": "library/BO16.svg",
+                  "preview": "previews/BO16.webp",
+                  "multiColor": true,
+                  "parts": [
+                    {
+                      "id": "BoxArea",
+                      "label": "BoxArea"
+                    },
+                    {
+                      "id": "SquarePoints",
+                      "label": "SquarePoints"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "items": [
+            {
+              "id": "FL14",
+              "label": "Flower",
+              "description": "Two yellow hexagonal flowers on green stems, drawn in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/FL14.svg",
+              "preview": "previews/FL14.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Stem",
+                  "label": "Stem"
+                },
+                {
+                  "id": "Petal_A",
+                  "label": "Petal_A"
+                },
+                {
+                  "id": "Petal_B",
+                  "label": "Petal_B"
+                },
+                {
+                  "id": "Petal_C",
+                  "label": "Petal_C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "W6c",
+          "label": "Weapons",
+          "description": "A South Park-style cartoon folder of weapon assets, currently containing a knife.",
+          "author": "",
+          "folders": [],
+          "items": [
+            {
+              "id": "KN17",
+              "label": "knife",
+              "description": "A simple gray knife with a separated handle, in flat cartoon style.",
+              "author": "",
+              "tags": [],
+              "path": "library/KN17.svg",
+              "preview": "previews/KN17.webp",
+              "multiColor": true,
+              "parts": [
+                {
+                  "id": "Handle",
+                  "label": "Handle"
+                },
+                {
+                  "id": "Handle_Grip",
+                  "label": "Handle_Grip"
+                },
+                {
+                  "id": "Blade",
+                  "label": "Blade"
+                },
+                {
+                  "id": "Shine",
+                  "label": "Shine"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

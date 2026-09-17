@@ -1,0 +1,259 @@
+{
+  "version": 2,
+  "savedAt": "2026-09-14T01:57:49.456Z",
+  "canvas": {
+    "width": 640,
+    "height": 480,
+    "backgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "borderColor": [
+      180,
+      180,
+      180
+    ]
+  },
+  "nodes": [
+    {
+      "id": "93d4160b-fd7c-498d-897b-97d42e17fc60",
+      "type": "svg-object",
+      "label": "TRAM",
+      "assetId": "TR20",
+      "transform": {
+        "x": 365.33331298828125,
+        "y": 242.66668701171875,
+        "sx": 1.4184839361553252,
+        "sy": 1.4184839361553252,
+        "r": 0,
+        "px": -321,
+        "py": -190.25
+      },
+      "visible": true,
+      "locked": true
+    },
+    {
+      "id": "cc61694e-8f52-4f2a-9fcd-3ba986c29c3e",
+      "type": "svg-object",
+      "label": "alyx",
+      "assetId": "AL34",
+      "transform": {
+        "x": 357.3333740234375,
+        "y": 389.33331298828125,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -83.0175,
+        "py": -55.5525
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "8a8bcfdf-e0a9-4db9-b9d5-857c5987b317",
+      "type": "svg-object",
+      "label": "3",
+      "assetId": "3X123",
+      "transform": {
+        "x": 356.6666259765625,
+        "y": 263.33331298828125,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -94.5945,
+        "py": -94.5945
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "0f87a92d-fdd8-4c80-b337-8f93d5081ae4",
+      "type": "svg-object",
+      "label": "TIRED",
+      "assetId": "TI71",
+      "transform": {
+        "x": 354,
+        "y": 263.33331298828125,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -55.513,
+        "py": -20.5545
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "9bae89a1-823f-4bff-83f2-1a842ec6aa43",
+      "type": "multicolor-object",
+      "label": "Alyx",
+      "assetId": "AL77",
+      "parts": [],
+      "transform": {
+        "x": 356.66668701171875,
+        "y": 198.66668701171875,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -91.1885,
+        "py": -37.1955
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "fe67b6e6-30f9-4170-8061-4f614254af3d",
+      "type": "svg-object",
+      "label": "DOT",
+      "assetId": "DO68",
+      "transform": {
+        "x": 325.33331298828125,
+        "y": 259.33331298828125,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -1.918,
+        "py": -2.345
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "383ef3ae-82da-461b-bd8f-875325246493",
+      "type": "svg-object",
+      "label": "DOT",
+      "assetId": "DO68",
+      "transform": {
+        "x": 382.66668701171875,
+        "y": 262.66668701171875,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -1.918,
+        "py": -2.345
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "85becbb7-a076-4434-9005-5aec07893b67",
+      "type": "svg-object",
+      "label": "MOUTH-5",
+      "assetId": "MO162",
+      "transform": {
+        "x": 354.6666259765625,
+        "y": 324,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -20.25,
+        "py": -8.5
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "00b454a6-dc59-41d0-a26b-c9a3771f9d5d",
+      "type": "svg-object",
+      "label": "Black GREY",
+      "assetId": "BL96",
+      "transform": {
+        "x": 358,
+        "y": 401.33331298828125,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -87.5275,
+        "py": -14.5275
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "68ad51a2-b20a-448c-97c8-ba63b4880ec7",
+      "type": "primitive",
+      "label": "Ellipse",
+      "shape": "ellipse",
+      "w": 157.3333740234375,
+      "h": 84,
+      "fill": [
+        255,
+        255,
+        255
+      ],
+      "stroke": [
+        100,
+        100,
+        100
+      ],
+      "strokeWidth": 1,
+      "transform": {
+        "x": 538.4999389648438,
+        "y": 145.6666259765625,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -78.66668701171875,
+        "py": -42
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "12644367-0afd-46e5-b1bc-455770145f84",
+      "type": "primitive",
+      "label": "Ellipse",
+      "shape": "ellipse",
+      "w": 37.33331298828125,
+      "h": 24.666656494140625,
+      "fill": [
+        255,
+        255,
+        255
+      ],
+      "stroke": [
+        100,
+        100,
+        100
+      ],
+      "strokeWidth": 1,
+      "transform": {
+        "x": 471.1666564941406,
+        "y": 199.33335876464844,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -18.666656494140625,
+        "py": -12.333328247070312
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "b35b8c40-668d-4bd3-82da-37b2b6e35cfa",
+      "type": "text",
+      "label": "Text",
+      "transform": {
+        "x": 505.1666259765625,
+        "y": 121,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": 0,
+        "py": 0
+      },
+      "visible": true,
+      "locked": false,
+      "content": "???",
+      "font": "\"Segoe Print\", \"Bradley Hand\", cursive",
+      "size": 38,
+      "style": "bold",
+      "color": [
+        33,
+        33,
+        33
+      ]
+    }
+  ]
+}

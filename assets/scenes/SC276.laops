@@ -1,0 +1,169 @@
+{
+  "version": 2,
+  "savedAt": "2026-09-13T17:12:09.307Z",
+  "canvas": {
+    "width": 640,
+    "height": 480,
+    "backgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "borderColor": [
+      180,
+      180,
+      180
+    ]
+  },
+  "nodes": [
+    {
+      "id": "a834efbd-e7ce-491d-9bc0-5a7e03d00b2a",
+      "type": "multicolor-object",
+      "label": "CITY_17",
+      "assetId": "CI26",
+      "parts": [],
+      "transform": {
+        "x": 324.0826021007307,
+        "y": 170.59614655369256,
+        "sx": 0.8242993160836037,
+        "sy": 0.8242993160836037,
+        "r": 0,
+        "px": -432,
+        "py": -437.259
+      },
+      "visible": true,
+      "locked": true
+    },
+    {
+      "id": "eff85808-8133-403f-9cc6-6278974e014c",
+      "type": "svg-object",
+      "label": "Combine_Elite",
+      "assetId": "CO40",
+      "transform": {
+        "x": 473.653410697199,
+        "y": 378.4365689696416,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -82.975,
+        "py": -55.3185
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "9d3bed53-02c0-4cce-bea5-3d046c09cb83",
+      "type": "svg-object",
+      "label": "Combine_Elite",
+      "assetId": "CO105",
+      "transform": {
+        "x": 472.91116883046277,
+        "y": 258.9283059053149,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -77.135,
+        "py": -78.1415
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "1d875e7e-f45e-4750-abaa-540e1bc1501a",
+      "type": "svg-object",
+      "label": "GREY",
+      "assetId": "GR102",
+      "transform": {
+        "x": 472.1688590053062,
+        "y": 393.28232374304105,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -87.5275,
+        "py": -14.5275
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "ef2864fa-7569-4b22-bce9-e6f7d56d5998",
+      "type": "primitive",
+      "label": "Ellipse",
+      "shape": "ellipse",
+      "w": 202.2732516337204,
+      "h": 83.50730688935283,
+      "fill": [
+        255,
+        255,
+        255
+      ],
+      "stroke": [
+        100,
+        100,
+        100
+      ],
+      "strokeWidth": 1,
+      "transform": {
+        "x": 286.504267279108,
+        "y": 307.91919556938285,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": -101.1366258168602,
+        "py": -41.75365344467642
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "54295276-7608-4759-bde3-381b2159e815",
+      "type": "text",
+      "label": "Text",
+      "transform": {
+        "x": 137.49012734048802,
+        "y": 491.07855534669665,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": 0,
+        "py": 0
+      },
+      "visible": true,
+      "locked": false,
+      "content": "Text",
+      "font": "Roboto, sans-serif",
+      "size": 24,
+      "style": "normal",
+      "color": [
+        33,
+        33,
+        33
+      ]
+    },
+    {
+      "id": "19006845-f85f-4b4b-823b-79054b618fab",
+      "type": "text",
+      "label": "Text",
+      "transform": {
+        "x": 191.30594167264704,
+        "y": 298.4550171323178,
+        "sx": 1,
+        "sy": 1,
+        "r": 0,
+        "px": 0,
+        "py": 0
+      },
+      "visible": true,
+      "locked": false,
+      "content": "Wake up and smell the ashes",
+      "font": "Roboto, sans-serif",
+      "size": 15,
+      "style": "normal",
+      "color": [
+        33,
+        33,
+        33
+      ]
+    }
+  ]
+}

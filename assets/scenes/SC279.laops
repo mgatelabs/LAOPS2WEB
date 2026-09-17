@@ -1,0 +1,173 @@
+{
+  "version": 2,
+  "savedAt": "2026-09-17T00:09:28.858Z",
+  "canvas": {
+    "width": 220,
+    "height": 300,
+    "backgroundColor": [
+      255,
+      255,
+      255
+    ],
+    "borderColor": [
+      0,
+      0,
+      0
+    ]
+  },
+  "nodes": [
+    {
+      "id": "88e709de-13ac-444b-860f-9746b7d06aa8",
+      "type": "svg-object",
+      "assetId": "ME53",
+      "label": "MEDIC",
+      "transform": {
+        "x": 26,
+        "y": 172,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "f01a68f5-c315-43c3-b796-61c4a1379778",
+      "type": "svg-object",
+      "assetId": "ST143",
+      "label": "Stethascope",
+      "transform": {
+        "x": 38,
+        "y": 169,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "fb768f21-a07d-4ddd-ad4f-9c6700617bfa",
+      "type": "svg-object",
+      "assetId": "1X121",
+      "label": "1",
+      "transform": {
+        "x": 18,
+        "y": 14,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "2291c45e-8409-4043-8171-9afab15927ce",
+      "type": "svg-object",
+      "assetId": "NO73",
+      "label": "Normal",
+      "transform": {
+        "x": 59,
+        "y": 91,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "2f86d530-af7a-47af-b2e3-4e448303affb",
+      "type": "svg-object",
+      "assetId": "DO68",
+      "label": "DOT",
+      "transform": {
+        "x": 79,
+        "y": 115,
+        "sx": 1.6549994,
+        "sy": 1.5549995,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "3e664adb-736d-4a6c-8ad2-ebe1ff654923",
+      "type": "svg-object",
+      "assetId": "DO68",
+      "label": "DOT",
+      "transform": {
+        "x": 140,
+        "y": 115,
+        "sx": 1.6549994,
+        "sy": 1.5549995,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "751680f5-fc5d-4b09-bc67-4a438681f81e",
+      "type": "svg-object",
+      "assetId": "GO82",
+      "label": "GORDON",
+      "transform": {
+        "x": 17,
+        "y": 4,
+        "sx": 1,
+        "sy": 1,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "0f4f2792-c970-4232-8aef-57ef14739f2d",
+      "type": "svg-object",
+      "assetId": "MO164",
+      "label": "MOUTH-7",
+      "transform": {
+        "x": 82,
+        "y": 156,
+        "sx": 1.5199995,
+        "sy": 1.7449993,
+        "px": 0,
+        "py": 0,
+        "r": 0
+      },
+      "visible": true,
+      "locked": false
+    },
+    {
+      "id": "4b143515-4f79-40f2-bbff-badd4991f39a",
+      "type": "svg-object",
+      "assetId": "ME179",
+      "label": "MedPack",
+      "transform": {
+        "x": -2,
+        "y": 246,
+        "sx": 0.43000054,
+        "sy": 0.43000054,
+        "px": 0,
+        "py": 0,
+        "r": -0.013002699436699251
+      },
+      "visible": true,
+      "locked": false
+    }
+  ]
+}
